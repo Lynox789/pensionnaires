@@ -1,0 +1,88 @@
+{ 
+  // source de l'image
+  "source": null,
+  // Numéro de la page du document en nombre entier.
+  "page": null,
+  // Coordonnée X de départ en pixels (coin supérieur gauche de la boîte de délimitation).
+  "x": null,
+  // Coordonnée Y de départ en pixels (coin supérieur gauche de la boîte de délimitation).
+  "y": null,
+  // Coordonnée X de fin en pixels (coin inférieur droit de la boîte de délimitation).
+  "xFin": null,
+  // Coordonnée Y de fin en pixels (coin inférieur droit de la boîte de délimitation).
+  "yFin": null,
+  "person": {
+    // Nom de famille du pensionnaire.
+    "lastName": "", 
+    //Prénom du pensionnaire
+    "firstName": "", 
+    // Titre de civilité ou de noblesse s'il est présent (ex: "Comte", "Dlle", "Sieur"). Sinon null.
+    "title": null, 
+    // Sexe du pensionnaire ("male" ou "female")
+    "sex": "", 
+    // Âge en nombre entier.
+    "age": null, 
+    // Année de naissance
+    "birthYear": null, 
+    // Montant total des pensions
+    "totalAmount": null 
+  },
+
+  // Une entrée par emploi distinct mentionné dans le texte.
+  "jobs": [
+    {
+      //Extrait de texte brut d'où est tirée l'information.
+      "text": "", 
+      //Titre exact du poste (ex: "intendant", "chirurgien-major").
+      "title": "", 
+      // Organisation ou entité d'affectation (ex: "police de Paris", "vaisseaux du roi").
+      "entity": "", 
+      //Détails supplémentaires (ex: "démission"). Sinon null.
+      "details": null, 
+      // Localisation géographique explicite liée à ce poste (ex: "Paris"). Sinon null.
+      "geodata": null, 
+      // Booléen : true si c'est un poste passé ("ancien", "ci-devant", "démission"), sinon false.
+      "previous": false 
+    }
+  ],
+  // Une entrée par pension ou rente spécifique listée dans les observations.
+  "detailedPensions": [
+    {
+      //Phrase exacte justifiant cette pension spécifique.
+      "text": "", 
+      // Tableau des départements liés spécifiquement à cette ligne de pension.
+      "departments": [], 
+      // Tableau des années d'obtention de cette pension (ex: ["1769", "1771"]).
+      "year": [], 
+      // Somme détaillée allouée pour cette ligne.
+      "amount": null, 
+      // Booléen : false si explicitement "sans retenue", sinon null.
+      "deduction": null, 
+      // Type de la pension
+      "type": null, 
+      // Titre du poste lié à cette pension spécifique.
+      "job": null, 
+      //Entité liée à cette pension spécifique.
+      "entity": null, 
+      // Appréciation des services : "current" (actuels), "past" (anciens/ci-devant), ou null.
+      "recognitionOfHisServices": null, 
+      //Informations ou observations supplémentaires.
+      "details": null, 
+      // Lieu géographique lié spécifiquement à cette pension.
+      "geodata": null, 
+
+      //Champs de réversion
+      
+      // Lien de parenté avec la personne ayant généré le droit (ex: "père").
+      "onBehalf": null, 
+      // Titre/Poste du proche (ex: "conseiller").
+      "onBehalfJob": null, 
+      //Entité d'affectation du proche (ex: "conseil supérieur de Pondichéry").
+      "onBehalfEntity": null, 
+      // Détails supplémentaires sur le proche.
+      "onBehalfDetails": null, 
+      // Localisation géographique liée au proche (ex: "Pondichéry").
+      "onBehalfGeodata": null 
+    }
+  ]
+}
