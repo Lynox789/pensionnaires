@@ -1,0 +1,5045 @@
+// 7eme classe page 9
+
+{
+  "person": {
+    "lastName": "ALLAIS",
+    "firstName": "Dominique",
+    "title": null,
+    "sex": "male",
+    "age": 32,
+    "birthYear": 1757,
+    "totalAmount": 200
+  },
+  "jobs": [
+    {
+      "text": "garçon en la cuisine bouche du roi",
+      "title": "garçon",
+      "entity": "cuisine bouche du roi",
+      "details": null,
+      "geodata": null,
+      "previous": true
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "Pour servir à sa subsistance et lui tenir lieu de retraite en qualité de garçon en la cuisine bouche du roi.",
+      "departments": [
+        "M. du R."
+      ],
+      "year": [
+        "1780"
+      ],
+      "amount": 200,
+      "deduction": null,
+      "type": "retraite",
+      "job": "garçon",
+      "entity": "cuisine bouche du roi",
+      "recognitionOfHisServices": "past",
+      "details": "Pour servir à sa subsistance",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+
+{
+  "person": {
+    "lastName": "ALLARD",
+    "firstName": "Jeanne Aubert",
+    "title": "Demoiselle",
+    "sex": "female",
+    "age": 73,
+    "birthYear": 1716,
+    "totalAmount": 472
+  },
+  "jobs": [],
+  "detailedPensions": [
+    {
+      "text": "Y compris 72 livres d'intérêts d'arrérages, en considération des services de son premier mari le sieur Bertaud, maréchal de camp ès armées du roi, directeur général des fortifications de la Provence.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1756"
+      ],
+      "amount": 472,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "Y compris 72 livres d'intérêts d'arrérages",
+      "geodata": null,
+      "onBehalf": "premier mari",
+      "onBehalfJob": "maréchal de camp, directeur général des fortifications",
+      "onBehalfEntity": "armées du roi",
+      "onBehalfDetails": "le sieur Bertaud",
+      "onBehalfGeodata": "Provence"
+    }
+  ]
+}
+
+{
+  "person": {
+    "lastName": "ALLERON",
+    "firstName": "Marie-Anne Phelippeaux",
+    "title": "Demoiselle",
+    "sex": "female",
+    "age": 77,
+    "birthYear": 1712,
+    "totalAmount": 475
+  },
+  "jobs": [
+    {
+      "text": "lavandière du linge du corps de feue madame la Dauphine",
+      "title": "lavandière",
+      "entity": "madame la Dauphine",
+      "details": "du linge du corps",
+      "geodata": null,
+      "previous": true
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, pour lui tenir lieu de partie du traitement dont elle jouissait en qualité de lavandière du linge du corps de feue madame la Dauphine.",
+      "departments": [
+        "M. du R."
+      ],
+      "year": [
+        "1767"
+      ],
+      "amount": 75,
+      "deduction": null,
+      "type": null,
+      "job": "lavandière",
+      "entity": "madame la Dauphine",
+      "recognitionOfHisServices": "past",
+      "details": "pour lui tenir lieu de partie du traitement dont elle jouissait",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, en considération des service de feu son mari, valet de chambre de feue madame la Dauphine, et ancien commis du département de la maison du roi.",
+      "departments": [
+        "M. du R."
+      ],
+      "year": [
+        "1789"
+      ],
+      "amount": 400,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "en considération des service de feu son mari",
+      "geodata": null,
+      "onBehalf": "mari",
+      "onBehalfJob": "valet de chambre, ancien commis",
+      "onBehalfEntity": "madame la Dauphine, département de la maison du roi",
+      "onBehalfDetails": "sieur Jean-Baptiste d'",
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+// 7eme classe page 10
+
+{
+  "person": {
+    "lastName": "ALLOUARD",
+    "firstName": "Marie-Jeanne Vallantin",
+    "title": "Demoiselle",
+    "sex": "female",
+    "age": 71,
+    "birthYear": 1718,
+    "totalAmount": 200
+  },
+  "jobs": [],
+  "detailedPensions": [
+    {
+      "text": "A titre de gratification annuelle, en considération des services de feu son père, ci-devant capitaine d'infanterie retiré à l'hôtel royal des invalides.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1759"
+      ],
+      "amount": 200,
+      "deduction": null,
+      "type": "gratification annuelle",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "en considération des services de feu son père",
+      "geodata": null,
+      "onBehalf": "père",
+      "onBehalfJob": "capitaine d'infanterie",
+      "onBehalfEntity": "hôtel royal des invalides",
+      "onBehalfDetails": "feu, ci-devant, retiré",
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "On observe qu'elle a, de plus, l'assurance d'une pension de 1,000 livres faisant partie de celle de 4,000 livres qui a été accordée à son mari, ancien commis du département de la guerre, en considération de vingt-huit années de services.",
+      "departments": [
+        "G."
+      ],
+      "year": [],
+      "amount": 1000,
+      "deduction": null,
+      "type": "assurance d'une pension",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "faisant partie de celle de 4,000 livres qui a été accordée à son mari, en considération de vingt-huit années de services",
+      "geodata": null,
+      "onBehalf": "mari",
+      "onBehalfJob": "commis",
+      "onBehalfEntity": "département de la guerre",
+      "onBehalfDetails": "sieur Louis-Étienne, ancien",
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+// 6eme classe page 9
+{
+  "person": {
+    "lastName": "ANJORANT",
+    "firstName": "Anne-Françoise de Roquemont",
+    "title": "Demoiselle",
+    "sex": "female",
+    "age": 24,
+    "birthYear": 1765,
+    "totalAmount": 600
+  },
+  "jobs": [],
+  "detailedPensions": [
+    {
+      "text": "Sans retenue; en considération des services de feu son père, major des compagnies de la garde de Paris.",
+      "departments": [
+        "M. du R."
+      ],
+      "year": [
+        "1788"
+      ],
+      "amount": 600,
+      "deduction": false,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "en considération des services de feu son père",
+      "geodata": null,
+      "onBehalf": "père",
+      "onBehalfJob": "major",
+      "onBehalfEntity": "compagnies de la garde",
+      "onBehalfDetails": "feu",
+      "onBehalfGeodata": "Paris"
+    }
+  ]
+}
+
+
+{
+  "person": {
+    "lastName": "ANJOU DE LA GARENNE",
+    "firstName": "Alexandre d'",
+    "title": null,
+    "sex": "male",
+    "age": 52,
+    "birthYear": 1737,
+    "totalAmount": 800
+  },
+  "jobs": [
+    {
+      "text": "Ancien brigadier des gardes du roi.",
+      "title": "brigadier",
+      "entity": "gardes du roi",
+      "details": null,
+      "geodata": null,
+      "previous": true
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "Ancien brigadier des gardes du roi. En considération de ses services, et pour sa retraite.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1789"
+      ],
+      "amount": 800,
+      "deduction": null,
+      "type": "retraite",
+      "job": "brigadier",
+      "entity": "gardes du roi",
+      "recognitionOfHisServices": "past",
+      "details": "En considération de ses services",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+{
+  "person": {
+    "lastName": "ANJOU",
+    "firstName": "Charles-Melchior d'",
+    "title": null,
+    "sex": "male",
+    "age": 51,
+    "birthYear": 1738,
+    "totalAmount": 800
+  },
+  "jobs": [
+    {
+      "text": "Lieutenant de vaisseau, retiré.",
+      "title": "lieutenant de vaisseau",
+      "entity": null,
+      "details": "retiré",
+      "geodata": null,
+      "previous": true
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "Lieutenant de vaisseau, retiré. En considération de ses services, et pour sa retraite.",
+      "departments": [
+        "M."
+      ],
+      "year": [
+        "1776"
+      ],
+      "amount": 800,
+      "deduction": null,
+      "type": "retraite",
+      "job": "lieutenant de vaisseau",
+      "entity": null,
+      "recognitionOfHisServices": "past",
+      "details": "En considération de ses services",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+// 5eme classe page 9
+
+{
+  "person": {
+    "lastName": "BATAILLE",
+    "firstName": "Louis de",
+    "title": null,
+    "sex": "male",
+    "age": 74,
+    "birthYear": 1715,
+    "totalAmount": 1720
+  },
+  "jobs": [
+    {
+      "text": "capitaine de grenadiers au régiment de Navarre",
+      "title": "capitaine de grenadiers",
+      "entity": "régiment de Navarre",
+      "details": null,
+      "geodata": null,
+      "previous": false
+    },
+    {
+      "text": "commandant du régiment des recrues de Dijon",
+      "title": "commandant",
+      "entity": "régiment des recrues de Dijon",
+      "details": "réforme",
+      "geodata": "Dijon",
+      "previous": true
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, en considération de ses services en qualité de capitaine de grenadiers au régiment de Navarre.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1761"
+      ],
+      "amount": 520,
+      "deduction": null,
+      "type": null,
+      "job": "capitaine de grenadiers",
+      "entity": "régiment de Navarre",
+      "recognitionOfHisServices": "past",
+      "details": "en considération de ses services",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, pour sa réforme en qualité de commandant du régiment des recrues de Dijon.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1766"
+      ],
+      "amount": 1200,
+      "deduction": null,
+      "type": "réforme",
+      "job": "commandant",
+      "entity": "régiment des recrues de Dijon",
+      "recognitionOfHisServices": "past",
+      "details": "pour sa réforme",
+      "geodata": "Dijon",
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+
+{
+  "person": {
+    "lastName": "BATARD",
+    "firstName": "Jean-Baptiste de",
+    "title": "sieur de Fontenay",
+    "sex": "male",
+    "age": 49,
+    "birthYear": 1740,
+    "totalAmount": 1200
+  },
+  "jobs": [
+    {
+      "text": "ancien premier capitaine commandant du régiment de dragons de Montmorency, avec rang de lieutenant-colonel",
+      "title": "premier capitaine commandant",
+      "entity": "régiment de dragons de Montmorency",
+      "details": "avec rang de lieutenant-colonel",
+      "geodata": null,
+      "previous": true
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "Pour sa retraite en qualité d'ancien premier capitaine commandant du régiment de dragons de Montmorency, avec rang de lieutenant-colonel ; ladite pension sans retenue.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1788"
+      ],
+      "amount": 1200,
+      "deduction": false,
+      "type": "retraite",
+      "job": "premier capitaine commandant",
+      "entity": "régiment de dragons de Montmorency",
+      "recognitionOfHisServices": "past",
+      "details": "avec rang de lieutenant-colonel",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+
+{
+  "person": {
+    "lastName": "BATÉ",
+    "firstName": "François",
+    "title": null,
+    "sex": "male",
+    "age": 79,
+    "birthYear": 1710,
+    "totalAmount": 1200
+  },
+  "jobs": [
+    {
+      "text": "Ancien garçon de fourrière du roi.",
+      "title": "garçon de fourrière",
+      "entity": "roi",
+      "details": null,
+      "geodata": null,
+      "previous": true
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, pour ses services et pour sa retraite.",
+      "departments": [
+        "M. du R."
+      ],
+      "year": [
+        "1777"
+      ],
+      "amount": 1000,
+      "deduction": null,
+      "type": "retraite",
+      "job": "garçon de fourrière",
+      "entity": "roi",
+      "recognitionOfHisServices": "past",
+      "details": "pour ses services et pour sa retraite",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, sans retenue, en considération de ses services.",
+      "departments": [
+        "M. du R."
+      ],
+      "year": [
+        "1761"
+      ],
+      "amount": 200,
+      "deduction": false,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": "past",
+      "details": "en considération de ses services",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+
+{
+  "person": {
+    "lastName": "BAUDEQUIN DE VILLENEUVE",
+    "firstName": "Nicolas",
+    "title": null,
+    "sex": "male",
+    "age": 63,
+    "birthYear": 1726,
+    "totalAmount": 1400
+  },
+  "jobs": [
+    {
+      "text": "major du régiment des grenadiers royaux de l'Ile de France",
+      "title": "major",
+      "entity": "régiment des grenadiers royaux de l'Ile de France",
+      "details": "réforme",
+      "geodata": "Ile de France",
+      "previous": true
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, pour sa réforme en qualité de major du régiment des grenadiers royaux de l'Ile de France.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1775"
+      ],
+      "amount": 1000,
+      "deduction": null,
+      "type": "réforme",
+      "job": "major",
+      "entity": "régiment des grenadiers royaux de l'Ile de France",
+      "recognitionOfHisServices": "past",
+      "details": "pour sa réforme",
+      "geodata": "Ile de France",
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, à titre de subsistance, et sans aucune retenue, en considération des services de feue sa mère, première femme de chambre de Madame Louise de France.",
+      "departments": [
+        "M. du R."
+      ],
+      "year": [
+        "1770"
+      ],
+      "amount": 400,
+      "deduction": false,
+      "type": "subsistance",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "à titre de subsistance, et sans aucune retenue",
+      "geodata": null,
+      "onBehalf": "mère",
+      "onBehalfJob": "première femme de chambre",
+      "onBehalfEntity": "Madame Louise de France",
+      "onBehalfDetails": "feue",
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+//4 eme classe page 9
+
+{
+  "person": {
+    "lastName": "BEILLARD",
+    "firstName": "Jean-François",
+    "title": "sieur d'Esplas",
+    "sex": "male",
+    "age": 71,
+    "birthYear": 1718,
+    "totalAmount": 2154
+  },
+  "jobs": [
+    {
+      "text": "Maréchal des logis retiré, de la seconde compagnie des mousquetaires de la garde ordinaire du roi.",
+      "title": "Maréchal des logis",
+      "entity": "seconde compagnie des mousquetaires de la garde ordinaire du roi",
+      "details": "retiré",
+      "geodata": null,
+      "previous": true
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, pour ses services.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1749",
+        "1758",
+        "1767"
+      ],
+      "amount": 554,
+      "deduction": null,
+      "type": null,
+      "job": "Maréchal des logis",
+      "entity": "seconde compagnie des mousquetaires de la garde ordinaire du roi",
+      "recognitionOfHisServices": "past",
+      "details": "pour ses services",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, pour retraite.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1772"
+      ],
+      "amount": 1600,
+      "deduction": null,
+      "type": "retraite",
+      "job": "Maréchal des logis",
+      "entity": "seconde compagnie des mousquetaires de la garde ordinaire du roi",
+      "recognitionOfHisServices": "past",
+      "details": "pour retraite",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+{
+  "person": {
+    "lastName": "BEILLARD",
+    "firstName": "Paul",
+    "title": "Sieur de Castelgaillard",
+    "sex": "male",
+    "age": 67,
+    "birthYear": 1722,
+    "totalAmount": 2036
+  },
+  "jobs": [
+    {
+      "text": "Maréchal des logis, réformé de la première compagnie des mousquetaires de la garde du roi.",
+      "title": "Maréchal des logis",
+      "entity": "première compagnie des mousquetaires de la garde du roi",
+      "details": "réformé",
+      "geodata": null,
+      "previous": true
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, y compris 66 livres d'intérêts d'arrérages, en considération de ses services.",
+      "departments": [
+        "F."
+      ],
+      "year": [
+        "1749",
+        "1760",
+        "1769"
+      ],
+      "amount": 566,
+      "deduction": null,
+      "type": null,
+      "job": "Maréchal des logis",
+      "entity": "première compagnie des mousquetaires de la garde du roi",
+      "recognitionOfHisServices": "past",
+      "details": "y compris 66 livres d'intérêts d'arrérages, en considération de ses services",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, pour réforme.",
+      "departments": [
+        "F."
+      ],
+      "year": [
+        "1775"
+      ],
+      "amount": 1470,
+      "deduction": null,
+      "type": "réforme",
+      "job": "Maréchal des logis",
+      "entity": "première compagnie des mousquetaires de la garde du roi",
+      "recognitionOfHisServices": "past",
+      "details": "pour réforme",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+
+{
+  "person": {
+    "lastName": "BELLEJOYEUSE DE CLÉDIER",
+    "firstName": "Charles-Hyacinthe",
+    "title": null,
+    "sex": "male",
+    "age": 56,
+    "birthYear": 1733,
+    "totalAmount": 2118
+  },
+  "jobs": [
+    {
+      "text": "Ci-devant major du régiment des grenadiers royaux de la Picardie",
+      "title": "major",
+      "entity": "régiment des grenadiers royaux de la Picardie",
+      "details": null,
+      "geodata": "Picardie",
+      "previous": true
+    },
+    {
+      "text": "à présent lieutenant-colonel à la suite de l'infanterie",
+      "title": "lieutenant-colonel",
+      "entity": "infanterie",
+      "details": "à la suite",
+      "geodata": null,
+      "previous": false
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, y compris 18 livres d'intérêts d'arrérages, pour services de feu son père, ci-devant capitaine au régiment de cavalerie de Noailles.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1754"
+      ],
+      "amount": 118,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "y compris 18 livres d'intérêts d'arrérages",
+      "geodata": null,
+      "onBehalf": "père",
+      "onBehalfJob": "capitaine",
+      "onBehalfEntity": "régiment de cavalerie de Noailles",
+      "onBehalfDetails": "feu, ci-devant",
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, en qualité de ci-devant major du régiment des grenadiers royaux de la Picardie: il cessera d'en jouir dès qu'il sera pourvu d'une lieutenance-colonelle.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1780",
+        "1781"
+      ],
+      "amount": 2000,
+      "deduction": null,
+      "type": null,
+      "job": "major",
+      "entity": "régiment des grenadiers royaux de la Picardie",
+      "recognitionOfHisServices": "past",
+      "details": "il cessera d'en jouir dès qu'il sera pourvu d'une lieutenance-colonelle",
+      "geodata": "Picardie",
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+//3eme classe page 9
+
+{
+  "person": {
+    "lastName": "AVRANGE D'HAUGERANVILLE",
+    "firstName": null,
+    "title": null,
+    "sex": "male",
+    "age": 40,
+    "birthYear": 1749,
+    "totalAmount": 4800
+  },
+  "jobs": [
+    {
+      "text": "Major de la compagnie réformée des gardes de la porte du roi.",
+      "title": "Major",
+      "entity": "compagnie réformée des gardes de la porte du roi",
+      "details": "réformée",
+      "geodata": null,
+      "previous": true
+    },
+    {
+      "text": "ancien capitaine attaché au régiment Royal-Roussillon, cavalerie",
+      "title": "capitaine",
+      "entity": "régiment Royal-Roussillon, cavalerie",
+      "details": "attaché",
+      "geodata": null,
+      "previous": true
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, en qualité d'ancien capitaine attaché au régiment Royal-Roussillon, cavalerie.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1779"
+      ],
+      "amount": 800,
+      "deduction": null,
+      "type": null,
+      "job": "capitaine",
+      "entity": "régiment Royal-Roussillon, cavalerie",
+      "recognitionOfHisServices": "past",
+      "details": "en qualité d'ancien capitaine attaché",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, sans aucune retenue, tant en considération de son mariage avec demoiselle Thérèse Berthier, que des services du sieur Berthier, père de ladite demoiselle.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1788"
+      ],
+      "amount": 4000,
+      "deduction": false,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "tant en considération de son mariage avec demoiselle Thérèse Berthier",
+      "geodata": null,
+      "onBehalf": "beau-père",
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": "sieur Berthier, père de ladite demoiselle",
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+
+{
+  "person": {
+    "lastName": "AVRANGE",
+    "firstName": "Jean-Pierre",
+    "title": null,
+    "sex": "male",
+    "age": 47,
+    "birthYear": 1742,
+    "totalAmount": 3600
+  },
+  "jobs": [
+    {
+      "text": "L'un des premiers commis du secrétaire d'Etat ayant le département de la guerre",
+      "title": "premier commis",
+      "entity": "secrétaire d'Etat ayant le département de la guerre",
+      "details": null,
+      "geodata": null,
+      "previous": false
+    },
+    {
+      "text": "commissaire-ordonnateur des guerres",
+      "title": "commissaire-ordonnateur",
+      "entity": "guerres",
+      "details": null,
+      "geodata": null,
+      "previous": false
+    },
+    {
+      "text": "commissaire ordinaire des guerres",
+      "title": "commissaire ordinaire",
+      "entity": "guerres",
+      "details": null,
+      "geodata": null,
+      "previous": true
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, pour appointements conservés en qualité de commissaire ordinaire des guerres.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1776"
+      ],
+      "amount": 3000,
+      "deduction": null,
+      "type": "appointements conservés",
+      "job": "commissaire ordinaire",
+      "entity": "guerres",
+      "recognitionOfHisServices": "past",
+      "details": "pour appointements conservés",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, en considération de ses services.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1776"
+      ],
+      "amount": 600,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": "current",
+      "details": "en considération de ses services",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+//2eme classe page 9
+
+{
+  "person": {
+    "lastName": "BOUÉXIC",
+    "firstName": null,
+    "title": "Comte de Guichen",
+    "sex": "male",
+    "age": 77,
+    "birthYear": 1712,
+    "totalAmount": 9000
+  },
+  "jobs": [
+    {
+      "text": "Lieutenant général des armées du roi.",
+      "title": "Lieutenant général",
+      "entity": "armées du roi",
+      "details": null,
+      "geodata": null,
+      "previous": false
+    },
+    {
+      "text": "où il commandait l'armée navale",
+      "title": "commandant",
+      "entity": "armée navale",
+      "details": null,
+      "geodata": "Amérique",
+      "previous": true
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, pour ses services en Amérique, où il commandait l'armée navale.",
+      "departments": [
+        "M."
+      ],
+      "year": [
+        "1781"
+      ],
+      "amount": 6000,
+      "deduction": null,
+      "type": null,
+      "job": "commandant",
+      "entity": "armée navale",
+      "recognitionOfHisServices": "past",
+      "details": "pour ses services",
+      "geodata": "Amérique",
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, tant pour ses services que pour l'indemniser de la diminution qu'éprouvent ses pensions par son passage de la dignité de grand-croix de l'ordre de Saint-Louis à celle de chevalier des ordres du roi.",
+      "departments": [
+        "M."
+      ],
+      "year": [
+        "1784"
+      ],
+      "amount": 3000,
+      "deduction": null,
+      "type": "indemnité",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": "past",
+      "details": "pour l'indemniser de la diminution qu'éprouvent ses pensions par son passage de la dignité de grand-croix de l'ordre de Saint-Louis à celle de chevalier des ordres du roi",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+
+{
+  "person": {
+    "lastName": "BOUFFLERS",
+    "firstName": "de Montmorency",
+    "title": "Dlle, Duchesse de",
+    "sex": "female",
+    "age": 59,
+    "birthYear": 1730,
+    "totalAmount": 16000
+  },
+  "jobs": [
+    {
+      "text": "dame du palais de la feue reine",
+      "title": "dame du palais",
+      "entity": "reine",
+      "details": null,
+      "geodata": null,
+      "previous": true
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, pour réserves sur le gouvernement de Flandres, depuis le décès du maréchal prince de Soubise.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1751"
+      ],
+      "amount": 10000,
+      "deduction": null,
+      "type": "réserves",
+      "job": null,
+      "entity": "gouvernement de Flandres",
+      "recognitionOfHisServices": null,
+      "details": "depuis le décès du maréchal prince de Soubise",
+      "geodata": "Flandres",
+      "onBehalf": "mari",
+      "onBehalfJob": "pair de France",
+      "onBehalfEntity": null,
+      "onBehalfDetails": "M. le duc de Boufflers",
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, pour appointements conservés en qualité de dame du palais de la feue reine.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1758"
+      ],
+      "amount": 6000,
+      "deduction": null,
+      "type": "appointements conservés",
+      "job": "dame du palais",
+      "entity": "reine",
+      "recognitionOfHisServices": "past",
+      "details": "pour appointements conservés",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+
+{
+  "person": {
+    "lastName": "BOURGELAT",
+    "firstName": "Adelaïde, Trusson",
+    "title": "Dlle",
+    "sex": "female",
+    "age": 48,
+    "birthYear": 1741,
+    "totalAmount": 11750
+  },
+  "jobs": [],
+  "detailedPensions": [
+    {
+      "text": "La première, y compris 450 livres d'intérêts d'arrérages, pour services de sa mère, femme de chambre de feue madame la Dauphine.",
+      "departments": [
+        "F."
+      ],
+      "year": [
+        "1761"
+      ],
+      "amount": 1950,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "y compris 450 livres d'intérêts d'arrérages",
+      "geodata": null,
+      "onBehalf": "mère",
+      "onBehalfJob": "femme de chambre",
+      "onBehalfEntity": "madame la Dauphine",
+      "onBehalfDetails": "feue",
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, à titre de reversibilité de pareille qu'avait feu son mari.",
+      "departments": [
+        "F."
+      ],
+      "year": [
+        "1773"
+      ],
+      "amount": 5000,
+      "deduction": null,
+      "type": "reversibilité",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "à titre de reversibilité de pareille qu'avait feu son mari",
+      "geodata": null,
+      "onBehalf": "mari",
+      "onBehalfJob": "commissaire général des haras",
+      "onBehalfEntity": null,
+      "onBehalfDetails": "sieur Bourgelat, feu",
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La troisième, pour services de son mari, et pour l'indemniser du logement qu'elle avait au château d'Alfort.",
+      "departments": [
+        "F."
+      ],
+      "year": [
+        "1780"
+      ],
+      "amount": 4800,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "pour l'indemniser du logement qu'elle avait au château d'Alfort",
+      "geodata": "château d'Alfort",
+      "onBehalf": "mari",
+      "onBehalfJob": "commissaire général des haras",
+      "onBehalfEntity": null,
+      "onBehalfDetails": "sieur Bourgelat",
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+// 1er classe page 9 
+
+{
+  "person": {
+    "lastName": "MOREAU",
+    "firstName": "Claude-François",
+    "title": null,
+    "sex": "male",
+    "age": 75,
+    "birthYear": 1714,
+    "totalAmount": 21000
+  },
+  "jobs": [
+    {
+      "text": "Conseiller du roi en ses conseils",
+      "title": "Conseiller",
+      "entity": "conseils",
+      "details": null,
+      "geodata": null,
+      "previous": false
+    },
+    {
+      "text": "procureur de Sa Majesté au Châtelet de Paris",
+      "title": "procureur",
+      "entity": "Sa Majesté",
+      "details": null,
+      "geodata": "Châtelet de Paris",
+      "previous": false
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, pour ses services et ceux de son père dans ladite charge.",
+      "departments": [
+        "F."
+      ],
+      "year": [
+        "1754"
+      ],
+      "amount": 3000,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": "current",
+      "details": "pour ses services et ceux de son père dans ladite charge",
+      "geodata": null,
+      "onBehalf": "père",
+      "onBehalfJob": "Conseiller, procureur",
+      "onBehalfEntity": null,
+      "onBehalfDetails": "dans ladite charge",
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, pour son travail dans l'instruction de l'affaire du Canada.",
+      "departments": [
+        "F."
+      ],
+      "year": [
+        "1764"
+      ],
+      "amount": 3000,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": "instruction de l'affaire du Canada",
+      "recognitionOfHisServices": null,
+      "details": "pour son travail",
+      "geodata": "Canada",
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La troisième, à titre d'indemnité, tant à cause de ses anciens services, que de la diminution de sa charge, avec réserve de 5,000 livres en faveur de son épouse.",
+      "departments": [
+        "F."
+      ],
+      "year": [
+        "1776"
+      ],
+      "amount": 15000,
+      "deduction": null,
+      "type": "indemnité",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": "past",
+      "details": "tant à cause de ses anciens services, que de la diminution de sa charge, avec réserve de 5,000 livres en faveur de son épouse",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+
+{
+  "person": {
+    "lastName": "MOUCHY",
+    "firstName": "d'Arpajon",
+    "title": "Dlle, Maréchale de",
+    "sex": "female",
+    "age": 60,
+    "birthYear": 1729,
+    "totalAmount": 35458
+  },
+  "jobs": [
+    {
+      "text": "Dame d'honneur de la reine",
+      "title": "dame d'honneur",
+      "entity": "reine",
+      "details": null,
+      "geodata": null,
+      "previous": false
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, pour ses services en qualité de dame d'honneur de la reine.",
+      "departments": [
+        "M. du R."
+      ],
+      "year": [
+        "1766"
+      ],
+      "amount": 12000,
+      "deduction": null,
+      "type": null,
+      "job": "dame d'honneur",
+      "entity": "reine",
+      "recognitionOfHisServices": "past",
+      "details": "pour ses services",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, pour l'indemniser de deux des trois dixièmes de retenue sur la gratification ci-dessus.",
+      "departments": [
+        "M. du R."
+      ],
+      "year": [
+        "1773"
+      ],
+      "amount": 2400,
+      "deduction": null,
+      "type": "indemnité",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "pour l'indemniser de deux des trois dixièmes de retenue sur la gratification ci-dessus",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La troisième, pour lui tenir lieu des gages, appointements et pensions qu'elle avait en sadite qualité de dame d'honneur.",
+      "departments": [
+        "M. du R."
+      ],
+      "year": [
+        "1768"
+      ],
+      "amount": 21058,
+      "deduction": null,
+      "type": "gages, appointements et pensions",
+      "job": "dame d'honneur",
+      "entity": null,
+      "recognitionOfHisServices": "past",
+      "details": "pour lui tenir lieu des gages, appointements et pensions qu'elle avait",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+//1er classe page 10
+
+{
+  "person": {
+    "lastName": "SABATIER de Cabre",
+    "firstName": "Honoré-Auguste",
+    "title": null,
+    "sex": "male",
+    "age": 52,
+    "birthYear": 1737,
+    "totalAmount": 20200
+  },
+  "jobs": [
+    {
+      "text": "Conseiller d'Etat",
+      "title": "Conseiller d'Etat",
+      "entity": null,
+      "details": null,
+      "geodata": null,
+      "previous": false
+    },
+    {
+      "text": "ci-devant ministre plénipotentiaire du roi auprès du prince évêque de Liège",
+      "title": "ministre plénipotentiaire",
+      "entity": "roi",
+      "details": "auprès du prince évêque de Liège",
+      "geodata": "Liège",
+      "previous": true
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, comprise dans un brevet du 2 février 1782, qui a été retiré.",
+      "departments": [
+        "M."
+      ],
+      "year": [
+        "1782"
+      ],
+      "amount": 6000,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "comprise dans un brevet du 2 février 1782, qui a été retiré",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, sans retenue, en considération de son travail, pour libérer la chambre du commerce de Marseille des dettes qu'elle avait contractées.",
+      "departments": [
+        "M."
+      ],
+      "year": [
+        "1785"
+      ],
+      "amount": 3000,
+      "deduction": false,
+      "type": null,
+      "job": null,
+      "entity": "chambre du commerce de Marseille",
+      "recognitionOfHisServices": "past",
+      "details": "en considération de son travail, pour libérer la chambre du commerce de Marseille des dettes qu'elle avait contractées",
+      "geodata": "Marseille",
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La troisième, à titre de reversion de partie de celle de 1,800 livres accordée à son père le 11 juin 1765.",
+      "departments": [
+        "M."
+      ],
+      "year": [
+        "1765"
+      ],
+      "amount": 1200,
+      "deduction": null,
+      "type": "reversion",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "de partie de celle de 1,800 livres accordée à son père le 11 juin 1765",
+      "geodata": null,
+      "onBehalf": "père",
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La quatrième, sans retenue, et pour retraite, en considération de ses services pendant l'administration des consulats, et pour le dédommager de la perte de cette place.",
+      "departments": [
+        "M."
+      ],
+      "year": [
+        "1788"
+      ],
+      "amount": 10000,
+      "deduction": false,
+      "type": "retraite",
+      "job": null,
+      "entity": "consulats",
+      "recognitionOfHisServices": "past",
+      "details": "en considération de ses services pendant l'administration des consulats, et pour le dédommager de la perte de cette place",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+//classe 3 page 13
+
+{
+  "person": {
+    "lastName": "ARMENAULT",
+    "firstName": "Claude",
+    "title": null,
+    "sex": "male",
+    "age": 44,
+    "birthYear": 1745,
+    "totalAmount": 6000
+  },
+  "jobs": [
+    {
+      "text": "Ci-devant premier secrétaire de diverses intendances",
+      "title": "premier secrétaire",
+      "entity": "intendances",
+      "details": "diverses",
+      "geodata": null,
+      "previous": true
+    },
+    {
+      "text": "et ensuite premier secrétaire de la marine.",
+      "title": "premier secrétaire",
+      "entity": "marine",
+      "details": "ensuite",
+      "geodata": null,
+      "previous": false
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, en considération de ses services en qualité de premier secrétaire dudit département, et pour sa retraite.",
+      "departments": [
+        "M."
+      ],
+      "year": [
+        "1788"
+      ],
+      "amount": 4800,
+      "deduction": null,
+      "type": "retraite",
+      "job": "premier secrétaire",
+      "entity": "marine",
+      "recognitionOfHisServices": "past",
+      "details": null,
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, pour services qu'il a rendus étant premier secrétaire des intendances d'Orléans, Bourges, Dijon et Caen.",
+      "departments": [
+        "M."
+      ],
+      "year": [
+        "1789"
+      ],
+      "amount": 1200,
+      "deduction": null,
+      "type": null,
+      "job": "premier secrétaire",
+      "entity": "intendances",
+      "recognitionOfHisServices": "past",
+      "details": null,
+      "geodata": "Orléans, Bourges, Dijon et Caen",
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+
+{
+  "person": {
+    "lastName": "ARNAUD DE L'ESTANG D'YPRES",
+    "firstName": "Henri-Laurent",
+    "title": null,
+    "sex": "male",
+    "age": 80,
+    "birthYear": 1709,
+    "totalAmount": 3520
+  },
+  "jobs": [
+    {
+      "text": "Ancien lieutenant-colonel au corps royal de l'artillerie.",
+      "title": "lieutenant-colonel",
+      "entity": "corps royal de l'artillerie",
+      "details": null,
+      "geodata": null,
+      "previous": true
+    },
+    {
+      "text": "en qualité d'enseigne de la compagnie ci-devant entretenue à Mâcon.",
+      "title": "enseigne",
+      "entity": "compagnie",
+      "details": null,
+      "geodata": "Mâcon",
+      "previous": true
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, en considération de ses services, et pour sa retraite.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1760"
+      ],
+      "amount": 2400,
+      "deduction": null,
+      "type": "retraite",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": "past",
+      "details": null,
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, en considération de sa nombreuse famille.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1774"
+      ],
+      "amount": 720,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "en considération de sa nombreuse famille",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La troisième, pour appointements conservés en qualité d'enseigne de la compagnie ci-devant entretenue à Mâcon. La reversion de cette troisième pension est assurée aux six enfants du sieur Lestang d'Ypres.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1776"
+      ],
+      "amount": 400,
+      "deduction": null,
+      "type": "appointements conservés",
+      "job": "enseigne",
+      "entity": "compagnie",
+      "recognitionOfHisServices": "past",
+      "details": "La reversion de cette troisième pension est assurée aux six enfants du sieur Lestang d'Ypres",
+      "geodata": "Mâcon",
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+{
+  "person": {
+    "lastName": "AROD DE MONTMELAS",
+    "firstName": "de Montreuil",
+    "title": "Comtesse",
+    "sex": "female",
+    "age": 29,
+    "birthYear": 1760,
+    "totalAmount": 4000
+  },
+  "jobs": [],
+  "detailedPensions": [
+    {
+      "text": "En considération de son mariage avec le comte d'Arod de Montmelas, capitaine au régiment du comte d'Artois, cavalerie.",
+      "departments": [
+        "F."
+      ],
+      "year": [
+        "1779"
+      ],
+      "amount": 4000,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "En considération de son mariage",
+      "geodata": null,
+      "onBehalf": "mari",
+      "onBehalfJob": "capitaine",
+      "onBehalfEntity": "régiment du comte d'Artois, cavalerie",
+      "onBehalfDetails": "comte d'Arod de Montmelas",
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+{
+  "person": {
+    "lastName": "AUBERT DE COURSERAC",
+    "firstName": "François",
+    "title": null,
+    "sex": "male",
+    "age": 71,
+    "birthYear": 1718,
+    "totalAmount": 3954
+  },
+  "jobs": [
+    {
+      "text": "Chef d'escadre, retiré.",
+      "title": "Chef d'escadre",
+      "entity": null,
+      "details": "retiré",
+      "geodata": null,
+      "previous": true
+    },
+    {
+      "text": "pour ses services en qualité de capitaine de vaisseau.",
+      "title": "capitaine de vaisseau",
+      "entity": null,
+      "details": null,
+      "geodata": null,
+      "previous": true
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, en considération de ses services, avec réserve de 800 livres en faveur de son épouse.",
+      "departments": [
+        "M."
+      ],
+      "year": [
+        "1776"
+      ],
+      "amount": 3600,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": "past",
+      "details": "avec réserve de 800 livres en faveur de son épouse",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, y compris 54 livres d'intérêts d'arrérages pour ses services en qualité de capitaine de vaisseau.",
+      "departments": [
+        "M."
+      ],
+      "year": [
+        "1758"
+      ],
+      "amount": 354,
+      "deduction": null,
+      "type": null,
+      "job": "capitaine de vaisseau",
+      "entity": null,
+      "recognitionOfHisServices": "past",
+      "details": "y compris 54 livres d'intérêts d'arrérages",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+// classe 3 page 14
+
+{
+  "person": {
+    "lastName": "AUMONT DE MOUSTIER",
+    "firstName": "Jean-Baptiste",
+    "title": null,
+    "sex": "male",
+    "age": 76,
+    "birthYear": 1713,
+    "totalAmount": 5454
+  },
+  "jobs": [
+    {
+      "text": "Maréchal de camp.",
+      "title": "Maréchal de camp",
+      "entity": null,
+      "details": null,
+      "geodata": null,
+      "previous": false
+    },
+    {
+      "text": "et pour sa retraite du régiment de Chartres, dragons.",
+      "title": null,
+      "entity": "régiment de Chartres, dragons",
+      "details": "retraite",
+      "geodata": null,
+      "previous": true
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, y compris 54 livres d'intérêts d'arrérages, pour services de feu son père, brigadier de cavalerie.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1714"
+      ],
+      "amount": 354,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "y compris 54 livres d'intérêts d'arrérages",
+      "geodata": null,
+      "onBehalf": "père",
+      "onBehalfJob": "brigadier",
+      "onBehalfEntity": "cavalerie",
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, en considération de ses services.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1778"
+      ],
+      "amount": 1200,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": "past",
+      "details": null,
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La troisième, pour même considération, et pour sa retraite du régiment de Chartres, dragons.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1780"
+      ],
+      "amount": 3900,
+      "deduction": null,
+      "type": "retraite",
+      "job": null,
+      "entity": "régiment de Chartres, dragons",
+      "recognitionOfHisServices": "past",
+      "details": null,
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+{
+  "person": {
+    "lastName": "AVRANGE DU KERMONT",
+    "firstName": null,
+    "title": null,
+    "sex": "male",
+    "age": 36,
+    "birthYear": 1753,
+    "totalAmount": 4100
+  },
+  "jobs": [
+    {
+      "text": "Ancien sous-chef dans le département de la guerre",
+      "title": "sous-chef",
+      "entity": "département de la guerre",
+      "details": null,
+      "geodata": null,
+      "previous": true
+    },
+    {
+      "text": "à présent commissaire ordinaire des guerres.",
+      "title": "commissaire ordinaire",
+      "entity": "guerres",
+      "details": "à présent",
+      "geodata": null,
+      "previous": false
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, en considération de ses services, et pour sa retraite des bureaux de la guerre.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1788"
+      ],
+      "amount": 2600,
+      "deduction": null,
+      "type": "retraite",
+      "job": null,
+      "entity": "bureaux de la guerre",
+      "recognitionOfHisServices": "past",
+      "details": null,
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, en faveur de son mariage avec demoiselle Nicole Le Franc, fille de l'un des garçons ordinaires de la chambre du roi, à laquelle a été assurée ladite pension de 1,500 livres.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1782"
+      ],
+      "amount": 1500,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "en faveur de son mariage",
+      "geodata": null,
+      "onBehalf": "beau-père",
+      "onBehalfJob": "garçon ordinaire",
+      "onBehalfEntity": "chambre du roi",
+      "onBehalfDetails": "père de demoiselle Nicole Le Franc (l'épouse)",
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+// classe 2 page 14
+
+{
+  "person": {
+    "lastName": "CLERMONT-TONNERRE",
+    "firstName": "François-Joseph",
+    "title": "Marquis",
+    "sex": "male",
+    "age": 62,
+    "birthYear": 1727,
+    "totalAmount": 10360
+  },
+  "jobs": [
+    {
+      "text": "Maréchal de camp.",
+      "title": "Maréchal de camp",
+      "entity": null,
+      "details": null,
+      "geodata": null,
+      "previous": false
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, y compris 360 livres d'intérêts d'arrérages, pour ses services.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1764"
+      ],
+      "amount": 3360,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": "current",
+      "details": "y compris 360 livres d'intérêts d'arrérages",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, pour mêmes considérations.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1764",
+        "1778"
+      ],
+      "amount": 7000,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": "current",
+      "details": null,
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+
+{
+  "person": {
+    "lastName": "CLUGNY",
+    "firstName": "Tardieu de Malessis",
+    "title": "Dlle",
+    "sex": "female",
+    "age": 57,
+    "birthYear": 1732,
+    "totalAmount": 12000
+  },
+  "jobs": [],
+  "detailedPensions": [
+    {
+      "text": "La première, pour ses services en qualité d'intendant à Saint-Domingue.",
+      "departments": [
+        "F."
+      ],
+      "year": [
+        "1764"
+      ],
+      "amount": 2000,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": "past",
+      "details": null,
+      "geodata": null,
+      "onBehalf": "mari",
+      "onBehalfJob": "intendant",
+      "onBehalfEntity": null,
+      "onBehalfDetails": "sieur de Clugny",
+      "onBehalfGeodata": "Saint-Domingue"
+    },
+    {
+      "text": "La seconde, pour mêmes motifs.",
+      "departments": [
+        "F."
+      ],
+      "year": [
+        "1770"
+      ],
+      "amount": 2000,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": "past",
+      "details": "pour mêmes motifs",
+      "geodata": null,
+      "onBehalf": "mari",
+      "onBehalfJob": "intendant",
+      "onBehalfEntity": null,
+      "onBehalfDetails": "sieur de Clugny",
+      "onBehalfGeodata": "Saint-Domingue"
+    },
+    {
+      "text": "La troisième, en considération des services et de la perte qu'elle a faite du sieur de Clugny, avec réserve de la moitié de cette pension en faveur de son fils.",
+      "departments": [
+        "F."
+      ],
+      "year": [
+        "1776"
+      ],
+      "amount": 8000,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": "past",
+      "details": "avec réserve de la moitié de cette pension en faveur de son fils",
+      "geodata": null,
+      "onBehalf": "mari",
+      "onBehalfJob": "contrôleur général",
+      "onBehalfEntity": null,
+      "onBehalfDetails": "sieur de Clugny",
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+
+{
+  "person": {
+    "lastName": "CONFLANS",
+    "firstName": "de Senecterre",
+    "title": "Dlle",
+    "sex": "female",
+    "age": 39,
+    "birthYear": 1750,
+    "totalAmount": 14000
+  },
+  "jobs": [],
+  "detailedPensions": [
+    {
+      "text": "La première, en faveur des services du maréchal de Senecterre, son grand-père.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1774"
+      ],
+      "amount": 2000,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": "past",
+      "details": null,
+      "geodata": null,
+      "onBehalf": "grand-père",
+      "onBehalfJob": "maréchal",
+      "onBehalfEntity": null,
+      "onBehalfDetails": "de Senecterre",
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, en considération des services de son mari.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1774"
+      ],
+      "amount": 6000,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": "past",
+      "details": null,
+      "geodata": null,
+      "onBehalf": "mari",
+      "onBehalfJob": "maréchal",
+      "onBehalfEntity": null,
+      "onBehalfDetails": "d'Armentières",
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La troisième, en remplacement de celle qui lui avait été accordée sur le gouvernement de Newbrisack, réduit de 15,000 livres à 8,000 livres, par ordonnance de 1776.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1774"
+      ],
+      "amount": 6000,
+      "deduction": null,
+      "type": "remplacement",
+      "job": null,
+      "entity": "gouvernement",
+      "recognitionOfHisServices": null,
+      "details": "réduit de 15,000 livres à 8,000 livres, par ordonnance de 1776",
+      "geodata": "Newbrisack",
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+{
+  "person": {
+    "lastName": "COSSART",
+    "firstName": null,
+    "title": "Marquis d'Espies",
+    "sex": "male",
+    "age": 89,
+    "birthYear": 1700,
+    "totalAmount": 11180
+  },
+  "jobs": [
+    {
+      "text": "Maréchal de camp",
+      "title": "Maréchal de camp",
+      "entity": null,
+      "details": null,
+      "geodata": null,
+      "previous": false
+    },
+    {
+      "text": "ci-devant commandant un bataillon des gardes françaises.",
+      "title": "commandant",
+      "entity": "bataillon des gardes françaises",
+      "details": null,
+      "geodata": null,
+      "previous": true
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, y compris 180 livres d'intérêts d'arrérages, pour ses services.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1752"
+      ],
+      "amount": 1180,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": "current",
+      "details": "y compris 180 livres d'intérêts d'arrérages",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, pour retraite.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1767"
+      ],
+      "amount": 9000,
+      "deduction": null,
+      "type": "retraite",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": null,
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La troisième, pour lui tenir lieu d'une pension de pareille somme, sur l'ordre de Saint-Louis.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1767"
+      ],
+      "amount": 1000,
+      "deduction": null,
+      "type": "pension",
+      "job": null,
+      "entity": "ordre de Saint-Louis",
+      "recognitionOfHisServices": null,
+      "details": "pour lui tenir lieu d'une pension de pareille somme",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+//classe 2 page 15
+
+{
+  "person": {
+    "lastName": "COURTEVILLE",
+    "firstName": null,
+    "title": "Comte d'Hodick",
+    "sex": "male",
+    "age": 63,
+    "birthYear": 1726,
+    "totalAmount": 10000
+  },
+  "jobs": [
+    {
+      "text": "Brigadier d'infanterie.",
+      "title": "Brigadier",
+      "entity": "infanterie",
+      "details": null,
+      "geodata": null,
+      "previous": false
+    },
+    {
+      "text": "en qualité de colonel commandant en second le corps des grenadiers de France, supprimé.",
+      "title": "colonel commandant en second",
+      "entity": "corps des grenadiers de France",
+      "details": "supprimé",
+      "geodata": null,
+      "previous": true
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, en considération de l'ancienneté et de la distinction de ses services.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1772"
+      ],
+      "amount": 4000,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": "current",
+      "details": "ancienneté et distinction de ses services",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, pour lui tenir lieu de son traitement en qualité de colonel commandant en second le corps des grenadiers de France, supprimé.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1771"
+      ],
+      "amount": 6000,
+      "deduction": null,
+      "type": "traitement",
+      "job": "colonel commandant en second",
+      "entity": "corps des grenadiers de France",
+      "recognitionOfHisServices": null,
+      "details": "pour lui tenir lieu de son traitement, supprimé",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+{
+  "person": {
+    "lastName": "CROISMARE",
+    "firstName": "Charles de",
+    "title": null,
+    "sex": "male",
+    "age": 59,
+    "birthYear": 1730,
+    "totalAmount": 12238
+  },
+  "jobs": [
+    {
+      "text": "Maréchal de camp",
+      "title": "Maréchal de camp",
+      "entity": null,
+      "details": null,
+      "geodata": null,
+      "previous": false
+    },
+    {
+      "text": "ci-devant lieutenant des gardes du corps de Sa Majesté dans la compagnie de Beauvau.",
+      "title": "lieutenant",
+      "entity": "gardes du corps de Sa Majesté dans la compagnie de Beauvau",
+      "details": null,
+      "geodata": null,
+      "previous": true
+    },
+    {
+      "text": "en qualité de ci-devant écuyer-cavalcadour du roi en sa petite écurie.",
+      "title": "écuyer-cavalcadour",
+      "entity": "petite écurie du roi",
+      "details": null,
+      "geodata": null,
+      "previous": true
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, y compris 138 livres d'intérêts d'arrérages, en considération de ses services.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1765"
+      ],
+      "amount": 4338,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": "current",
+      "details": "y compris 138 livres d'intérêts d'arrérages",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, en considération de ses services, et pour sa retraite des gardes du corps.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1781"
+      ],
+      "amount": 5500,
+      "deduction": null,
+      "type": "retraite",
+      "job": null,
+      "entity": "gardes du corps",
+      "recognitionOfHisServices": "current",
+      "details": null,
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La troisième, en qualité de ci-devant écuyer-cavalcadour du roi en sa petite écurie.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1779"
+      ],
+      "amount": 2400,
+      "deduction": null,
+      "type": null,
+      "job": "écuyer-cavalcadour",
+      "entity": "petite écurie du roi",
+      "recognitionOfHisServices": null,
+      "details": null,
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+{
+  "person": {
+    "lastName": "DAMAS D'ANTIGNY",
+    "firstName": "François",
+    "title": null,
+    "sex": "male",
+    "age": 58,
+    "birthYear": 1731,
+    "totalAmount": 12000
+  },
+  "jobs": [],
+  "detailedPensions": [
+    {
+      "text": "La première pension a été accordée sans retenue à feue madame Zéphirinne-Félicité de Rochechouart, au sieur de Damas d'Antigny, son mari, et aux enfants qui pourraient naître de leur mariage et à leur postérité.",
+      "departments": [
+        "F."
+      ],
+      "year": [
+        "1757"
+      ],
+      "amount": 6000,
+      "deduction": false,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "accordée à feue madame Zéphirinne-Félicité de Rochechouart, au sieur de Damas d'Antigny, son mari, et aux enfants",
+      "geodata": null,
+      "onBehalf": "mari",
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": "feue madame Zéphirinne-Félicité de Rochechouart",
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, aussi sans retenue, pour l'indemniser du gouvernement de Dombes, dont la survivance lui était assurée, et a été supprimée par édit de septembre 1781.",
+      "departments": [
+        "F."
+      ],
+      "year": [
+        "1766"
+      ],
+      "amount": 6000,
+      "deduction": false,
+      "type": "indemnité",
+      "job": null,
+      "entity": "gouvernement de Dombes",
+      "recognitionOfHisServices": null,
+      "details": "supprimée par édit de septembre 1781",
+      "geodata": "Dombes",
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+{
+  "person": {
+    "lastName": "DANZELE DE SAUDRICOURT",
+    "firstName": "Antoine-Charles",
+    "title": null,
+    "sex": "male",
+    "age": 56,
+    "birthYear": 1733,
+    "totalAmount": 10937
+  },
+  "jobs": [
+    {
+      "text": "Gentilhomme de la vénerie du roi.",
+      "title": "Gentilhomme",
+      "entity": "vénerie du roi",
+      "details": null,
+      "geodata": null,
+      "previous": false
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première est le produit net de deux objets portés dans un précédent brevet du 1er février 1780, retiré.",
+      "departments": [
+        "M",
+        "du R."
+      ],
+      "year": [
+        "1780"
+      ],
+      "amount": 1737,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "produit net de deux objets portés dans un précédent brevet du 1er février 1780, retiré",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, sans retenue, est divisée comme suit, savoir: 6,200 livres à titre de retraite, et 3,000 livres à titre de pension extraordinaire en considération de ses infirmités.",
+      "departments": [
+        "M",
+        "du R."
+      ],
+      "year": [
+        "1782"
+      ],
+      "amount": 9200,
+      "deduction": false,
+      "type": "retraite et pension extraordinaire",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "divisée comme suit, savoir: 6,200 livres à titre de retraite, et 3,000 livres à titre de pension extraordinaire en considération de ses infirmités",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+
+{
+  "person": {
+    "lastName": "D'ARTAGNAN",
+    "firstName": "Louis de Fezenzac de Montesquiou",
+    "title": null,
+    "sex": "male",
+    "age": 56,
+    "birthYear": 1733,
+    "totalAmount": 8062
+  },
+  "jobs": [
+    {
+      "text": "Maréchal de camp,",
+      "title": "Maréchal de camp",
+      "entity": null,
+      "details": null,
+      "geodata": null,
+      "previous": false
+    },
+    {
+      "text": "ci-devant capitaine au régiment des gardes françaises.",
+      "title": "capitaine",
+      "entity": "régiment des gardes françaises",
+      "details": null,
+      "geodata": null,
+      "previous": true
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, y compris 162 livres d'intérêts d'arrérages, en considération des services du maréchal de Montesquiou, son grand-oncle, et de ceux de son père.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1752",
+        "1770"
+      ],
+      "amount": 2062,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "y compris 162 livres d'intérêts d'arrérages",
+      "geodata": null,
+      "onBehalf": "grand-oncle et père",
+      "onBehalfJob": "maréchal",
+      "onBehalfEntity": null,
+      "onBehalfDetails": "maréchal de Montesquiou",
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, en considération de trente-neuf années de service, et pour sa retraite dudit régiment.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1789"
+      ],
+      "amount": 6000,
+      "deduction": null,
+      "type": "retraite",
+      "job": null,
+      "entity": "régiment des gardes françaises",
+      "recognitionOfHisServices": "past",
+      "details": "en considération de trente-neuf années de service",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+
+
+//classe 6 page 12
+
+
+{
+  "person": {
+    "lastName": "ANCELIN",
+    "firstName": "Ambroise-Philippe",
+    "title": null,
+    "sex": "male",
+    "age": 64,
+    "birthYear": 1725,
+    "totalAmount": 500
+  },
+  "jobs": [],
+  "detailedPensions": [
+    {
+      "text": "En considération des services de feu son père et de son aïeul, par réversion de partie d'une pension de 3,000 livres dont jouissait le feu sieur Ancelin, son oncle, petit-fils de la nourrice de Louis XIV.",
+      "departments": [
+        "M. du R."
+      ],
+      "year": [
+        "1754"
+      ],
+      "amount": 500,
+      "deduction": null,
+      "type": "réversion",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "réversion de partie d'une pension de 3,000 livres dont jouissait son oncle",
+      "geodata": null,
+      "onBehalf": "père, aïeul et oncle",
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": "le feu sieur Ancelin, son oncle, petit-fils de la nourrice de Louis XIV",
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+{
+  "person": {
+    "lastName": "ANDRÉ",
+    "firstName": "Jeanne",
+    "title": "Demoiselle",
+    "sex": "female",
+    "age": null,
+    "birthYear": null,
+    "totalAmount": 200
+  },
+  "jobs": [],
+  "detailedPensions": [
+    {
+      "text": "La première, par réversion d'une portion de celle de 400 liv. dont jouissait feu son père, maitre en chirurgie à Versailles, pour avoir inventé des bougies destinées à la guérison des maladies de l'urètre et de la vessie.",
+      "departments": [
+        "G.",
+        "M. du R."
+      ],
+      "year": [
+        "1785"
+      ],
+      "amount": 100,
+      "deduction": null,
+      "type": "réversion",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "portion de celle de 400 liv.",
+      "geodata": null,
+      "onBehalf": "père",
+      "onBehalfJob": "maitre en chirurgie",
+      "onBehalfEntity": null,
+      "onBehalfDetails": "pour avoir inventé des bougies destinées à la guérison des maladies de l'urètre et de la vessie",
+      "onBehalfGeodata": "Versailles"
+    },
+    {
+      "text": "La seconde, en considération des services du feu sieur Bernard, son aïeul, potager de la cuisine bouche du roi.",
+      "departments": [
+        "G.",
+        "M. du R."
+      ],
+      "year": [
+        "1783"
+      ],
+      "amount": 100,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": null,
+      "geodata": null,
+      "onBehalf": "aïeul",
+      "onBehalfJob": "potager",
+      "onBehalfEntity": "cuisine bouche du roi",
+      "onBehalfDetails": "sieur Bernard",
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+//classe 6 page 13
+
+{
+  "person": {
+    "lastName": "ANDRÉ",
+    "firstName": "Nicole-Prudence",
+    "title": "Demoiselle",
+    "sex": "female",
+    "age": 39,
+    "birthYear": 1750,
+    "totalAmount": 200
+  },
+  "jobs": [],
+  "detailedPensions": [
+    {
+      "text": "La première, par réversion d'une portion de celle de 400 liv, dont jouissait feu son père, maitre en chirurgie à Versailles, pour avoir inventé des bougies destinées à la guérison des maladies de l'urètre et de la vessie.",
+      "departments": [
+        "G.",
+        "M. du R."
+      ],
+      "year": [
+        "1785"
+      ],
+      "amount": 100,
+      "deduction": null,
+      "type": "réversion",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "portion de celle de 400 liv",
+      "geodata": null,
+      "onBehalf": "père",
+      "onBehalfJob": "maitre en chirurgie",
+      "onBehalfEntity": null,
+      "onBehalfDetails": "pour avoir inventé des bougies destinées à la guérison des maladies de l'urètre et de la vessie",
+      "onBehalfGeodata": "Versailles"
+    },
+    {
+      "text": "La seconde, en considération des services du feu sieur Bernard, son aïeul, potager de la cuisine bouche du roi.",
+      "departments": [
+        "G.",
+        "M. du R."
+      ],
+      "year": [
+        "1783"
+      ],
+      "amount": 100,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": null,
+      "geodata": null,
+      "onBehalf": "aïeul",
+      "onBehalfJob": "potager",
+      "onBehalfEntity": "cuisine bouche du roi",
+      "onBehalfDetails": "sieur Bernard",
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+// ATTENTION classe 6 page 13 format irrégulier !
+// liste de famille sous un format particulier
+{
+  "person": {
+    "lastName": "ANDRIOT",
+    "firstName": "Marguerite",
+    "title": "Demoiselle",
+    "sex": "female",
+    "age": 30,
+    "birthYear": 1759,
+    "totalAmount": 80
+  },
+  "jobs": [],
+  "detailedPensions": [
+    {
+      "text": "Faisant partie d'une pension de 400 liv. accordée aux cinq filles du sieur Francois Andriot de la Roche, ci-devant employé au service de la compagnie des Indes, pour être, ladite pension de 400 livres, partagée également entre elles, et réversible à la dernière survivante; en considération des services de feu leur père.",
+      "departments": [
+        "F."
+      ],
+      "year": [
+        "1781"
+      ],
+      "amount": 80,
+      "deduction": null,
+      "type": "partie d'une pension",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "partagée également entre elles, et réversible à la dernière survivante",
+      "geodata": null,
+      "onBehalf": "père",
+      "onBehalfJob": "employé",
+      "onBehalfEntity": "compagnie des Indes",
+      "onBehalfDetails": "sieur Francois Andriot de la Roche",
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+// classe 6 page 15
+
+{
+  "person": {
+    "lastName": "ARCIZAS",
+    "firstName": "Bertrand-Augustin d'",
+    "title": "sieur d'Estansan",
+    "sex": "male",
+    "age": 47,
+    "birthYear": 1742,
+    "totalAmount": 250
+  },
+  "jobs": [
+    {
+      "text": "Ancien garde du corps du roi",
+      "title": "garde du corps",
+      "entity": "roi",
+      "details": null,
+      "geodata": null,
+      "previous": true
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "en considération des services de feu son père, ci-devant capitaine au régiment de la Couronne. On observe qu'il a été accordé 400 livres de pension, partageables, 200 livres au sieur Bertrand-Augustin d'Arcizas d'Estansan l'aîné, et 100 livres à chacun de ses deux autres frères; le tout réversible d'une tête sur l'autre, la totalité au dernier survivant ; et que, par la mort du plus jeune, l'aîné se trouve avoir actuellement 250 livres et le cadet 150 livres de pension.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1772"
+      ],
+      "amount": 250,
+      "deduction": null,
+      "type": "pension",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "pension de 400 livres partageable, réversible d'une tête sur l'autre",
+      "geodata": null,
+      "onBehalf": "père",
+      "onBehalfJob": "capitaine",
+      "onBehalfEntity": "régiment de la Couronne",
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+// classe 1 page 12
+
+{
+  "person": {
+    "lastName": "SÉGUR",
+    "firstName": "Philippe-Henri",
+    "title": "Maréchal de",
+    "sex": "male",
+    "age": 65,
+    "birthYear": 1724,
+    "totalAmount": 83300
+  },
+  "jobs": [
+    {
+      "text": "Maréchal de France,",
+      "title": "Maréchal de France",
+      "entity": null,
+      "details": null,
+      "geodata": null,
+      "previous": false
+    },
+    {
+      "text": "ministre d'Etat,",
+      "title": "ministre d'Etat",
+      "entity": null,
+      "details": null,
+      "geodata": null,
+      "previous": false
+    },
+    {
+      "text": "et gouverneur des pays de Foix, Donezan et Andore.",
+      "title": "gouverneur",
+      "entity": "pays",
+      "details": null,
+      "geodata": "Foix, Donezan et Andore",
+      "previous": false
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, pour ses services, comme brigadier et colonel d'un régiment d'infanterie de son nom, et pour blessures dans la guerre de 1741.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1747"
+      ],
+      "amount": 5300,
+      "deduction": null,
+      "type": null,
+      "job": "brigadier et colonel",
+      "entity": "régiment d'infanterie",
+      "recognitionOfHisServices": "past",
+      "details": "pour blessures dans la guerre de 1741",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, pour appointements conservés, en qualité d'inspecteur général d'infanterie.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1776"
+      ],
+      "amount": 8000,
+      "deduction": null,
+      "type": "appointements conservés",
+      "job": "inspecteur général",
+      "entity": "infanterie",
+      "recognitionOfHisServices": null,
+      "details": null,
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La troisième, à titre de gratification convertie en pension, en faveur de ses services.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1783"
+      ],
+      "amount": 20000,
+      "deduction": null,
+      "type": "gratification convertie en pension",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": "current",
+      "details": null,
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La quatrième, en qualité de ministre d'Etat.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1781"
+      ],
+      "amount": 20000,
+      "deduction": null,
+      "type": null,
+      "job": "ministre d'Etat",
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": null,
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La cinquième, pour ses services, en qualité de secrétaire d'Etat au département de la guerre, en attendant un gouvernement.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1787"
+      ],
+      "amount": 30000,
+      "deduction": null,
+      "type": null,
+      "job": "secrétaire d'Etat",
+      "entity": "département de la guerre",
+      "recognitionOfHisServices": "past",
+      "details": "en attendant un gouvernement",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+{
+  "person": {
+    "lastName": "THIERRY de Ville-d'Havré",
+    "firstName": null,
+    "title": null,
+    "sex": "male",
+    "age": 50,
+    "birthYear": 1739,
+    "totalAmount": 37336
+  },
+  "jobs": [
+    {
+      "text": "Mestre de camp de dragons",
+      "title": "Mestre de camp",
+      "entity": "dragons",
+      "details": null,
+      "geodata": null,
+      "previous": false
+    },
+    {
+      "text": "premier valet de chambre du roi.",
+      "title": "premier valet de chambre",
+      "entity": "roi",
+      "details": null,
+      "geodata": null,
+      "previous": false
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, pour ses services en qualité de mousquetaire de la première compagnie.",
+      "departments": [
+        "F."
+      ],
+      "year": [
+        "1764"
+      ],
+      "amount": 336,
+      "deduction": null,
+      "type": null,
+      "job": "mousquetaire",
+      "entity": "première compagnie",
+      "recognitionOfHisServices": "past",
+      "details": null,
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, pour idem, en qualité de sous-brigadier de ladite compagnie.",
+      "departments": [
+        "F."
+      ],
+      "year": [
+        "1770"
+      ],
+      "amount": 300,
+      "deduction": null,
+      "type": null,
+      "job": "sous-brigadier",
+      "entity": "ladite compagnie",
+      "recognitionOfHisServices": "past",
+      "details": "pour idem",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La troisième, en qualité de lieutenant-colonel de dragons, avec rang de mestre de camp.",
+      "departments": [
+        "F."
+      ],
+      "year": [
+        "1774"
+      ],
+      "amount": 1000,
+      "deduction": null,
+      "type": null,
+      "job": "lieutenant-colonel",
+      "entity": "dragons",
+      "recognitionOfHisServices": null,
+      "details": "avec rang de mestre de camp",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La quatrième, pour ses services près monseigneur le Dauphin aujourd'hui roi, comme premier valet de chambre en survivance.",
+      "departments": [
+        "F."
+      ],
+      "year": [
+        "1757"
+      ],
+      "amount": 1200,
+      "deduction": null,
+      "type": null,
+      "job": "premier valet de chambre",
+      "entity": "monseigneur le Dauphin",
+      "recognitionOfHisServices": "past",
+      "details": "en survivance",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La cinquième, sur les gages de la place de premier valet de chambre de monseigneur le duc de Berry, aujourd'hui roi, dont était alors pourvu le sieur son père.",
+      "departments": [
+        "F."
+      ],
+      "year": [
+        "1760"
+      ],
+      "amount": 3500,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "sur les gages de la place. On observe que cette pension est reversible à son épouse.",
+      "geodata": null,
+      "onBehalf": "père",
+      "onBehalfJob": "premier valet de chambre",
+      "onBehalfEntity": "monseigneur le duc de Berry",
+      "onBehalfDetails": "le sieur son père",
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La sixième, tant pour ses services que pour lui faciliter l'acquisition de la charge de premier valet de chambre du roi.",
+      "departments": [
+        "F."
+      ],
+      "year": [
+        "1774"
+      ],
+      "amount": 6000,
+      "deduction": null,
+      "type": null,
+      "job": "premier valet de chambre",
+      "entity": "roi",
+      "recognitionOfHisServices": "current",
+      "details": "pour lui faciliter l'acquisition de la charge",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La septième, en remplacement d'un intérêt de 30,000 livres qu'il avait sur une place d'administrateur des postes.",
+      "departments": [
+        "F."
+      ],
+      "year": [
+        "1777"
+      ],
+      "amount": 20000,
+      "deduction": null,
+      "type": "remplacement",
+      "job": "administrateur",
+      "entity": "postes",
+      "recognitionOfHisServices": null,
+      "details": "en remplacement d'un intérêt de 30,000 livres. On observe que cette pension est reversible à son épouse.",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La huitième, pour l'indemniser de la perte de sa place de régisseur des vivres du département de la marine.",
+      "departments": [
+        "F."
+      ],
+      "year": [
+        "1782"
+      ],
+      "amount": 5000,
+      "deduction": null,
+      "type": "indemnité",
+      "job": "régisseur des vivres",
+      "entity": "département de la marine",
+      "recognitionOfHisServices": null,
+      "details": "pour l'indemniser de la perte de sa place",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+{
+  "person": {
+    "lastName": "THOMASSIN",
+    "firstName": "Louis",
+    "title": "Marquis de PENIER",
+    "sex": "male",
+    "age": 84,
+    "birthYear": 1705,
+    "totalAmount": 20000
+  },
+  "jobs": [
+    {
+      "text": "Président à mortier honoraire au parlement de Provence",
+      "title": "Président à mortier",
+      "entity": "parlement de Provence",
+      "details": "honoraire",
+      "geodata": "Provence",
+      "previous": false
+    },
+    {
+      "text": "et ancien intendant de la Martinique.",
+      "title": "intendant",
+      "entity": null,
+      "details": null,
+      "geodata": "Martinique",
+      "previous": true
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, en considération de ses services à la Guadeloupe et à la Martinique, où il a successivement rempli la place d'intendant.",
+      "departments": [
+        "M."
+      ],
+      "year": [
+        "1771"
+      ],
+      "amount": 10000,
+      "deduction": null,
+      "type": null,
+      "job": "intendant",
+      "entity": null,
+      "recognitionOfHisServices": "past",
+      "details": "où il a successivement rempli la place d'intendant",
+      "geodata": "Guadeloupe et à la Martinique",
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, en considération de ses services en la même qualité et pendant la durée de sa seconde administration.",
+      "departments": [
+        "M."
+      ],
+      "year": [
+        "1785"
+      ],
+      "amount": 10000,
+      "deduction": null,
+      "type": null,
+      "job": "intendant",
+      "entity": null,
+      "recognitionOfHisServices": "past",
+      "details": "pendant la durée de sa seconde administration",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+
+{
+  "person": {
+    "lastName": "TURPIN",
+    "firstName": "De Crissé Lancelot",
+    "title": "Comte de",
+    "sex": "male",
+    "age": 73,
+    "birthYear": 1716,
+    "totalAmount": 30000
+  },
+  "jobs": [
+    {
+      "text": "Lieutenant général des armées du roi,",
+      "title": "Lieutenant général",
+      "entity": "armées du roi",
+      "details": null,
+      "geodata": null,
+      "previous": false
+    },
+    {
+      "text": "ancien inspecteur général de la cavalerie et des dragons,",
+      "title": "inspecteur général",
+      "entity": "cavalerie et des dragons",
+      "details": null,
+      "geodata": null,
+      "previous": true
+    },
+    {
+      "text": "et commandeur de l'ordre royal et militaire de Saint-Louis.",
+      "title": "commandeur",
+      "entity": "ordre royal et militaire de Saint-Louis",
+      "details": null,
+      "geodata": null,
+      "previous": false
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, en considération de son mariage avec mademoiselle de Lowendal, et à titre de reversion de partie de celle de 20,000 livres accordée en 1755 à madame la maréchale, sa belle-mère.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1759"
+      ],
+      "amount": 10000,
+      "deduction": null,
+      "type": "reversion",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "en considération de son mariage avec mademoiselle de Lowendal, et à titre de reversion de partie de celle de 20,000 livres accordée en 1755",
+      "geodata": null,
+      "onBehalf": "belle-mère",
+      "onBehalfJob": "maréchale",
+      "onBehalfEntity": null,
+      "onBehalfDetails": "madame la maréchale",
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, pour appointements conservés en qualité d'ancien inspecteur général de cavalerie.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1776"
+      ],
+      "amount": 8000,
+      "deduction": null,
+      "type": "appointements conservés",
+      "job": "inspecteur général",
+      "entity": "cavalerie",
+      "recognitionOfHisServices": null,
+      "details": null,
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La troisième, en considération de l'ancienneté et de la distinction de ses services. On observe : 1° que cette dernière pension doit cesser lorsqu'il rentrera en activité de service ; 2° qu'en vertu des décisions et brevet du 13 mars 1759, sa pension de 10,000 livres doit passer, après son décès, à mademoiselle de Lowendal, son épouse, et après le décès de l'un et de l'autre à ceux de leurs enfants qui existeront alors.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1783"
+      ],
+      "amount": 12000,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": "current",
+      "details": "On observe : 1° que cette dernière pension doit cesser lorsqu'il rentrera en activité de service ; 2° qu'en vertu des décisions et brevet du 13 mars 1759, sa pension de 10,000 livres doit passer, après son décès, à mademoiselle de Lowendal, son épouse, et après le décès de l'un et de l'autre à ceux de leurs enfants qui existeront alors.",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+{
+  "person": {
+    "lastName": "VIMEUR",
+    "firstName": "J. Bapt. Donatien",
+    "title": "Comte de ROCHAMBEAU",
+    "sex": "male",
+    "age": 64,
+    "birthYear": 1725,
+    "totalAmount": 34740
+  },
+  "jobs": [
+    {
+      "text": "Lieutenant général des armées du roi,",
+      "title": "Lieutenant général",
+      "entity": "armées du roi",
+      "details": null,
+      "geodata": null,
+      "previous": false
+    },
+    {
+      "text": "chevalier de ses ordres,",
+      "title": "chevalier",
+      "entity": "ordres du roi",
+      "details": null,
+      "geodata": null,
+      "previous": false
+    },
+    {
+      "text": "et gouverneur de Villefranche.",
+      "title": "gouverneur",
+      "entity": null,
+      "details": null,
+      "geodata": "Villefranche",
+      "previous": false
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, y compris 540 livres d'intérêts d'arrérages, en considération de ses services et blessures.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1747"
+      ],
+      "amount": 3540,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": "current",
+      "details": "y compris 540 livres d'intérêts d'arrérages, et blessures",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, pour appointements conservés en qualité d'inspecteur général d'infanterie.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1776"
+      ],
+      "amount": 8000,
+      "deduction": null,
+      "type": "appointements conservés",
+      "job": "inspecteur général",
+      "entity": "infanterie",
+      "recognitionOfHisServices": null,
+      "details": null,
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La troisième, en indemnité de pareille somme sur le gouvernement de Vendôme, supprimé par ordonnance du 18 mars 1776.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1779"
+      ],
+      "amount": 1200,
+      "deduction": null,
+      "type": "indemnité",
+      "job": null,
+      "entity": "gouvernement",
+      "recognitionOfHisServices": null,
+      "details": "supprimé par ordonnance du 18 mars 1776",
+      "geodata": "Vendôme",
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La quatrième, en considération de la distinction et de l'utilité de ses services, et en attendant un gouvernement de la première classe, qui, lorsqu'il en sera pourvu, doit faire cesser ladite pension, et le gouvernement de Villefranche. On observe que sur ses pensions, 4,000 livres sont reversibles à la demoiselle d'Acosta, son épouse.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1781"
+      ],
+      "amount": 22000,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": "current",
+      "details": "en attendant un gouvernement de la première classe, qui, lorsqu'il en sera pourvu, doit faire cesser ladite pension, et le gouvernement de Villefranche. On observe que sur ses pensions, 4,000 livres sont reversibles à la demoiselle d'Acosta, son épouse.",
+      "geodata": "Villefranche",
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+// classe 1 page 11
+
+{
+  "person": {
+    "lastName": "SAYN",
+    "firstName": "Georges-Ernest",
+    "title": "Comte de",
+    "sex": "male",
+    "age": 54,
+    "birthYear": 1735,
+    "totalAmount": 22000
+  },
+  "jobs": [
+    {
+      "text": "Maréchal de camp,",
+      "title": "Maréchal de camp",
+      "entity": null,
+      "details": null,
+      "geodata": null,
+      "previous": false
+    },
+    {
+      "text": "ci-devant mestre de camp, commandant ci-devant le régiment d'infanterie allemande d'Anhalt.",
+      "title": "mestre de camp",
+      "entity": "régiment d'infanterie allemande d'Anhalt",
+      "details": null,
+      "geodata": null,
+      "previous": true
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, en considération de ses services, et pour l'indemniser des dégâts que les armées ont faits, la guerre dernière, dans ses biens en Allemagne.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1763"
+      ],
+      "amount": 10000,
+      "deduction": null,
+      "type": "indemnité",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": "current",
+      "details": "indemniser des dégâts, la guerre dernière, dans ses biens en Allemagne",
+      "geodata": "Allemagne",
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, pour ses services et pour sa retraite, en qualité de mestre de camp, commandant ledit régiment.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1780"
+      ],
+      "amount": 6000,
+      "deduction": null,
+      "type": "retraite",
+      "job": "mestre de camp",
+      "entity": "régiment d'infanterie allemande d'Anhalt",
+      "recognitionOfHisServices": "past",
+      "details": null,
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La troisième, pour même considération de services, et pour arriver au total de 12,000 livres équivalent le traitement dont il jouissait comme mestre de camp du régiment d'Anhalt. On observe que 5,000 livres sont reversibles à son épouse.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1780"
+      ],
+      "amount": 6000,
+      "deduction": null,
+      "type": null,
+      "job": "mestre de camp",
+      "entity": "régiment d'Anhalt",
+      "recognitionOfHisServices": "past",
+      "details": "pour arriver au total de 12,000 livres. On observe que 5,000 livres sont reversibles à son épouse.",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+
+{
+  "person": {
+    "lastName": "SPARRE",
+    "firstName": "Séraphim-Joseph",
+    "title": "Comte de",
+    "sex": "male",
+    "age": 53,
+    "birthYear": 1736,
+    "totalAmount": 25048
+  },
+  "jobs": [
+    {
+      "text": "Lieutenant général des armées du roi,",
+      "title": "Lieutenant général",
+      "entity": "armées du roi",
+      "details": null,
+      "geodata": null,
+      "previous": false
+    },
+    {
+      "text": "ci-devant colonel propriétaire du régiment de Royal-Suédois.",
+      "title": "colonel propriétaire",
+      "entity": "régiment de Royal-Suédois",
+      "details": null,
+      "geodata": null,
+      "previous": true
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, en considération de ses services.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1771"
+      ],
+      "amount": 5400,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": "current",
+      "details": null,
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, pour même considération, et alors colonel propriétaire du régiment ci-dessus.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1763"
+      ],
+      "amount": 3648,
+      "deduction": null,
+      "type": null,
+      "job": "colonel propriétaire",
+      "entity": "régiment de Royal-Suédois",
+      "recognitionOfHisServices": "past",
+      "details": null,
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La troisième, à titre d'appointements, en qualité de colonel propriétaire du régiment de Royal-Suédois, lesquels ont été convertis en pension, du jour de sa démission dudit régiment.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1780"
+      ],
+      "amount": 12000,
+      "deduction": null,
+      "type": "appointements convertis en pension",
+      "job": "colonel propriétaire",
+      "entity": "régiment de Royal-Suédois",
+      "recognitionOfHisServices": "past",
+      "details": "du jour de sa démission dudit régiment",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La quatrième, en considération de ses services, et de ceux du feu sieur Joseph-Igrace Sparre, son père, avec assurance de 4,000 livres de plus à la mort de son épouse, qui par représailles a la même assurance de 4,000 livres, en cas de prédécès de son mari.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1788"
+      ],
+      "amount": 4000,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": "current",
+      "details": "avec assurance de 4,000 livres de plus à la mort de son épouse, qui par représailles a la même assurance de 4,000 livres, en cas de prédécès de son mari.",
+      "geodata": null,
+      "onBehalf": "père",
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": "feu sieur Joseph-Igrace Sparre",
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+
+//classe 5 page 15
+
+{
+  "person": {
+    "lastName": "BLANCHARD",
+    "firstName": "Jean-Pierre",
+    "title": null,
+    "sex": "male",
+    "age": 36,
+    "birthYear": 1753,
+    "totalAmount": 1200
+  },
+  "jobs": [],
+  "detailedPensions": [
+    {
+      "text": "Sans retenue, comme une distinction que lui a mérité le succès de son voyage aérien de Douvres à Calais.",
+      "departments": [
+        "M. du R."
+      ],
+      "year": [
+        "1785"
+      ],
+      "amount": 1200,
+      "deduction": false,
+      "type": "gratification",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "comme une distinction que lui a mérité le succès de son voyage aérien",
+      "geodata": "Douvres à Calais",
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+{
+  "person": {
+    "lastName": "BLANCHET",
+    "firstName": "Julie-Filleul",
+    "title": "Demoiselle",
+    "sex": "female",
+    "age": 47,
+    "birthYear": 1742,
+    "totalAmount": 1200
+  },
+  "jobs": [],
+  "detailedPensions": [
+    {
+      "text": "La première, en considération des services de son père, garçon de la chambre du roi, et concierge garde-meuble du château de Choisy.",
+      "departments": [
+        "M. du R."
+      ],
+      "year": [
+        "1770"
+      ],
+      "amount": 400,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": null,
+      "geodata": null,
+      "onBehalf": "père",
+      "onBehalfJob": "garçon de la chambre et concierge garde-meuble",
+      "onBehalfEntity": "chambre du roi et château de Choisy",
+      "onBehalfDetails": null,
+      "onBehalfGeodata": "Choisy"
+    },
+    {
+      "text": "La seconde, pour lui tenir lieu de celle de pareille somme, dont elle jouissait sur les dépenses du château de Choisy.",
+      "departments": [
+        "M. du R."
+      ],
+      "year": [
+        "1787"
+      ],
+      "amount": 800,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "pour lui tenir lieu de celle de pareille somme, dont elle jouissait sur les dépenses du château de Choisy",
+      "geodata": "Choisy",
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+{
+  "person": {
+    "lastName": "BLOND",
+    "firstName": "François",
+    "title": "sieur de Boispoussin",
+    "sex": "male",
+    "age": 59,
+    "birthYear": 1730,
+    "totalAmount": 1621
+  },
+  "jobs": [
+    {
+      "text": "Maréchal des logis des mousquetaires de la garde ordinaire du roi.",
+      "title": "Maréchal des logis",
+      "entity": "mousquetaires de la garde ordinaire du roi",
+      "details": null,
+      "geodata": null,
+      "previous": false
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, y compris 41 livres d'intérêts d'arrérages, en considération de ses services.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1753",
+        "1771"
+      ],
+      "amount": 841,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": "current",
+      "details": "y compris 41 livres d'intérêts d'arrérages",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, pour sa réforme; cette dernière cessera s'il vient à être replacé.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1775"
+      ],
+      "amount": 780,
+      "deduction": null,
+      "type": "réforme",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "cette dernière cessera s'il vient à être replacé",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+{
+  "person": {
+    "lastName": "BLONDEAU",
+    "firstName": "Marie-Hébert",
+    "title": "Demoiselle",
+    "sex": "female",
+    "age": 58,
+    "birthYear": 1731,
+    "totalAmount": 1200
+  },
+  "jobs": [],
+  "detailedPensions": [
+    {
+      "text": "La première, qui lui a été assurée en 1773, pour en jouir à titre de réversion après le décès de son mari, commis au département de la guerre, au bureau des affaires du conseil, à qui elle avait été accordée en considération de la manière distinguée avec laquelle il avait rempli la commission dont il avait été chargé sous les ordres des commissaires du conseil, que le roi envoya, en 1765, au parlement de Pau.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1783"
+      ],
+      "amount": 600,
+      "deduction": null,
+      "type": "réversion",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "assurée en 1773",
+      "geodata": null,
+      "onBehalf": "mari",
+      "onBehalfJob": "commis",
+      "onBehalfEntity": "département de la guerre, au bureau des affaires du conseil",
+      "onBehalfDetails": "la manière distinguée avec laquelle il avait rempli la commission dont il avait été chargé sous les ordres des commissaires du conseil envoyés au parlement de Pau en 1765",
+      "onBehalfGeodata": "Pau"
+    },
+    {
+      "text": "La seconde, pour les services de feu son dit mari.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1783"
+      ],
+      "amount": 600,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": null,
+      "geodata": null,
+      "onBehalf": "mari",
+      "onBehalfJob": "commis",
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+{
+  "person": {
+    "lastName": "BLONDEAU",
+    "firstName": "Marie-Catherine",
+    "title": "Demoiselle",
+    "sex": "female",
+    "age": 71,
+    "birthYear": 1718,
+    "totalAmount": 1500
+  },
+  "jobs": [],
+  "detailedPensions": [
+    {
+      "text": "La première, en considération des services de feu son père, ancien commis au département de la guerre.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1757"
+      ],
+      "amount": 300,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": null,
+      "geodata": null,
+      "onBehalf": "père",
+      "onBehalfJob": "commis",
+      "onBehalfEntity": "département de la guerre",
+      "onBehalfDetails": "feu son père",
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, pour les services de feu son frère, aussi ancien commis audit département.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1784"
+      ],
+      "amount": 800,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": null,
+      "geodata": null,
+      "onBehalf": "frère",
+      "onBehalfJob": "commis",
+      "onBehalfEntity": "département de la guerre",
+      "onBehalfDetails": "feu son frère",
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La troisième, en considération des services de son père et de ses trois frères, pendant cent soixante-trois années.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1785"
+      ],
+      "amount": 400,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "pendant cent soixante-trois années",
+      "geodata": null,
+      "onBehalf": "père et frères",
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": "services de son père et de ses trois frères",
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+
+{
+  "person": {
+    "lastName": "BOBÉ DEZCLOZEAUX",
+    "firstName": "Joseph",
+    "title": null,
+    "sex": "male",
+    "age": 55,
+    "birthYear": 1734,
+    "totalAmount": 1700
+  },
+  "jobs": [
+    {
+      "text": "Commis dans les bureaux de M. Bertin, ministre et secrétaire d'Etat",
+      "title": "Commis",
+      "entity": "bureaux de M. Bertin, ministre et secrétaire d'Etat",
+      "details": null,
+      "geodata": null,
+      "previous": false
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, sans retenue, par continuation de celle de pareille somme dont jouissait feue sa mère.",
+      "departments": [
+        "F."
+      ],
+      "year": [
+        "1766"
+      ],
+      "amount": 200,
+      "deduction": false,
+      "type": "continuation",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "continuation de celle de pareille somme dont jouissait feue sa mère",
+      "geodata": null,
+      "onBehalf": "mère",
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": "feue sa mère",
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, sans retenue, pour dédommagement d'une place de femme de chambre, que Madame Victoire avait promise à sa femme, lors de son mariage.",
+      "departments": [
+        "F."
+      ],
+      "year": [
+        "1772"
+      ],
+      "amount": 1000,
+      "deduction": false,
+      "type": "dédommagement",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "pour dédommagement d'une place de femme de chambre",
+      "geodata": null,
+      "onBehalf": "femme",
+      "onBehalfJob": "femme de chambre",
+      "onBehalfEntity": "Madame Victoire",
+      "onBehalfDetails": "sa femme",
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La troisième, pour les services de feu son père, ci-devant commissaire et contrôleur de la marine, à la Louisiane.",
+      "departments": [
+        "F."
+      ],
+      "year": [
+        "1773"
+      ],
+      "amount": 500,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": null,
+      "geodata": null,
+      "onBehalf": "père",
+      "onBehalfJob": "commissaire et contrôleur de la marine",
+      "onBehalfEntity": null,
+      "onBehalfDetails": "feu son père",
+      "onBehalfGeodata": "Louisiane"
+    }
+  ]
+}
+
+//classe 5 page 16
+
+{
+  "person": {
+    "lastName": "BOCHARD DE CHAMPIGNY",
+    "firstName": "Alexandre",
+    "title": null,
+    "sex": "male",
+    "age": 56,
+    "birthYear": 1733,
+    "totalAmount": 1298
+  },
+  "jobs": [
+    {
+      "text": "Capitaine en second des grenadiers au régiment des gardes françaises.",
+      "title": "Capitaine en second",
+      "entity": "grenadiers au régiment des gardes françaises",
+      "details": null,
+      "geodata": null,
+      "previous": false
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "En considération des services de feu son père, maréchal des camps et armées du roi, y compris 198 livres d'intérêts d'arrérages.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1743",
+        "1759"
+      ],
+      "amount": 1298,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "y compris 198 livres d'intérêts d'arrérages",
+      "geodata": null,
+      "onBehalf": "père",
+      "onBehalfJob": "maréchal des camps et armées",
+      "onBehalfEntity": "roi",
+      "onBehalfDetails": "feu son père",
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+{
+  "person": {
+    "lastName": "BOISQUET",
+    "firstName": "Ursin-Joseph",
+    "title": null,
+    "sex": "male",
+    "age": 48,
+    "birthYear": 1741,
+    "totalAmount": 1350
+  },
+  "jobs": [
+    {
+      "text": "Ci-devant commissaire de la marine et des classes,",
+      "title": "commissaire",
+      "entity": "marine et des classes",
+      "details": null,
+      "geodata": null,
+      "previous": true
+    },
+    {
+      "text": "actuellement trésorier des Invalides de la marine, à Nantes.",
+      "title": "trésorier",
+      "entity": "Invalides de la marine",
+      "details": null,
+      "geodata": "Nantes",
+      "previous": false
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, en considération de ses services pendant qu'il a été chargé de la comptabilité des colonies, au port de Rochefort.",
+      "departments": [
+        "M."
+      ],
+      "year": [
+        "1775"
+      ],
+      "amount": 600,
+      "deduction": null,
+      "type": null,
+      "job": null,
+      "entity": "comptabilité des colonies",
+      "recognitionOfHisServices": "past",
+      "details": "pendant qu'il a été chargé de la comptabilité des colonies",
+      "geodata": "Rochefort",
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, à titre d'appointements conservés pour ses services.",
+      "departments": [
+        "M."
+      ],
+      "year": [
+        "1776"
+      ],
+      "amount": 750,
+      "deduction": null,
+      "type": "appointements conservés",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": "past",
+      "details": null,
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+
+{
+  "person": {
+    "lastName": "BOMBELLES",
+    "firstName": "Alexandre",
+    "title": "baron de",
+    "sex": "male",
+    "age": 43,
+    "birthYear": 1746,
+    "totalAmount": 1416
+  },
+  "jobs": [],
+  "detailedPensions": [
+    {
+      "text": "La première, y compris 108 livres d'accroissement pour arrérages, faisant partie de celle de 3,000 livres accordée aux cinq enfants du feu sieur comte de Bombelles, lieutenant-général des armées du roi, commandeur de l'ordre royal et militaire de Saint-Louis, avec accroissement entre eux, et réversion au dernier survivant, jusqu'à concurrence de 1,500 livres seulement.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1757"
+      ],
+      "amount": 708,
+      "deduction": null,
+      "type": "pension",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "y compris 108 livres d'accroissement pour arrérages, faisant partie d'une pension de 3,000 livres, réversible au dernier survivant jusqu'à 1,500 livres",
+      "geodata": null,
+      "onBehalf": "père",
+      "onBehalfJob": "lieutenant-général et commandeur",
+      "onBehalfEntity": "armées du roi, ordre royal et militaire de Saint-Louis",
+      "onBehalfDetails": "feu sieur comte de Bombelles",
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, y compris aussi 108 livres d'accroissements d'arrérages, faisant partie d'une autre pension de 3,000 livres accordée aux mêmes, avec réversion et accroissement, jusqu'au dernier survivant, de la totalité de ladite somme.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1760"
+      ],
+      "amount": 708,
+      "deduction": null,
+      "type": "pension",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "y compris aussi 108 livres d'accroissements d'arrérages, faisant partie d'une autre pension de 3,000 livres, avec réversion et accroissement jusqu'au dernier survivant",
+      "geodata": null,
+      "onBehalf": "père",
+      "onBehalfJob": "lieutenant-général et commandeur",
+      "onBehalfEntity": "armées du roi, ordre royal et militaire de Saint-Louis",
+      "onBehalfDetails": "feu sieur comte de Bombelles",
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+//classe 5 page 17
+
+{
+  "person": {
+    "lastName": "BOMBELLES",
+    "firstName": "Marc-Marie",
+    "title": "marquis de",
+    "sex": "male",
+    "age": 45,
+    "birthYear": 1744,
+    "totalAmount": 1416
+  },
+  "jobs": [
+    {
+      "text": "Mestre de camp de cavalerie,",
+      "title": "Mestre de camp",
+      "entity": "cavalerie",
+      "details": null,
+      "geodata": null,
+      "previous": false
+    },
+    {
+      "text": "ministre du roi près la diète générale de l'empire,",
+      "title": "ministre",
+      "entity": "diète générale de l'empire",
+      "details": null,
+      "geodata": null,
+      "previous": false
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, faisant partie de celle de 3,000 livres accordée aux cinq enfants du feu sieur comte de Bombelles... mêmes motifs et même assurance de réversion.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1757"
+      ],
+      "amount": 708,
+      "deduction": null,
+      "type": "pension",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "faisant partie de celle de 3,000 livres accordée aux cinq enfants du feu sieur comte de Bombelles, avec assurance de réversion",
+      "geodata": null,
+      "onBehalf": "père",
+      "onBehalfJob": "comte",
+      "onBehalfEntity": null,
+      "onBehalfDetails": "feu sieur comte de Bombelles",
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, faisant partie d'une autre pension de 3,000 livres accordée aux mêmes... mêmes motifs et même assurance de réversion.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1760"
+      ],
+      "amount": 708,
+      "deduction": null,
+      "type": "pension",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "faisant partie d'une autre pension de 3,000 livres accordée aux mêmes, avec assurance de réversion",
+      "geodata": null,
+      "onBehalf": "père",
+      "onBehalfJob": "comte",
+      "onBehalfEntity": null,
+      "onBehalfDetails": "feu sieur comte de Bombelles",
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+{
+  "person": {
+    "lastName": "BONNEFOY",
+    "firstName": "François",
+    "title": null,
+    "sex": "male",
+    "age": 60,
+    "birthYear": 1729,
+    "totalAmount": 1500
+  },
+  "jobs": [],
+  "detailedPensions": [
+    {
+      "text": "La première, sans retenue, en considération de ses services en qualité d'huissier du chambellan du roi, notamment à cause des voyages qu'il a faits à Strasbourg, à Lyon et à Reims.",
+      "departments": [
+        "M. du R."
+      ],
+      "year": [
+        "1779"
+      ],
+      "amount": 300,
+      "deduction": false,
+      "type": null,
+      "job": "huissier",
+      "entity": "chambellan du roi",
+      "recognitionOfHisServices": "past",
+      "details": "notamment à cause des voyages qu'il a faits à Strasbourg, à Lyon et à Reims",
+      "geodata": "Strasbourg, Lyon et Reims",
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, sans retenue, à titre de retraite, en qualité de premier garçon du serdeau de la reine.",
+      "departments": [
+        "M. du R."
+      ],
+      "year": [
+        "1788"
+      ],
+      "amount": 1200,
+      "deduction": false,
+      "type": "retraite",
+      "job": "premier garçon du serdeau",
+      "entity": "reine",
+      "recognitionOfHisServices": "past",
+      "details": null,
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+//classe 4 page 20
+
+{
+  "person": {
+    "lastName": "CHAVANNES",
+    "firstName": "Jean-François",
+    "title": null,
+    "sex": "male",
+    "age": 58,
+    "birthYear": 1731,
+    "totalAmount": 2000
+  },
+  "jobs": [],
+  "detailedPensions": [
+    {
+      "text": "Sans aucune retenue présente ni à venir, en considération de quarante-deux ans de services, en qualité de commis du département de la guerre, au bureau des hôpitaux, et ensuite au bureau du secrétariat du même département, et pour sa retraite ; avec réserve de 830 livres en faveur de son épouse.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1787"
+      ],
+      "amount": 2000,
+      "deduction": false,
+      "type": "retraite",
+      "job": "commis",
+      "entity": "département de la guerre",
+      "recognitionOfHisServices": "past",
+      "details": "quarante-deux ans de services, au bureau des hôpitaux, puis au bureau du secrétariat. Avec réserve de 830 livres en faveur de son épouse.",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+
+{
+  "person": {
+    "lastName": "CHOIN DE MONTCHOISY",
+    "firstName": "Antoine-Louis",
+    "title": null,
+    "sex": "male",
+    "age": 42,
+    "birthYear": 1747,
+    "totalAmount": 2000
+  },
+  "jobs": [
+    {
+      "text": "Major attaché au premier régiment de chasseurs à cheval.",
+      "title": "Major",
+      "entity": "premier régiment de chasseurs à cheval",
+      "details": null,
+      "geodata": null,
+      "previous": false
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "Tant pour lui tenir lieu d'appointements en ladite qualité, qu'en considération de ses services en Amérique, où il a été employé dans le même grade de major, à la suite des volontaires-étrangers de Lauzun : cette pension doit cesser quand il sera placé.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1783"
+      ],
+      "amount": 2000,
+      "deduction": null,
+      "type": "appointements",
+      "job": "major",
+      "entity": "volontaires-étrangers de Lauzun",
+      "recognitionOfHisServices": "past",
+      "details": "cette pension doit cesser quand il sera placé",
+      "geodata": "Amérique",
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+{
+  "person": {
+    "lastName": "CIOLLY",
+    "firstName": "Marie-Anne-Charlotte",
+    "title": "Dlle Cardonne",
+    "sex": "female",
+    "age": 47,
+    "birthYear": 1742,
+    "totalAmount": 2200
+  },
+  "jobs": [
+    {
+      "text": "Ci-devant femme de chambre de Madame Clotilde de France.",
+      "title": "femme de chambre",
+      "entity": "Madame Clotilde de France",
+      "details": null,
+      "geodata": null,
+      "previous": true
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, pour lui tenir lieu du traitement dont elle jouissait en ladite qualité, et pour sa retraite.",
+      "departments": [
+        "M. du R."
+      ],
+      "year": [
+        "1779"
+      ],
+      "amount": 1800,
+      "deduction": null,
+      "type": "retraite",
+      "job": "femme de chambre",
+      "entity": "Madame Clotilde de France",
+      "recognitionOfHisServices": null,
+      "details": "lui tenir lieu du traitement dont elle jouissait",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, à titre de subsistance, en considération des services de son père, premier commis au contrôle général de la maison de feue madame la Dauphine; elle a, de plus, l'assurance de 300 livres après le décès de son mari.",
+      "departments": [
+        "M. du R."
+      ],
+      "year": [
+        "1766"
+      ],
+      "amount": 400,
+      "deduction": null,
+      "type": "subsistance",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "elle a, de plus, l'assurance de 300 livres après le décès de son mari",
+      "geodata": null,
+      "onBehalf": "père",
+      "onBehalfJob": "premier commis",
+      "onBehalfEntity": "contrôle général de la maison de madame la Dauphine",
+      "onBehalfDetails": "services de son père",
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+//classe 4 page 21
+
+{
+  "person": {
+    "lastName": "COLLET",
+    "firstName": "Jean-Baptiste",
+    "title": null,
+    "sex": "male",
+    "age": 76,
+    "birthYear": 1713,
+    "totalAmount": 2000
+  },
+  "jobs": [
+    {
+      "text": "Inspecteur des bâtiments du roi à Vincennes.",
+      "title": "Inspecteur",
+      "entity": "bâtiments du roi",
+      "details": null,
+      "geodata": "Vincennes",
+      "previous": false
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "En considération de ses services depuis 1734, en qualité d'inspecteur des dehors du château de Versailles, et successivement en celle de contrôleur des châteaux de Blois, Chambord et Vincennes; avec réserve de 1,000 livres en faveur de son épouse.",
+      "departments": [
+        "M. du R."
+      ],
+      "year": [
+        "1780"
+      ],
+      "amount": 2000,
+      "deduction": null,
+      "type": null,
+      "job": "inspecteur et contrôleur",
+      "entity": "châteaux de Versailles, Blois, Chambord et Vincennes",
+      "recognitionOfHisServices": "past",
+      "details": "services depuis 1734. Avec réserve de 1,000 livres en faveur de son épouse.",
+      "geodata": "Versailles, Blois, Chambord, Vincennes",
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+//classe 4 page 22
+
+{
+  "person": {
+    "lastName": "COLSON",
+    "firstName": "Rose-Pétronille",
+    "title": "Dlle Leroi",
+    "sex": "female",
+    "age": 59,
+    "birthYear": 1730,
+    "totalAmount": 2000
+  },
+  "jobs": [
+    {
+      "text": "Comédienne ordinaire du roi.",
+      "title": "Comédienne",
+      "entity": "roi",
+      "details": null,
+      "geodata": null,
+      "previous": false
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, en considération de ses services.",
+      "departments": [
+        "M. du R."
+      ],
+      "year": [
+        "1770",
+        "1778"
+      ],
+      "amount": 1000,
+      "deduction": null,
+      "type": "pension",
+      "job": "comédienne",
+      "entity": "roi",
+      "recognitionOfHisServices": "current",
+      "details": null,
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, à titre d'augmentation, en la même considération.",
+      "departments": [
+        "M. du R."
+      ],
+      "year": [
+        "1784"
+      ],
+      "amount": 1000,
+      "deduction": null,
+      "type": "augmentation",
+      "job": "comédienne",
+      "entity": "roi",
+      "recognitionOfHisServices": "current",
+      "details": null,
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+//classe 4 page 23
+
+{
+  "person": {
+    "lastName": "COURTIN",
+    "firstName": "Pierre-Godefroi",
+    "title": "sieur de Toursay",
+    "sex": "male",
+    "age": 76,
+    "birthYear": 1713,
+    "totalAmount": 2057
+  },
+  "jobs": [
+    {
+      "text": "Maréchal des logis retiré de la compagnie des chevau-légers de la garde du roi.",
+      "title": "Maréchal des logis",
+      "entity": "chevau-légers de la garde du roi",
+      "details": null,
+      "geodata": null,
+      "previous": true
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, y compris 57 livres d'intérêts d'arrérages, en considération de ses services.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1748",
+        "1764"
+      ],
+      "amount": 557,
+      "deduction": null,
+      "type": "pension",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": "past",
+      "details": "y compris 57 livres d'intérêts d'arrérages",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, pour sa retraite.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1770",
+        "1774"
+      ],
+      "amount": 1500,
+      "deduction": null,
+      "type": "retraite",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": null,
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
+
+{
+  "person": {
+    "lastName": "DAUPHIN",
+    "firstName": "François",
+    "title": "sieur de Goursac",
+    "sex": "male",
+    "age": 55,
+    "birthYear": 1734,
+    "totalAmount": 1935
+  },
+  "jobs": [
+    {
+      "text": "Chevau-léger de la garde ordinaire du roi.",
+      "title": "Chevau-léger",
+      "entity": "garde ordinaire du roi",
+      "details": null,
+      "geodata": null,
+      "previous": false
+    }
+  ],
+  "detailedPensions": [
+    {
+      "text": "La première, y compris 48 livres d'intérêts d'arrérages, en considération de ses services.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1782",
+        "1771"
+      ],
+      "amount": 348,
+      "deduction": null,
+      "type": "pension",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": "past",
+      "details": "y compris 48 livres d'intérêts d'arrérages",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La seconde, en la même considération.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1774"
+      ],
+      "amount": 300,
+      "deduction": null,
+      "type": "pension",
+      "job": null,
+      "entity": null,
+      "recognitionOfHisServices": "past",
+      "details": null,
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La troisième, pour lui tenir lieu d'une paie de chevau-léger relégué.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1775"
+      ],
+      "amount": 540,
+      "deduction": null,
+      "type": "pension",
+      "job": "chevau-léger",
+      "entity": null,
+      "recognitionOfHisServices": null,
+      "details": "pour lui tenir lieu d'une paie de chevau-léger relégué",
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    },
+    {
+      "text": "La quatrième, pour sa réforme dudit corps.",
+      "departments": [
+        "G."
+      ],
+      "year": [
+        "1787"
+      ],
+      "amount": 747,
+      "deduction": null,
+      "type": "réforme",
+      "job": null,
+      "entity": "corps des chevau-légers",
+      "recognitionOfHisServices": null,
+      "details": null,
+      "geodata": null,
+      "onBehalf": null,
+      "onBehalfJob": null,
+      "onBehalfEntity": null,
+      "onBehalfDetails": null,
+      "onBehalfGeodata": null
+    }
+  ]
+}
