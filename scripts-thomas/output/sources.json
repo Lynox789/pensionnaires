@@ -1,0 +1,2375 @@
+[
+  {
+    "class": 7,
+    "page": 100,
+    "entryNumber": 2,
+    "xyStart": [
+      80,
+      201
+    ],
+    "xyEnd": [
+      1103,
+      273
+    ],
+    "extractedAt": "2026-06-19T22:46:35",
+    "cost": {
+      "eur": 0.016637739999999998,
+      "inputTokens": 321,
+      "outputTokens": 600,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BOYSSIÈRE",
+      "firstName": "Dalmas de",
+      "widowOf": null,
+      "title": null,
+      "sex": "male",
+      "age": 73,
+      "birthYear": 1716,
+      "totalAmount": 590,
+      "incoherence": null
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "Pour ses services et retraite en qualité de ci-devant commandant le bataillon de milice de Rhodez. Dans cette pension sont comprises 90 livres d'intérêts sur les 500 livres de pension originaire.",
+        "department": "G",
+        "year": "1763",
+        "amount": 590,
+        "deduction": null,
+        "type": "retraite",
+        "reasons": [
+          "services",
+          "retraite",
+          "intérêts sur la pension originaire"
+        ],
+        "job": {
+          "text": "ci-devant commandant le bataillon de milice de Rhodez",
+          "title": "commandant",
+          "entity": "bataillon de milice de Rhodez",
+          "militaryRank": null,
+          "reformedRank": false,
+          "serviceDuration": null,
+          "details": null,
+          "geodata": "Rhodez",
+          "previous": true
+        },
+        "serviceDuration": null,
+        "recognitionOfHisServices": "past",
+        "temporary": null,
+        "beneficiaryScope": "self",
+        "details": "Dans cette pension sont comprises 90 livres d'intérêts sur les 500 livres de pension originaire.",
+        "geodata": "Rhodez",
+        "onBehalfPersons": []
+      }
+    ],
+    "wikidata": null,
+    "prosocour": null,
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 100,
+    "entryNumber": 3,
+    "xyStart": [
+      78,
+      327
+    ],
+    "xyEnd": [
+      1110,
+      357
+    ],
+    "extractedAt": "2026-06-19T22:46:41",
+    "cost": {
+      "eur": 0.01348214,
+      "inputTokens": 180,
+      "outputTokens": 491,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRAC",
+      "firstName": "François",
+      "widowOf": null,
+      "title": "sieur de Montpiney",
+      "sex": "male",
+      "age": 57,
+      "birthYear": 1732,
+      "totalAmount": 400,
+      "incoherence": null
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "G. 1769 .............. 400 Pour retraite, en qualité de capitaine au régiment de royal Comtois.",
+        "department": "G",
+        "year": "1769",
+        "amount": 400,
+        "deduction": null,
+        "type": "retraite",
+        "reasons": [],
+        "job": {
+          "text": "en qualité de capitaine au régiment de royal Comtois",
+          "title": "capitaine",
+          "entity": "régiment de royal Comtois",
+          "militaryRank": "capitaine",
+          "reformedRank": false,
+          "serviceDuration": null,
+          "details": null,
+          "geodata": null,
+          "previous": false,
+          "chargeMatchId": "Hhy9s3kBGuoZ3L-aF7yJ",
+          "chargeMatchNom": "Capitaine du régiment des gardes françaises",
+          "chargeMatchInstitution": "Maison du roi > Maison militaire du roi > Des troupes de la Maison du roi > Régiment des gardes françaises",
+          "chargeMatchScore": 0.761
+        },
+        "serviceDuration": null,
+        "recognitionOfHisServices": null,
+        "temporary": null,
+        "beneficiaryScope": "self",
+        "details": null,
+        "geodata": null,
+        "onBehalfPersons": []
+      }
+    ],
+    "wikidata": null,
+    "prosocour": null,
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 100,
+    "entryNumber": 4,
+    "xyStart": [
+      76,
+      373
+    ],
+    "xyEnd": [
+      1113,
+      463
+    ],
+    "extractedAt": "2026-06-19T22:46:47",
+    "cost": {
+      "eur": 0.01523014,
+      "inputTokens": 305,
+      "outputTokens": 542,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRACHET",
+      "firstName": "Gabriel",
+      "widowOf": null,
+      "title": "sieur de Villars",
+      "sex": "male",
+      "age": 66,
+      "birthYear": 1723,
+      "totalAmount": 97,
+      "incoherence": null
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "Pour traitement de réforme en qualité de capitaine réformé du régiment provincial d'Autun. Il cessera d'en jouir s'il est replacé.",
+        "department": "G",
+        "year": "1775",
+        "amount": 97,
+        "deduction": null,
+        "type": "réforme",
+        "reasons": [
+          "traitement de réforme"
+        ],
+        "job": {
+          "text": "capitaine réformé du régiment provincial d'Autun",
+          "title": "capitaine",
+          "entity": "régiment provincial d'Autun",
+          "militaryRank": "capitaine",
+          "reformedRank": true,
+          "serviceDuration": null,
+          "details": null,
+          "geodata": "Autun",
+          "previous": false
+        },
+        "serviceDuration": null,
+        "recognitionOfHisServices": null,
+        "temporary": true,
+        "beneficiaryScope": "self",
+        "details": "Il cessera d'en jouir s'il est replacé.",
+        "geodata": "Autun",
+        "onBehalfPersons": []
+      }
+    ],
+    "wikidata": null,
+    "prosocour": null,
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 100,
+    "entryNumber": 5,
+    "xyStart": [
+      78,
+      467
+    ],
+    "xyEnd": [
+      1104,
+      559
+    ],
+    "extractedAt": "2026-06-19T22:46:54",
+    "cost": {
+      "eur": 0.01605354,
+      "inputTokens": 349,
+      "outputTokens": 569,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRACHET",
+      "firstName": "Louis de",
+      "widowOf": null,
+      "title": null,
+      "sex": "male",
+      "age": 51,
+      "birthYear": 1738,
+      "totalAmount": 300,
+      "incoherence": null
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "G. 1779 300 Ancien garde du corps du roi; pour lui tenir lieu d'appointements en qualité de capitaine attaché au corps de la cavalerie. Il cessera d'en jouir s'il est replacé.",
+        "department": "G",
+        "year": "1779",
+        "amount": 300,
+        "deduction": null,
+        "type": "pension",
+        "reasons": [
+          "pour lui tenir lieu d'appointements en qualité de capitaine attaché au corps de la cavalerie"
+        ],
+        "job": {
+          "text": "Ancien garde du corps du roi",
+          "title": "garde du corps du roi",
+          "entity": "corps du roi",
+          "militaryRank": null,
+          "reformedRank": false,
+          "serviceDuration": null,
+          "details": null,
+          "geodata": null,
+          "previous": true
+        },
+        "serviceDuration": null,
+        "recognitionOfHisServices": "past",
+        "temporary": true,
+        "beneficiaryScope": "self",
+        "details": "Il cessera d'en jouir s'il est replacé.",
+        "geodata": null,
+        "onBehalfPersons": []
+      }
+    ],
+    "wikidata": null,
+    "prosocour": null,
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 100,
+    "entryNumber": 6,
+    "xyStart": [
+      78,
+      581
+    ],
+    "xyEnd": [
+      1102,
+      611
+    ],
+    "extractedAt": "2026-06-19T22:46:59",
+    "cost": {
+      "eur": 0.013928339999999999,
+      "inputTokens": 197,
+      "outputTokens": 507,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRADE",
+      "firstName": "Jean de",
+      "widowOf": null,
+      "title": null,
+      "sex": "male",
+      "age": 48,
+      "birthYear": 1741,
+      "totalAmount": 100,
+      "incoherence": null
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "Sans retenue; en considération de ses services en qualité de ci-devant lieutenant au régiment de la Roche-Aymont.",
+        "department": "G",
+        "year": "1758",
+        "amount": 100,
+        "deduction": false,
+        "type": "pension",
+        "reasons": [
+          "en considération de ses services"
+        ],
+        "job": {
+          "text": "ci-devant lieutenant au régiment de la Roche-Aymont",
+          "title": "lieutenant",
+          "entity": "régiment de la Roche-Aymont",
+          "militaryRank": "lieutenant",
+          "reformedRank": false,
+          "serviceDuration": null,
+          "details": null,
+          "geodata": null,
+          "previous": true,
+          "chargeMatchId": "4zMKtHkBGuoZ3L-al2hs",
+          "chargeMatchNom": "Lieutenant au gouvernement de la ville de Noyon",
+          "chargeMatchInstitution": "Gouvernements des États et des provinces de France > Gouvernement d’Île-de-France > Gouvernements particuliers d’Île-de-France > Gouvernement particulier de Noyon",
+          "chargeMatchScore": 0.658
+        },
+        "serviceDuration": null,
+        "recognitionOfHisServices": "past",
+        "temporary": null,
+        "beneficiaryScope": "self",
+        "details": null,
+        "geodata": null,
+        "onBehalfPersons": []
+      }
+    ],
+    "wikidata": null,
+    "prosocour": null,
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 100,
+    "entryNumber": 7,
+    "xyStart": [
+      78,
+      659
+    ],
+    "xyEnd": [
+      1134,
+      689
+    ],
+    "extractedAt": "2026-06-19T22:47:05",
+    "cost": {
+      "eur": 0.01470574,
+      "inputTokens": 206,
+      "outputTokens": 539,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRADY",
+      "firstName": "Patrice",
+      "widowOf": null,
+      "title": null,
+      "sex": "male",
+      "age": 51,
+      "birthYear": 1738,
+      "totalAmount": 400,
+      "incoherence": null
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "G, 1762 ... 400 Pour sa réforme, en qualité de lieutenant du régiment de Lally, irlandais. Il cessera d'en jouir s'il est replacé.",
+        "department": "G",
+        "year": "1762",
+        "amount": 400,
+        "deduction": null,
+        "type": "réforme",
+        "reasons": [
+          "réforme"
+        ],
+        "job": {
+          "text": "en qualité de lieutenant du régiment de Lally, irlandais",
+          "title": "lieutenant",
+          "entity": "régiment de Lally, irlandais",
+          "militaryRank": "lieutenant",
+          "reformedRank": true,
+          "serviceDuration": null,
+          "details": null,
+          "geodata": null,
+          "previous": false,
+          "chargeMatchId": "uzQOtHkBGuoZ3L-as8Ap",
+          "chargeMatchNom": "Lieutenant général de l’Orléanais",
+          "chargeMatchInstitution": "Gouvernements des États et des provinces de France > Gouvernement d’Orléanais > Lieutenances du gouvernement d’Orléanais > Orléanais, pays et duché d'Orléanais",
+          "chargeMatchScore": 0.746
+        },
+        "serviceDuration": null,
+        "recognitionOfHisServices": null,
+        "temporary": true,
+        "beneficiaryScope": "self",
+        "details": "Il cessera d'en jouir s'il est replacé.",
+        "geodata": null,
+        "onBehalfPersons": []
+      }
+    ],
+    "wikidata": null,
+    "prosocour": null,
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 100,
+    "entryNumber": 8,
+    "xyStart": [
+      78,
+      751
+    ],
+    "xyEnd": [
+      1072,
+      781
+    ],
+    "extractedAt": "2026-06-19T22:47:15",
+    "cost": {
+      "eur": 0.029931740000000002,
+      "inputTokens": 896,
+      "outputTokens": 1063,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRAGELOGNE",
+      "firstName": "François de",
+      "widowOf": null,
+      "title": null,
+      "sex": "male",
+      "age": 27,
+      "birthYear": 1762,
+      "totalAmount": 500,
+      "incoherence": false
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "G. U 1780, 200 livres. Ci-devant sous-lieutenant au régiment d'Armagnac, infanterie. La première, pour avoir eu la cuisse fracassée d'un coup de biscayen à l'attaque de Sainte-Lucie; blessure qui l'a forcé de quitter le service.",
+        "department": "G",
+        "year": "1780",
+        "amount": 200,
+        "deduction": null,
+        "type": "pension",
+        "reasons": [
+          "cuisse fracassée d'un coup de biscayen à l'attaque de Sainte-Lucie",
+          "blessure qui l'a forcé de quitter le service"
+        ],
+        "job": {
+          "text": "Ci-devant sous-lieutenant au régiment d'Armagnac, infanterie",
+          "title": "sous-lieutenant",
+          "entity": "régiment d'Armagnac, infanterie",
+          "militaryRank": "sous-lieutenant",
+          "reformedRank": false,
+          "serviceDuration": null,
+          "details": null,
+          "geodata": "Sainte-Lucie",
+          "previous": true,
+          "chargeMatchId": "366vwZgBImkVMCbKKaGy",
+          "chargeMatchNom": "Colonel du régiment de la Reine-Infanterie",
+          "chargeMatchInstitution": "Du connétable, des maréchaux de France et des autres officiers de guerre > Régiments d’infanterie, de cavalerie et de dragons > Infanterie",
+          "chargeMatchScore": 0.65
+        },
+        "serviceDuration": null,
+        "recognitionOfHisServices": "past",
+        "temporary": null,
+        "beneficiaryScope": "self",
+        "details": null,
+        "geodata": "Sainte-Lucie",
+        "onBehalfPersons": []
+      },
+      {
+        "text": "2„1781, 300 livres. La seconde, en la même considération.",
+        "department": "G",
+        "year": "1781",
+        "amount": 300,
+        "deduction": null,
+        "type": "pension",
+        "reasons": [
+          "cuisse fracassée d'un coup de biscayen à l'attaque de Sainte-Lucie",
+          "blessure qui l'a forcé de quitter le service"
+        ],
+        "job": {
+          "text": "Ci-devant sous-lieutenant au régiment d'Armagnac, infanterie",
+          "title": "sous-lieutenant",
+          "entity": "régiment d'Armagnac, infanterie",
+          "militaryRank": "sous-lieutenant",
+          "reformedRank": false,
+          "serviceDuration": null,
+          "details": null,
+          "geodata": "Sainte-Lucie",
+          "previous": true,
+          "chargeMatchId": "366vwZgBImkVMCbKKaGy",
+          "chargeMatchNom": "Colonel du régiment de la Reine-Infanterie",
+          "chargeMatchInstitution": "Du connétable, des maréchaux de France et des autres officiers de guerre > Régiments d’infanterie, de cavalerie et de dragons > Infanterie",
+          "chargeMatchScore": 0.65
+        },
+        "serviceDuration": null,
+        "recognitionOfHisServices": "past",
+        "temporary": null,
+        "beneficiaryScope": "self",
+        "details": "en la même considération",
+        "geodata": "Sainte-Lucie",
+        "onBehalfPersons": []
+      }
+    ],
+    "wikidata": null,
+    "prosocour": null,
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 100,
+    "entryNumber": 9,
+    "xyStart": [
+      78,
+      841
+    ],
+    "xyEnd": [
+      1125,
+      1003
+    ],
+    "extractedAt": "2026-06-19T22:47:28",
+    "cost": {
+      "eur": 0.030667740000000006,
+      "inputTokens": 566,
+      "outputTokens": 1161,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRANDA",
+      "firstName": "Jean-Michel",
+      "widowOf": null,
+      "title": null,
+      "sex": "male",
+      "age": 59,
+      "birthYear": 1730,
+      "totalAmount": 500,
+      "incoherence": false
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "F. 1° 1770, 300 livres; Sans retenue; ci-devant chef de l'artillerie de la compagnie des Indes, à Lorient. La première, pour récompense de ses services.",
+        "department": "F",
+        "year": "1770",
+        "amount": 300,
+        "deduction": false,
+        "type": "pension",
+        "reasons": [
+          "pour récompense de ses services"
+        ],
+        "job": {
+          "text": "ci-devant chef de l'artillerie de la compagnie des Indes, à Lorient",
+          "title": "chef de l'artillerie",
+          "entity": "compagnie des Indes",
+          "militaryRank": null,
+          "reformedRank": false,
+          "serviceDuration": null,
+          "details": null,
+          "geodata": "Lorient",
+          "previous": true
+        },
+        "serviceDuration": null,
+        "recognitionOfHisServices": "past",
+        "temporary": null,
+        "beneficiaryScope": "self",
+        "details": null,
+        "geodata": "Lorient",
+        "onBehalfPersons": []
+      },
+      {
+        "text": "2° 1782, 200 livres. La seconde, en la même considération. Cette dernière réversible en totalité à la demoiselle Even, son épouse, et après elle aux filles provenant de son mariage avec ledit sieur Branda, avec accroissement progressif entre elles, jusqu'à totalité pour la survivante.",
+        "department": "F",
+        "year": "1782",
+        "amount": 200,
+        "deduction": false,
+        "type": "pension",
+        "reasons": [
+          "pour récompense de ses services",
+          "en la même considération"
+        ],
+        "job": {
+          "text": "ci-devant chef de l'artillerie de la compagnie des Indes, à Lorient",
+          "title": "chef de l'artillerie",
+          "entity": "compagnie des Indes",
+          "militaryRank": null,
+          "reformedRank": false,
+          "serviceDuration": null,
+          "details": null,
+          "geodata": "Lorient",
+          "previous": true
+        },
+        "serviceDuration": null,
+        "recognitionOfHisServices": "past",
+        "temporary": null,
+        "beneficiaryScope": "selfAndOthers",
+        "details": "réversible en totalité à la demoiselle Even, son épouse, et après elle aux filles provenant de son mariage, avec accroissement progressif entre elles jusqu'à totalité pour la survivante",
+        "geodata": "Lorient",
+        "onBehalfPersons": [
+          {
+            "relation": "épouse",
+            "name": "Even",
+            "deceased": false,
+            "job": {
+              "text": "",
+              "title": "",
+              "entity": null,
+              "militaryRank": null,
+              "reformedRank": false,
+              "serviceDuration": null,
+              "details": null,
+              "geodata": null,
+              "previous": false
+            }
+          }
+        ]
+      }
+    ],
+    "wikidata": null,
+    "prosocour": null,
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 100,
+    "entryNumber": 10,
+    "xyStart": [
+      78,
+      1017
+    ],
+    "xyEnd": [
+      1111,
+      1079
+    ],
+    "extractedAt": "2026-06-19T22:47:34",
+    "cost": {
+      "eur": 0.01498174,
+      "inputTokens": 231,
+      "outputTokens": 546,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRANDA",
+      "firstName": "Julienne le Dourgny",
+      "widowOf": null,
+      "title": "Demoiselle",
+      "sex": "female",
+      "age": 63,
+      "birthYear": 1726,
+      "totalAmount": 400,
+      "incoherence": null
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "F. 1784 . 400 En considération des services de feu son mari, garde-magasin de la compagnie des Indes.",
+        "department": "F.",
+        "year": "1784",
+        "amount": 400,
+        "deduction": null,
+        "type": "pension",
+        "reasons": [
+          "en considération des services de feu son mari"
+        ],
+        "job": null,
+        "serviceDuration": null,
+        "recognitionOfHisServices": "past",
+        "temporary": null,
+        "beneficiaryScope": "self",
+        "details": null,
+        "geodata": null,
+        "onBehalfPersons": [
+          {
+            "relation": "mari",
+            "name": null,
+            "deceased": true,
+            "job": {
+              "text": "garde-magasin de la compagnie des Indes",
+              "title": "garde-magasin",
+              "entity": "compagnie des Indes",
+              "militaryRank": null,
+              "reformedRank": false,
+              "serviceDuration": null,
+              "details": null,
+              "geodata": null,
+              "previous": false,
+              "chargeMatchId": "Zizxs3kBGuoZ3L-a7KUq",
+              "chargeMatchNom": "Garde-magasin des Galères à Toulon",
+              "chargeMatchInstitution": "Du général des Galères > Capitaines et autres officiers des Galères",
+              "chargeMatchScore": 0.656
+            }
+          }
+        ]
+      }
+    ],
+    "wikidata": null,
+    "prosocour": null,
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 100,
+    "entryNumber": 11,
+    "xyStart": [
+      78,
+      1095
+    ],
+    "xyEnd": [
+      1109,
+      1125
+    ],
+    "extractedAt": "2026-06-19T22:47:39",
+    "cost": {
+      "eur": 0.011476539999999999,
+      "inputTokens": 174,
+      "outputTokens": 405,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRANNZIN",
+      "firstName": "Amélie",
+      "widowOf": null,
+      "title": "Demoiselle",
+      "sex": "female",
+      "age": null,
+      "birthYear": null,
+      "totalAmount": 100,
+      "incoherence": null
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "BRANNZIN (Demoiselle Amélie), F. 1768 ... 100 Sans retenue; eu considération de sa conversion à la religion catholique.",
+        "department": "F.",
+        "year": "1768",
+        "amount": 100,
+        "deduction": false,
+        "type": "pension",
+        "reasons": [
+          "en considération de sa conversion à la religion catholique"
+        ],
+        "job": null,
+        "serviceDuration": null,
+        "recognitionOfHisServices": null,
+        "temporary": null,
+        "beneficiaryScope": "self",
+        "details": null,
+        "geodata": null,
+        "onBehalfPersons": []
+      }
+    ],
+    "wikidata": null,
+    "prosocour": null,
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 100,
+    "entryNumber": 12,
+    "xyStart": [
+      78,
+      1155
+    ],
+    "xyEnd": [
+      1103,
+      1185
+    ],
+    "extractedAt": "2026-06-19T22:47:44",
+    "cost": {
+      "eur": 0.011080940000000001,
+      "inputTokens": 183,
+      "outputTokens": 386,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRANTES",
+      "firstName": "Louise-Angélique de Caulincourt",
+      "widowOf": "Sieur de Brantes",
+      "title": "Demoiselle",
+      "sex": "female",
+      "age": 66,
+      "birthYear": 1723,
+      "totalAmount": 354,
+      "incoherence": null
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "G. 1751 .... 354 En considération des services de sa famille.",
+        "department": "G",
+        "year": "1751",
+        "amount": 354,
+        "deduction": null,
+        "type": "pension",
+        "reasons": [
+          "en considération des services de sa famille"
+        ],
+        "job": null,
+        "serviceDuration": null,
+        "recognitionOfHisServices": null,
+        "temporary": null,
+        "beneficiaryScope": "self",
+        "details": null,
+        "geodata": null,
+        "onBehalfPersons": []
+      }
+    ],
+    "wikidata": null,
+    "prosocour": null,
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 100,
+    "entryNumber": 13,
+    "xyStart": [
+      78,
+      1215
+    ],
+    "xyEnd": [
+      1113,
+      1285
+    ],
+    "extractedAt": "2026-06-19T22:47:51",
+    "cost": {
+      "eur": 0.01841334,
+      "inputTokens": 297,
+      "outputTokens": 682,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRAS-DE-FER",
+      "firstName": "Louis de",
+      "widowOf": null,
+      "title": "sieur",
+      "sex": "male",
+      "age": 37,
+      "birthYear": 1752,
+      "totalAmount": 200,
+      "incoherence": null
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "G. 1788 ........... 200 Garde du corps du roi ; en considération des services de feu son père, ancien brigadier des gardes de la compagnie de Luxembourg.",
+        "department": "G",
+        "year": "1788",
+        "amount": 200,
+        "deduction": null,
+        "type": "pension",
+        "reasons": [
+          "en considération des services de feu son père"
+        ],
+        "job": {
+          "text": "Garde du corps du roi",
+          "title": "Garde du corps du roi",
+          "entity": "garde du corps du roi",
+          "militaryRank": null,
+          "reformedRank": false,
+          "serviceDuration": null,
+          "details": null,
+          "geodata": null,
+          "previous": false
+        },
+        "serviceDuration": null,
+        "recognitionOfHisServices": null,
+        "temporary": null,
+        "beneficiaryScope": "self",
+        "details": null,
+        "geodata": null,
+        "onBehalfPersons": [
+          {
+            "relation": "père",
+            "name": null,
+            "deceased": true,
+            "job": {
+              "text": "ancien brigadier des gardes de la compagnie de Luxembourg",
+              "title": "brigadier des gardes",
+              "entity": "compagnie de Luxembourg",
+              "militaryRank": "brigadier",
+              "reformedRank": false,
+              "serviceDuration": null,
+              "details": null,
+              "geodata": null,
+              "previous": true
+            }
+          }
+        ]
+      }
+    ],
+    "wikidata": null,
+    "prosocour": null,
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 100,
+    "entryNumber": 14,
+    "xyStart": [
+      80,
+      1311
+    ],
+    "xyEnd": [
+      1121,
+      1401
+    ],
+    "extractedAt": "2026-06-19T22:48:00",
+    "cost": {
+      "eur": 0.022226740000000002,
+      "inputTokens": 326,
+      "outputTokens": 842,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRAS-DE-FER",
+      "firstName": "François de",
+      "widowOf": null,
+      "title": null,
+      "sex": "male",
+      "age": 50,
+      "birthYear": 1739,
+      "totalAmount": 590,
+      "incoherence": false
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "G. 1° 1766, 200; Gendarme réformé de la garde du roi. La première, en considération de ses services.",
+        "department": "G",
+        "year": "1766",
+        "amount": 200,
+        "deduction": null,
+        "type": "pension",
+        "reasons": [
+          "en considération de ses services"
+        ],
+        "job": {
+          "text": "Gendarme réformé de la garde du roi",
+          "title": "gendarme",
+          "entity": "garde du roi",
+          "militaryRank": null,
+          "reformedRank": true,
+          "serviceDuration": null,
+          "details": null,
+          "geodata": null,
+          "previous": false,
+          "chargeMatchId": "wi3zs3kBGuoZ3L-aXgOU",
+          "chargeMatchNom": "Gendarme de la Garde ordinaire du roi",
+          "chargeMatchInstitution": "Maison du roi > Maison militaire du roi > Des troupes de la Maison du roi > Gendarmes de la Garde du roi",
+          "chargeMatchScore": 0.816
+        },
+        "serviceDuration": null,
+        "recognitionOfHisServices": "past",
+        "temporary": null,
+        "beneficiaryScope": "self",
+        "details": null,
+        "geodata": null,
+        "onBehalfPersons": []
+      },
+      {
+        "text": "G. 2° 1775, 390. Gendarme réformé de la garde du roi. La seconde, pour appointements de réforme. Ces appointements seulement seront supprimés lors de son replacement.",
+        "department": "G",
+        "year": "1775",
+        "amount": 390,
+        "deduction": null,
+        "type": "pension",
+        "reasons": [
+          "pour appointements de réforme"
+        ],
+        "job": {
+          "text": "Gendarme réformé de la garde du roi",
+          "title": "gendarme",
+          "entity": "garde du roi",
+          "militaryRank": null,
+          "reformedRank": true,
+          "serviceDuration": null,
+          "details": null,
+          "geodata": null,
+          "previous": false,
+          "chargeMatchId": "wi3zs3kBGuoZ3L-aXgOU",
+          "chargeMatchNom": "Gendarme de la Garde ordinaire du roi",
+          "chargeMatchInstitution": "Maison du roi > Maison militaire du roi > Des troupes de la Maison du roi > Gendarmes de la Garde du roi",
+          "chargeMatchScore": 0.816
+        },
+        "serviceDuration": null,
+        "recognitionOfHisServices": null,
+        "temporary": true,
+        "beneficiaryScope": "self",
+        "details": "Ces appointements seulement seront supprimés lors de son replacement.",
+        "geodata": null,
+        "onBehalfPersons": []
+      }
+    ],
+    "wikidata": null,
+    "prosocour": null,
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 100,
+    "entryNumber": 15,
+    "xyStart": [
+      80,
+      1429
+    ],
+    "xyEnd": [
+      1109,
+      1459
+    ],
+    "extractedAt": "2026-06-19T22:48:07",
+    "cost": {
+      "eur": 0.01842254,
+      "inputTokens": 224,
+      "outputTokens": 697,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRAS-DE-FER",
+      "firstName": "Pierre-Jean-François de",
+      "widowOf": null,
+      "title": null,
+      "sex": "male",
+      "age": 44,
+      "birthYear": 1745,
+      "totalAmount": 100,
+      "incoherence": null
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "G. 1774 .............. 100 Garde du corps du roi dans la compagnie de Luxembourg ; en considération des services de feu son père, ancien porte-étendard dans la même compagnie.",
+        "department": "G",
+        "year": "1774",
+        "amount": 100,
+        "deduction": null,
+        "type": "pension",
+        "reasons": [
+          "en considération des services de feu son père"
+        ],
+        "job": {
+          "text": "Garde du corps du roi dans la compagnie de Luxembourg",
+          "title": "Garde du corps du roi",
+          "entity": "compagnie de Luxembourg",
+          "militaryRank": null,
+          "reformedRank": false,
+          "serviceDuration": null,
+          "details": null,
+          "geodata": null,
+          "previous": false
+        },
+        "serviceDuration": null,
+        "recognitionOfHisServices": null,
+        "temporary": null,
+        "beneficiaryScope": "self",
+        "details": null,
+        "geodata": null,
+        "onBehalfPersons": [
+          {
+            "relation": "père",
+            "name": null,
+            "deceased": true,
+            "job": {
+              "text": "ancien porte-étendard dans la même compagnie",
+              "title": "porte-étendard",
+              "entity": "compagnie de Luxembourg",
+              "militaryRank": null,
+              "reformedRank": false,
+              "serviceDuration": null,
+              "details": null,
+              "geodata": null,
+              "previous": true
+            }
+          }
+        ]
+      }
+    ],
+    "wikidata": null,
+    "prosocour": null,
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 100,
+    "entryNumber": 16,
+    "xyStart": [
+      86,
+      1483
+    ],
+    "xyEnd": [
+      1150,
+      1645
+    ],
+    "extractedAt": "2026-06-19T22:48:15",
+    "cost": {
+      "eur": 0.01880434,
+      "inputTokens": 472,
+      "outputTokens": 664,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRASSAC",
+      "firstName": "Antoine de",
+      "widowOf": null,
+      "title": null,
+      "sex": "male",
+      "age": 70,
+      "birthYear": 1719,
+      "totalAmount": 520,
+      "incoherence": null
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "G. 1761 ..... 520 En considération de ses services en qualité de capitaine au régiment de Vermandois. Dans cette pension sont comprises 120 livres d'intérêts d'arrérages, tant sur les 400 livres de pension originaire que sur les 120 livres d'intérêts.",
+        "department": "G",
+        "year": "1761",
+        "amount": 520,
+        "deduction": null,
+        "type": "pension",
+        "reasons": [
+          "en considération de ses services",
+          "comprend 120 livres d'intérêts d'arrérages sur les 400 livres de pension originaire et sur les 120 livres d'intérêts"
+        ],
+        "job": {
+          "text": "capitaine au régiment de Vermandois",
+          "title": "capitaine",
+          "entity": "régiment de Vermandois",
+          "militaryRank": "capitaine",
+          "reformedRank": false,
+          "serviceDuration": null,
+          "details": null,
+          "geodata": null,
+          "previous": false,
+          "chargeMatchId": "Hhy9s3kBGuoZ3L-aF7yJ",
+          "chargeMatchNom": "Capitaine du régiment des gardes françaises",
+          "chargeMatchInstitution": "Maison du roi > Maison militaire du roi > Des troupes de la Maison du roi > Régiment des gardes françaises",
+          "chargeMatchScore": 0.794
+        },
+        "serviceDuration": null,
+        "recognitionOfHisServices": "past",
+        "temporary": null,
+        "beneficiaryScope": "self",
+        "details": "Dans cette pension sont comprises 120 livres d'intérêts d'arrérages, tant sur les 400 livres de pension originaire que sur les 120 livres d'intérêts.",
+        "geodata": null,
+        "onBehalfPersons": []
+      }
+    ],
+    "wikidata": null,
+    "prosocour": null,
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 101,
+    "entryNumber": 2,
+    "xyStart": [
+      150,
+      139
+    ],
+    "xyEnd": [
+      1132,
+      229
+    ],
+    "extractedAt": "2026-06-19T23:05:09",
+    "cost": {
+      "eur": 0.01487594,
+      "inputTokens": 283,
+      "outputTokens": 531,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRASSAY",
+      "firstName": "Henri",
+      "widowOf": null,
+      "title": "sieur de Josselin",
+      "sex": "male",
+      "age": 34,
+      "birthYear": 1755,
+      "totalAmount": 180,
+      "incoherence": false
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "G. 1775. Pour appointements de réforme en qualité de mousquetaire. Il cessera d'en jouir s'il est replacé.",
+        "department": "G",
+        "year": "1775",
+        "amount": 180,
+        "deduction": null,
+        "type": "pension",
+        "reasons": [
+          "appointements de réforme en qualité de mousquetaire"
+        ],
+        "job": {
+          "text": "appointements de réforme en qualité de mousquetaire",
+          "title": "mousquetaire",
+          "entity": null,
+          "militaryRank": "mousquetaire",
+          "reformedRank": true,
+          "serviceDuration": null,
+          "details": null,
+          "geodata": null,
+          "previous": false
+        },
+        "serviceDuration": null,
+        "recognitionOfHisServices": null,
+        "temporary": true,
+        "beneficiaryScope": "self",
+        "details": "Il cessera d'en jouir s'il est replacé.",
+        "geodata": null,
+        "onBehalfPersons": []
+      }
+    ],
+    "wikidata": null,
+    "prosocour": null,
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 101,
+    "entryNumber": 3,
+    "xyStart": [
+      150,
+      241
+    ],
+    "xyEnd": [
+      1118,
+      295
+    ],
+    "extractedAt": "2026-06-19T23:05:16",
+    "cost": {
+      "eur": 0.015276140000000002,
+      "inputTokens": 235,
+      "outputTokens": 558,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRASSIER",
+      "firstName": "Catherine Faguer",
+      "widowOf": "sieur Brassier",
+      "title": "Demoiselle",
+      "sex": "female",
+      "age": 86,
+      "birthYear": 1703,
+      "totalAmount": 150,
+      "incoherence": null
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "G. 1766. 150 En considération des services de feu son mari, ancien porte-étendard des gardes du corps du roi.",
+        "department": "G",
+        "year": "1766",
+        "amount": 150,
+        "deduction": null,
+        "type": "réversion",
+        "reasons": [
+          "En considération des services de feu son mari"
+        ],
+        "job": null,
+        "serviceDuration": null,
+        "recognitionOfHisServices": "past",
+        "temporary": null,
+        "beneficiaryScope": "self",
+        "details": null,
+        "geodata": null,
+        "onBehalfPersons": [
+          {
+            "relation": "mari",
+            "name": null,
+            "deceased": true,
+            "job": {
+              "text": "ancien porte-étendard des gardes du corps du roi",
+              "title": "porte-étendard",
+              "entity": "gardes du corps du roi",
+              "militaryRank": null,
+              "reformedRank": false,
+              "serviceDuration": null,
+              "details": null,
+              "geodata": null,
+              "previous": true,
+              "chargeMatchId": "CTkdtHkBGuoZ3L-awlTT",
+              "chargeMatchNom": "Porte-étendard des gardes du corps",
+              "chargeMatchInstitution": "Maison du roi > Maison militaire du roi > Des troupes de la Maison du roi > Gardes du corps",
+              "chargeMatchScore": 0.844
+            }
+          }
+        ]
+      }
+    ],
+    "wikidata": null,
+    "prosocour": {
+      "id": "Zyfis3kBGuoZ3L-aCPH4",
+      "score": 0.517
+    },
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 101,
+    "entryNumber": 4,
+    "xyStart": [
+      148,
+      313
+    ],
+    "xyEnd": [
+      1092,
+      369
+    ],
+    "extractedAt": "2026-06-19T23:05:23",
+    "cost": {
+      "eur": 0.014751740000000001,
+      "inputTokens": 246,
+      "outputTokens": 533,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRATY",
+      "firstName": "Jacques",
+      "widowOf": null,
+      "title": null,
+      "sex": "male",
+      "age": 66,
+      "birthYear": 1723,
+      "totalAmount": 300,
+      "incoherence": null
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "F. 1772. Sans retenue ; en considération de ses services et à titre de retraite, en qualité de ci-devant sous-inspecteur du nettoiement de la ville de Paris.",
+        "department": "F",
+        "year": "1772",
+        "amount": 300,
+        "deduction": false,
+        "type": "retraite",
+        "reasons": [
+          "en considération de ses services"
+        ],
+        "job": {
+          "text": "ci-devant sous-inspecteur du nettoiement de la ville de Paris",
+          "title": "sous-inspecteur du nettoiement",
+          "entity": "ville de Paris",
+          "militaryRank": null,
+          "reformedRank": false,
+          "serviceDuration": null,
+          "details": null,
+          "geodata": "Paris",
+          "previous": true
+        },
+        "serviceDuration": null,
+        "recognitionOfHisServices": "past",
+        "temporary": null,
+        "beneficiaryScope": "self",
+        "details": null,
+        "geodata": "Paris",
+        "onBehalfPersons": []
+      }
+    ],
+    "wikidata": null,
+    "prosocour": null,
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 101,
+    "entryNumber": 5,
+    "xyStart": [
+      148,
+      385
+    ],
+    "xyEnd": [
+      1125,
+      435
+    ],
+    "extractedAt": "2026-06-19T23:05:29",
+    "cost": {
+      "eur": 0.01331194,
+      "inputTokens": 213,
+      "outputTokens": 477,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRAUN",
+      "firstName": "Jean-Christophe",
+      "widowOf": null,
+      "title": null,
+      "sex": "male",
+      "age": 46,
+      "birthYear": 1743,
+      "totalAmount": 200,
+      "incoherence": null
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "En considération de ses services en qualité de hautbois réformé des mousquetaires.",
+        "department": "G",
+        "year": "1776",
+        "amount": 200,
+        "deduction": null,
+        "type": "pension",
+        "reasons": [
+          "en considération de ses services"
+        ],
+        "job": {
+          "text": "en qualité de hautbois réformé des mousquetaires",
+          "title": "hautbois",
+          "entity": "mousquetaires",
+          "militaryRank": null,
+          "reformedRank": true,
+          "serviceDuration": null,
+          "details": null,
+          "geodata": null,
+          "previous": false
+        },
+        "serviceDuration": null,
+        "recognitionOfHisServices": "past",
+        "temporary": null,
+        "beneficiaryScope": "self",
+        "details": null,
+        "geodata": null,
+        "onBehalfPersons": []
+      }
+    ],
+    "wikidata": null,
+    "prosocour": null,
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 101,
+    "entryNumber": 6,
+    "xyStart": [
+      150,
+      457
+    ],
+    "xyEnd": [
+      1094,
+      507
+    ],
+    "extractedAt": "2026-06-19T23:05:35",
+    "cost": {
+      "eur": 0.014774739999999998,
+      "inputTokens": 556,
+      "outputTokens": 472,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRAUN",
+      "firstName": "Jean-Frédéric",
+      "widowOf": null,
+      "title": null,
+      "sex": "male",
+      "age": 51,
+      "birthYear": 1738,
+      "totalAmount": 200,
+      "incoherence": false
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "Même observation et même considération que ci-dessus.",
+        "department": "G",
+        "year": "1776",
+        "amount": 200,
+        "deduction": null,
+        "type": "pension",
+        "reasons": [
+          "en considération de ses services"
+        ],
+        "job": {
+          "text": "en qualité de hautbois réformé des mousquetaires",
+          "title": "hautbois",
+          "entity": "mousquetaires",
+          "militaryRank": null,
+          "reformedRank": true,
+          "serviceDuration": null,
+          "details": null,
+          "geodata": null,
+          "previous": false
+        },
+        "serviceDuration": null,
+        "recognitionOfHisServices": "past",
+        "temporary": null,
+        "beneficiaryScope": "self",
+        "details": null,
+        "geodata": null,
+        "onBehalfPersons": []
+      }
+    ],
+    "wikidata": null,
+    "prosocour": null,
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 101,
+    "entryNumber": 7,
+    "xyStart": [
+      148,
+      511
+    ],
+    "xyEnd": [
+      1090,
+      595
+    ],
+    "extractedAt": "2026-06-19T23:05:41",
+    "cost": {
+      "eur": 0.01617314,
+      "inputTokens": 300,
+      "outputTokens": 584,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRAUT DE LA FOND",
+      "firstName": "Augustine Coutance",
+      "widowOf": null,
+      "title": "Demoiselle",
+      "sex": "female",
+      "age": 78,
+      "birthYear": 1711,
+      "totalAmount": 200,
+      "incoherence": null
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "Sans retenue; en considération des services de feu son mari, ancien second lieutenant de vaisseau de la compagnie des Indes.",
+        "department": "F",
+        "year": "1756",
+        "amount": 200,
+        "deduction": false,
+        "type": "réversion",
+        "reasons": [
+          "en considération des services de feu son mari"
+        ],
+        "job": null,
+        "serviceDuration": null,
+        "recognitionOfHisServices": "past",
+        "temporary": null,
+        "beneficiaryScope": "self",
+        "details": null,
+        "geodata": null,
+        "onBehalfPersons": [
+          {
+            "relation": "mari",
+            "name": null,
+            "deceased": true,
+            "job": {
+              "text": "ancien second lieutenant de vaisseau de la compagnie des Indes",
+              "title": "second lieutenant de vaisseau",
+              "entity": "compagnie des Indes",
+              "militaryRank": "second lieutenant de vaisseau",
+              "reformedRank": false,
+              "serviceDuration": null,
+              "details": null,
+              "geodata": null,
+              "previous": true
+            }
+          }
+        ]
+      }
+    ],
+    "wikidata": null,
+    "prosocour": null,
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 101,
+    "entryNumber": 8,
+    "xyStart": [
+      148,
+      599
+    ],
+    "xyEnd": [
+      1096,
+      653
+    ],
+    "extractedAt": "2026-06-19T23:05:48",
+    "cost": {
+      "eur": 0.01454934,
+      "inputTokens": 242,
+      "outputTokens": 525,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRAY",
+      "firstName": "Jean-Louis de",
+      "widowOf": null,
+      "title": null,
+      "sex": "male",
+      "age": 55,
+      "birthYear": 1734,
+      "totalAmount": 360,
+      "incoherence": null
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "Pour ses services et pour retraite en qualité de lieutenant en premier au régiment de Franche-Comté, cavalerie.",
+        "department": "G",
+        "year": "1788",
+        "amount": 360,
+        "deduction": null,
+        "type": "retraite",
+        "reasons": [
+          "ses services",
+          "retraite"
+        ],
+        "job": {
+          "text": "lieutenant en premier au régiment de Franche-Comté, cavalerie",
+          "title": "lieutenant en premier",
+          "entity": "régiment de Franche-Comté, cavalerie",
+          "militaryRank": "lieutenant en premier",
+          "reformedRank": false,
+          "serviceDuration": null,
+          "details": null,
+          "geodata": null,
+          "previous": false
+        },
+        "serviceDuration": null,
+        "recognitionOfHisServices": "past",
+        "temporary": null,
+        "beneficiaryScope": "self",
+        "details": null,
+        "geodata": null,
+        "onBehalfPersons": []
+      }
+    ],
+    "wikidata": null,
+    "prosocour": {
+      "id": "3yzws3kBGuoZ3L-at1nY",
+      "score": 0.544
+    },
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 101,
+    "entryNumber": 9,
+    "xyStart": [
+      148,
+      669
+    ],
+    "xyEnd": [
+      1100,
+      723
+    ],
+    "extractedAt": "2026-06-19T23:05:55",
+    "cost": {
+      "eur": 0.015358940000000001,
+      "inputTokens": 228,
+      "outputTokens": 563,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRAY",
+      "firstName": "Marie Cauchois",
+      "widowOf": "sieur de Bray",
+      "title": null,
+      "sex": "female",
+      "age": 94,
+      "birthYear": 1695,
+      "totalAmount": 177,
+      "incoherence": null
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "M. 1715. En considération des services de feu son père, maître constructeur des vaisseaux du roi, au Havre.",
+        "department": "M.",
+        "year": "1715",
+        "amount": null,
+        "deduction": null,
+        "type": "pension",
+        "reasons": [
+          "en considération des services de feu son père"
+        ],
+        "job": null,
+        "serviceDuration": null,
+        "recognitionOfHisServices": "past",
+        "temporary": null,
+        "beneficiaryScope": "self",
+        "details": null,
+        "geodata": "Havre",
+        "onBehalfPersons": [
+          {
+            "relation": "père",
+            "name": null,
+            "deceased": true,
+            "job": {
+              "text": "maître constructeur des vaisseaux du roi, au Havre",
+              "title": "maître constructeur des vaisseaux du roi",
+              "entity": "vaisseaux du roi",
+              "militaryRank": null,
+              "reformedRank": false,
+              "serviceDuration": null,
+              "details": null,
+              "geodata": "Havre",
+              "previous": false
+            }
+          }
+        ]
+      }
+    ],
+    "wikidata": null,
+    "prosocour": {
+      "id": "Di30s3kBGuoZ3L-asF0J",
+      "score": 0.551
+    },
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 101,
+    "entryNumber": 10,
+    "xyStart": [
+      148,
+      727
+    ],
+    "xyEnd": [
+      1099,
+      809
+    ],
+    "extractedAt": "2026-06-19T23:06:01",
+    "cost": {
+      "eur": 0.01384094,
+      "inputTokens": 273,
+      "outputTokens": 488,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRAYER",
+      "firstName": "Jean-Baptiste",
+      "widowOf": null,
+      "title": null,
+      "sex": "male",
+      "age": 64,
+      "birthYear": 1725,
+      "totalAmount": 400,
+      "incoherence": null
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "M. du R. 1767. En considération de ses services en qualité de maréchal en la petite écurie du roi.",
+        "department": "M. du R.",
+        "year": "1767",
+        "amount": 400,
+        "deduction": null,
+        "type": "pension",
+        "reasons": [
+          "en considération de ses services"
+        ],
+        "job": {
+          "text": "maréchal en la petite écurie du roi",
+          "title": "maréchal",
+          "entity": "petite écurie du roi",
+          "militaryRank": null,
+          "reformedRank": false,
+          "serviceDuration": null,
+          "details": null,
+          "geodata": null,
+          "previous": false,
+          "chargeMatchId": "mHmyH5MBmpSLEILypX6T",
+          "chargeMatchNom": "Garçon-maréchal de la Petite Écurie",
+          "chargeMatchInstitution": "Maison du roi > Maison civile du roi > Du Grand écuyer de France et des officiers des Écuries du roi > Petite Écurie",
+          "chargeMatchScore": 0.759
+        },
+        "serviceDuration": null,
+        "recognitionOfHisServices": "past",
+        "temporary": null,
+        "beneficiaryScope": "self",
+        "details": null,
+        "geodata": null,
+        "onBehalfPersons": []
+      }
+    ],
+    "wikidata": null,
+    "prosocour": {
+      "id": "NjcXtHkBGuoZ3L-abmOX",
+      "score": 0.63
+    },
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 101,
+    "entryNumber": 11,
+    "xyStart": [
+      146,
+      837
+    ],
+    "xyEnd": [
+      1116,
+      917
+    ],
+    "extractedAt": "2026-06-19T23:06:08",
+    "cost": {
+      "eur": 0.016757340000000003,
+      "inputTokens": 312,
+      "outputTokens": 607,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRAZIER",
+      "firstName": "Jeanne Jacquart",
+      "widowOf": null,
+      "title": "Demoiselle",
+      "sex": "female",
+      "age": 54,
+      "birthYear": 1735,
+      "totalAmount": 300,
+      "incoherence": null
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "F. 1786 . . . 300 Sans retenue ; à titre de secours annuel de charité, en considération des services de feu son mari, employé dans les bureaux de l'administration de la loterie royale de France.",
+        "department": "F",
+        "year": "1786",
+        "amount": 300,
+        "deduction": false,
+        "type": "pension",
+        "reasons": [
+          "secours annuel de charité",
+          "services de feu son mari"
+        ],
+        "job": null,
+        "serviceDuration": null,
+        "recognitionOfHisServices": "past",
+        "temporary": null,
+        "beneficiaryScope": "self",
+        "details": "à titre de secours annuel de charité",
+        "geodata": null,
+        "onBehalfPersons": [
+          {
+            "relation": "mari",
+            "name": null,
+            "deceased": true,
+            "job": {
+              "text": "employé dans les bureaux de l'administration de la loterie royale de France",
+              "title": "employé dans les bureaux",
+              "entity": "administration de la loterie royale de France",
+              "militaryRank": null,
+              "reformedRank": false,
+              "serviceDuration": null,
+              "details": null,
+              "geodata": null,
+              "previous": false
+            }
+          }
+        ]
+      }
+    ],
+    "wikidata": null,
+    "prosocour": {
+      "id": "ACLPs3kBGuoZ3L-awE8u",
+      "score": 0.42
+    },
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 101,
+    "entryNumber": 12,
+    "xyStart": [
+      148,
+      929
+    ],
+    "xyEnd": [
+      1099,
+      959
+    ],
+    "extractedAt": "2026-06-19T23:06:15",
+    "cost": {
+      "eur": 0.01436534,
+      "inputTokens": 177,
+      "outputTokens": 530,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRAZIER",
+      "firstName": "Claudine Cotez",
+      "widowOf": "Brazier",
+      "title": null,
+      "sex": "female",
+      "age": 37,
+      "birthYear": 1752,
+      "totalAmount": 100,
+      "incoherence": null
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "En considération des services de feu son mari, brigadier de maréchaussée.",
+        "department": "G",
+        "year": "1788",
+        "amount": 100,
+        "deduction": null,
+        "type": "réversion",
+        "reasons": [
+          "en considération des services de feu son mari"
+        ],
+        "job": null,
+        "serviceDuration": null,
+        "recognitionOfHisServices": "past",
+        "temporary": null,
+        "beneficiaryScope": "self",
+        "details": null,
+        "geodata": null,
+        "onBehalfPersons": [
+          {
+            "relation": "mari",
+            "name": null,
+            "deceased": true,
+            "job": {
+              "text": "brigadier de maréchaussée",
+              "title": "brigadier de maréchaussée",
+              "entity": "maréchaussée",
+              "militaryRank": "brigadier",
+              "reformedRank": false,
+              "serviceDuration": null,
+              "details": null,
+              "geodata": null,
+              "previous": false
+            }
+          }
+        ]
+      }
+    ],
+    "wikidata": null,
+    "prosocour": {
+      "id": "ACLPs3kBGuoZ3L-awE8u",
+      "score": 0.42
+    },
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 101,
+    "entryNumber": 13,
+    "xyStart": [
+      148,
+      981
+    ],
+    "xyEnd": [
+      1097,
+      1039
+    ],
+    "extractedAt": "2026-06-19T23:06:21",
+    "cost": {
+      "eur": 0.01282894,
+      "inputTokens": 228,
+      "outputTokens": 453,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRÉANT",
+      "firstName": "Marie-Françoise",
+      "widowOf": null,
+      "title": null,
+      "sex": "female",
+      "age": 35,
+      "birthYear": 1754,
+      "totalAmount": 150,
+      "incoherence": null
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "M. du. R. 1783 . . . 150 Sans retenue ; pour lui servir de dot dans la maison des nouvelles catholiques de Rouen.",
+        "department": "M. du R.",
+        "year": "1783",
+        "amount": 150,
+        "deduction": false,
+        "type": "pension",
+        "reasons": [
+          "pour lui servir de dot dans la maison des nouvelles catholiques de Rouen"
+        ],
+        "job": null,
+        "serviceDuration": null,
+        "recognitionOfHisServices": null,
+        "temporary": null,
+        "beneficiaryScope": "self",
+        "details": "pour lui servir de dot dans la maison des nouvelles catholiques de Rouen",
+        "geodata": "Rouen",
+        "onBehalfPersons": []
+      }
+    ],
+    "wikidata": null,
+    "prosocour": null,
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 101,
+    "entryNumber": 14,
+    "xyStart": [
+      146,
+      1053
+    ],
+    "xyEnd": [
+      1095,
+      1109
+    ],
+    "extractedAt": "2026-06-19T23:06:27",
+    "cost": {
+      "eur": 0.012658740000000002,
+      "inputTokens": 236,
+      "outputTokens": 444,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRÉARD",
+      "firstName": "Françoise",
+      "widowOf": null,
+      "title": "Demoiselle",
+      "sex": "female",
+      "age": 38,
+      "birthYear": 1751,
+      "totalAmount": 200,
+      "incoherence": null
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "Af. É. 1783 ... 200 Sans retenue; en considération de sa naissance, des services de sa famille et des circonstances dans lesquelles elle se trouve.",
+        "department": "Af. É.",
+        "year": "1783",
+        "amount": 200,
+        "deduction": false,
+        "type": "pension",
+        "reasons": [
+          "en considération de sa naissance",
+          "des services de sa famille",
+          "des circonstances dans lesquelles elle se trouve"
+        ],
+        "job": null,
+        "serviceDuration": null,
+        "recognitionOfHisServices": null,
+        "temporary": null,
+        "beneficiaryScope": "self",
+        "details": null,
+        "geodata": null,
+        "onBehalfPersons": []
+      }
+    ],
+    "wikidata": null,
+    "prosocour": {
+      "id": "Mx_Fs3kBGuoZ3L-aNAEm",
+      "score": 0.532
+    },
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 101,
+    "entryNumber": 15,
+    "xyStart": [
+      148,
+      1123
+    ],
+    "xyEnd": [
+      1096,
+      1179
+    ],
+    "extractedAt": "2026-06-19T23:06:33",
+    "cost": {
+      "eur": 0.01480694,
+      "inputTokens": 233,
+      "outputTokens": 538,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRÉARD",
+      "firstName": "Pierre-Antoine de",
+      "widowOf": null,
+      "title": null,
+      "sex": "male",
+      "age": 47,
+      "birthYear": 1742,
+      "totalAmount": 500,
+      "incoherence": null
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "Pour récompense de ses services en qualité de conseil clerc au conseil supérieur, ci-devant établi à Bayeux.",
+        "department": "F",
+        "year": "1775",
+        "amount": 500,
+        "deduction": null,
+        "type": "pension",
+        "reasons": [
+          "récompense de ses services"
+        ],
+        "job": {
+          "text": "conseil clerc au conseil supérieur, ci-devant établi à Bayeux",
+          "title": "conseil clerc",
+          "entity": "conseil supérieur de Bayeux",
+          "militaryRank": null,
+          "reformedRank": false,
+          "serviceDuration": null,
+          "details": "ci-devant établi à Bayeux",
+          "geodata": "Bayeux",
+          "previous": true
+        },
+        "serviceDuration": null,
+        "recognitionOfHisServices": "past",
+        "temporary": null,
+        "beneficiaryScope": "self",
+        "details": null,
+        "geodata": "Bayeux",
+        "onBehalfPersons": []
+      }
+    ],
+    "wikidata": null,
+    "prosocour": {
+      "id": "Mx_Fs3kBGuoZ3L-aNAEm",
+      "score": 0.493
+    },
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 101,
+    "entryNumber": 16,
+    "xyStart": [
+      146,
+      1183
+    ],
+    "xyEnd": [
+      1095,
+      1237
+    ],
+    "extractedAt": "2026-06-19T23:06:42",
+    "cost": {
+      "eur": 0.014889739999999999,
+      "inputTokens": 221,
+      "outputTokens": 544,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRECEY",
+      "firstName": "Côme-Joseph de",
+      "widowOf": null,
+      "title": null,
+      "sex": "male",
+      "age": 64,
+      "birthYear": 1725,
+      "totalAmount": 400,
+      "incoherence": null
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "M. 1779 ... 400. En considération de ses services en qualité de capitaine des troupes, ci-devant entretenues à la Louisiane.",
+        "department": "M.",
+        "year": "1779",
+        "amount": 400,
+        "deduction": null,
+        "type": "pension",
+        "reasons": [
+          "en considération de ses services"
+        ],
+        "job": {
+          "text": "capitaine des troupes, ci-devant entretenues à la Louisiane",
+          "title": "capitaine des troupes entretenues à la Louisiane",
+          "entity": "troupes entretenues à la Louisiane",
+          "militaryRank": "capitaine",
+          "reformedRank": false,
+          "serviceDuration": null,
+          "details": null,
+          "geodata": "Louisiane",
+          "previous": true
+        },
+        "serviceDuration": null,
+        "recognitionOfHisServices": "past",
+        "temporary": null,
+        "beneficiaryScope": "self",
+        "details": null,
+        "geodata": "Louisiane",
+        "onBehalfPersons": []
+      }
+    ],
+    "wikidata": null,
+    "prosocour": null,
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 101,
+    "entryNumber": 17,
+    "xyStart": [
+      144,
+      1253
+    ],
+    "xyEnd": [
+      1090,
+      1339
+    ],
+    "extractedAt": "2026-06-19T23:06:49",
+    "cost": {
+      "eur": 0.016817139999999998,
+      "inputTokens": 310,
+      "outputTokens": 610,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRECEY",
+      "firstName": "Nicole Pallud",
+      "widowOf": "Astruc",
+      "title": "Demoiselle",
+      "sex": "female",
+      "age": 48,
+      "birthYear": 1741,
+      "totalAmount": 300,
+      "incoherence": null
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "Sans retenue ; en considération des services de feu son premier mari, lieutenant de vaisseau de la compagnie des Indes.",
+        "department": "F",
+        "year": "1782",
+        "amount": 300,
+        "deduction": false,
+        "type": "réversion",
+        "reasons": [
+          "en considération des services de feu son premier mari"
+        ],
+        "job": null,
+        "serviceDuration": null,
+        "recognitionOfHisServices": "past",
+        "temporary": null,
+        "beneficiaryScope": "self",
+        "details": "Demoiselle veuve du sieur Astruc, actuellement épouse du sieur de",
+        "geodata": null,
+        "onBehalfPersons": [
+          {
+            "relation": "mari",
+            "name": "Astruc",
+            "deceased": true,
+            "job": {
+              "text": "lieutenant de vaisseau de la compagnie des Indes",
+              "title": "lieutenant de vaisseau",
+              "entity": "compagnie des Indes",
+              "militaryRank": "lieutenant de vaisseau",
+              "reformedRank": false,
+              "serviceDuration": null,
+              "details": null,
+              "geodata": null,
+              "previous": false,
+              "chargeMatchId": "0zQNtHkBGuoZ3L-akV7l",
+              "chargeMatchNom": "Lieutenant de la compagnie du prévôt de l’Île-de-France",
+              "chargeMatchInstitution": "Parlements et autres juridictions > Siège général de la Table de marbre du Palais > La Connétablie et Maréchaussée de France > Officiers du siège général de la Connétablie et Maréchaussée de France",
+              "chargeMatchScore": 0.65
+            }
+          }
+        ]
+      }
+    ],
+    "wikidata": null,
+    "prosocour": null,
+    "_suggestions": []
+  },
+  {
+    "class": 7,
+    "page": 101,
+    "entryNumber": 18,
+    "xyStart": [
+      144,
+      1343
+    ],
+    "xyEnd": [
+      1092,
+      1393
+    ],
+    "extractedAt": "2026-06-19T23:06:55",
+    "cost": {
+      "eur": 0.01393754,
+      "inputTokens": 219,
+      "outputTokens": 503,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 2959
+    },
+    "person": {
+      "lastName": "BRECEY",
+      "firstName": "Louis-Joseph de",
+      "widowOf": null,
+      "title": null,
+      "sex": "male",
+      "age": 66,
+      "birthYear": 1723,
+      "totalAmount": 400,
+      "incoherence": null
+    },
+    "jobs": [],
+    "detailedPensions": [
+      {
+        "text": "G. 1767. Pour sa retraite, en qualité de lieutenant au régiment royal Lorraine, cavalerie.",
+        "department": "G",
+        "year": "1767",
+        "amount": null,
+        "deduction": null,
+        "type": "retraite",
+        "reasons": [],
+        "job": {
+          "text": "lieutenant au régiment royal Lorraine, cavalerie",
+          "title": "lieutenant",
+          "entity": "régiment royal Lorraine, cavalerie",
+          "militaryRank": "lieutenant",
+          "reformedRank": false,
+          "serviceDuration": null,
+          "details": null,
+          "geodata": null,
+          "previous": false,
+          "chargeMatchId": "uMpcsZMBGByWEhNImYYb",
+          "chargeMatchNom": "Lieutenant général de la Lorraine",
+          "chargeMatchInstitution": "Gouvernements des États et des provinces de France > Gouvernement de Lorraine et Barrois",
+          "chargeMatchScore": 0.722
+        },
+        "serviceDuration": null,
+        "recognitionOfHisServices": null,
+        "temporary": null,
+        "beneficiaryScope": "self",
+        "details": null,
+        "geodata": null,
+        "onBehalfPersons": []
+      }
+    ],
+    "wikidata": null,
+    "prosocour": null,
+    "_suggestions": []
+  }
+]
