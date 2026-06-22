@@ -1,0 +1,88 @@
+{ 
+  // image source
+  "source": null,
+  // Document page number as an integer.
+  "page": null,
+  // Starting X coordinate in pixels (top-left corner of the bounding box).
+  "x": null,
+  // Starting Y coordinate in pixels (top-left corner of the bounding box).
+  "y": null,
+  // Ending X coordinate in pixels (bottom-right corner of the bounding box).
+  "xFin": null,
+  // Ending Y coordinate in pixels (bottom-right corner of the bounding box).
+  "yFin": null,
+  "person": {
+    // Last name of the pensioner.
+    "lastName": "", 
+    // First name of the pensioner.
+    "firstName": "", 
+    // Honorific or noble title if present (e.g., "Comte", "Dlle", "Sieur"). Otherwise null.
+    "title": null, 
+    // Gender of the pensioner ("male" or "female").
+    "sex": "", 
+    // Age as an integer.
+    "age": null, 
+    // Birth year.
+    "birthYear": null, 
+    // Total amount of pensions.
+    "totalAmount": null 
+  },
+
+  // One entry per distinct job mentioned in the text.
+  "jobs": [
+    {
+      // Raw text excerpt from which the information is extracted.
+      "text": "", 
+      // Exact job title (e.g., "intendant", "chirurgien-major").
+      "title": "", 
+      // Organization or entity of assignment (e.g., "police de Paris", "vaisseaux du roi").
+      "entity": "", 
+      // Additional details (e.g., "démission"). Otherwise null.
+      "details": null, 
+      // Explicit geographical location linked to this position (e.g., "Paris"). Otherwise null.
+      "geodata": null, 
+      // Boolean: true if it is a past position ("ancien", "ci-devant", "démission"), otherwise false.
+      "previous": false 
+    }
+  ],
+  // One entry per specific pension or annuity listed in the observations.
+  "detailedPensions": [
+    {
+      // Exact phrase justifying this specific pension.
+      "text": "", 
+      // Array of departments specifically linked to this pension line.
+      "departments": [], 
+      // Array of years this pension was obtained (e.g., ["1769", "1771"]).
+      "year": [], 
+      // Detailed sum allocated for this line.
+      "amount": null, 
+      // Boolean: false if explicitly "sans retenue" (without deduction), otherwise null.
+      "deduction": null, 
+      // Type of pension.
+      "type": null, 
+      // Job title linked to this specific pension.
+      "job": null, 
+      // Entity linked to this specific pension.
+      "entity": null, 
+      // Assessment of services: "current", "past" ("anciens/ci-devant"), or null.
+      "recognitionOfHisServices": null, 
+      // Additional information or observations.
+      "details": null, 
+      // Geographical location specifically linked to this pension.
+      "geodata": null, 
+
+      // Reversion fields
+      
+      // Family relationship with the person who generated the right (e.g., "père").
+      "onBehalf": null, 
+      // Title/Job of the relative (e.g., "conseiller").
+      "onBehalfJob": null, 
+      // Entity of assignment of the relative (e.g., "conseil supérieur de Pondichéry").
+      "onBehalfEntity": null, 
+      // Additional details about the relative.
+      "onBehalfDetails": null, 
+      // Geographical location linked to the relative (e.g., "Pondichéry").
+      "onBehalfGeodata": null 
+    }
+  ]
+}
