@@ -1,7 +1,9 @@
 import requests
 import json
+import re
+from thefuzz import fuzz
 
-def search_prosocour(last_name, first_name):
+def searchProsocour(last_name, first_name):
     # Combine first and last names to format the search query
     search_query = f"{first_name} {last_name}".strip()
     print(f"Starting API request for: '{search_query}'...\n")
@@ -66,6 +68,52 @@ def search_prosocour(last_name, first_name):
 
     except requests.exceptions.RequestException as e:
         print(f"Failed to reach the API: {e}")
+
+
+#Step 2
+
+#Verify that the first and lastname match
+def strictMatch(str1, str2):
+    if not str1 or not str2:
+        return False
+    return str1.strip().lower() == str2.strip().lower()
+
+
+def tokenMatch(str1, str2):
+    if not str1 or not str2:
+        return 0
+   
+    token1 = set(str1.lower().replace('-', ' ').split())
+    token2 = set(str2.lower().replace('-', ' ').split())
+
+    commonWords = token1 & token2
+
+    return len(commonWords)
+
+
+def extractYear(dateStr):
+    if not dateStr:
+        return None
+    #Search for 4 numbers following each other in a string
+    match = re.search(r'\d{4}', str(dateStr))
+    return int(match.group()) if match else None
+
+def matchYears(year1, year2, tolerance = 1):
+    y1 = extractYear(year1)
+    y2 = extractYear(year2)
+
+    if not y1 or not y2:
+        return False
+    #Verify difference between years within the accepted tolerance
+    return abs(y1 - y2) <= tolerance
+
+def levenshteinScore(str1, str2):
+    if not str1 or not str2:
+        return 0
+    #Return a score between 0 and 100 (where 100 means identical)
+    return fuzz.ratio(str1.lower(), str2.lower())
+
+
 
 
 # Main execution block
