@@ -1,124 +1,226 @@
 import requests
 import json
 import re
-from thefuzz import fuzz
+import argparse
+from nltk.metrics import edit_distance
 
-def searchProsocour(last_name, first_name):
-    # Combine first and last names to format the search query
-    search_query = f"{first_name} {last_name}".strip()
-    print(f"Starting API request for: '{search_query}'...\n")
+dbRegistry = {
+    "prosocour": "https://www.prosocour.chateauversailles-recherche.fr/api/public/v2/personnes/search"
+}
 
-    # Target API endpoint
-    url = "https://www.prosocour.chateauversailles-recherche.fr/api/public/v2/personnes/search"
+def extractYear(dateStr):
+    if not dateStr:
+        return None
+    match = re.search(r'\d{4}', str(dateStr))
+    return int(match.group()) if match else None
 
-    # Request headers to mimic a standard browser request
+def SortedLevenshtein(str1, str2):
+    """
+    Calculates Levenshtein distance on alphabetically sorted words 
+    to handle inverted names (ex: 'Louis Noailles' vs 'Noailles Louis').
+    Returns a similarity float between 0.0 and 1.0
+    """
+    if not str1 and not str2: return 1.0
+    if not str1 or not str2: return 0.0
+    
+    # Clean, split, sort and rejoin
+    s1Sorted = " ".join(sorted(str1.lower().replace('-', ' ').split()))
+    s2Sorted = " ".join(sorted(str2.lower().replace('-', ' ').split()))
+    
+    dist = edit_distance(s1Sorted, s2Sorted)
+    maxLength = max(len(s1Sorted), len(s2Sorted))
+    
+    return 1.0 - (dist / maxLength)
+
+def checkCrossMatch(query, name, surname):
+    """
+    Verifies if the query contains AT LEAST one word from the first name 
+    AND one word from the last name.
+    """
+    queryTokens = set(query.lower().replace('-', ' ').split())
+    nameTokens = set(name.lower().replace('-', ' ').split()) if name else set()
+    surnameTokens = set(surname.lower().replace('-', ' ').split()) if surname else set()
+    
+    hasNameMatch = len(queryTokens & nameTokens) > 0
+    hasSurnameMatch = len(queryTokens & surnameTokens) > 0
+    
+    return hasNameMatch and hasSurnameMatch
+
+def calculateScore(targetQuery, candidateData, targetDn=None, targetDb=None, targetDm=None):
+    candidateFullName = candidateData.get('fullName', '')
+    candidateName = candidateData.get('name', '')
+    candidateSurname = candidateData.get('surname', '')
+
+    score = 0.0
+    maxScore = 0.0
+
+    # Identity Evaluation (Max 60 points)
+    maxScore += 60.0
+    
+    # Levenshtein similarity maps to 40 points
+    similarity = SortedLevenshtein(targetQuery, candidateFullName)
+    score += similarity * 40.0
+    
+    # Cross-match bonus awards 20 points if both first and last names are hit
+    if checkCrossMatch(targetQuery, candidateName, candidateSurname):
+        score += 20.0
+
+    # Date Evaluation (Dynamically increases max possible score if arguments are provided)
+    if targetDn is not None:
+        maxScore += 20.0
+        candidateDn = candidateData.get('dn')
+        if candidateDn is not None:
+            diff = abs(targetDn - candidateDn)
+            if diff == 0: score += 20.0
+            elif diff <= 1: score += 10.0 # Tolerance of 1 year
+
+    if targetDb is not None:
+        maxScore += 10.0
+        candidateDb = candidateData.get('db')
+        if candidateDb is not None:
+            diff = abs(targetDb - candidateDb)
+            if diff == 0: score += 10.0
+            elif diff <= 1: score += 5.0
+
+    if targetDm is not None:
+        maxScore += 20.0
+        candidateDm = candidateData.get('dm')
+        if candidateDm is not None:
+            diff = abs(targetDm - candidateDm)
+            if diff == 0: score += 20.0
+            elif diff <= 1: score += 10.0
+
+    finalScore = score / maxScore
+    return round(finalScore, 2)
+
+def safeExtractListValue(dataDict, listKey, itemKey):
+    lst = dataDict.get(listKey, [])
+    if isinstance(lst, list) and len(lst) > 0 and isinstance(lst[0], dict):
+        return lst[0].get(itemKey, '')
+    return ''
+
+def safeExtractDate(dataDict, dateKey):
+    val = dataDict.get(dateKey)
+    if isinstance(val, dict):
+        return extractYear(val.get('date') or val.get('annee'))
+    return extractYear(val)
+
+def ProsocourData(item):
+    if not isinstance(item, dict):
+        return None
+
+    source = item.get('source', item)
+    
+    surname = safeExtractListValue(source, 'noms', 'nom')
+    name = safeExtractListValue(source, 'prenoms', 'prenom')
+    fullName = source.get('affichage', f"{name} {surname}".strip())
+    
+    dn = safeExtractDate(source, 'naissance')
+    db = safeExtractDate(source, 'bapteme')
+    dm = safeExtractDate(source, 'mort')
+    title = safeExtractListValue(source, 'titres', 'titre')
+    personId = item.get('id', source.get('id', ''))
+    pictureUrl = source.get('portrait_url', None)
+    
+    return {
+        "base": "prosocour",
+        "scoring": 0.0,
+        "dn": dn,
+        "db": db,
+        "dm": dm,
+        "name": name,
+        "surname": surname,
+        "fullName": fullName,
+        "title": title,
+        "picture": pictureUrl,
+        "id": personId,
+        "url": f"https://www.prosocour.chateauversailles-recherche.fr/info_personne/{personId}" if personId else None
+    }
+
+def fetchProsocour(query, url):
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0",
         "Accept": "application/json",
         "Content-Type": "application/json",
         "Origin": "https://www.prosocour.chateauversailles-recherche.fr",
-        "Referer": f"https://www.prosocour.chateauversailles-recherche.fr/search?s={search_query}"
+        "Referer": f"https://www.prosocour.chateauversailles-recherche.fr/search?s={query}"
     }
 
-    # JSON payload defining the search criteria across multiple database fields
     payload = {
-        "size": 20,
+        "size": 20, # Search 20 by 20
         "sort": [
             {"_score": {"order": "desc"}},
             {"_id": "asc"}
         ],
         "where": {
             "$or": [
-                {"noms.nom": search_query},
-                {"noms.nom.raw": search_query},
-                {"noms.nom.__pauc": search_query},
-                {"prenoms.prenom": search_query},
-                {"prenoms.prenom.raw": search_query},
-                {"surnoms.surnom": search_query},
-                {"surnoms.surnom.raw": search_query},
-                {"variantes_patronymiques.variante_patronymique": search_query},
-                {"variantes_patronymiques.variante_patronymique.raw": search_query},
-                {"variantes_patronymiques.variante_patronymique.__pauc": search_query},
-                {"affichage": search_query},
-                {"affichage.raw": search_query},
-                {"affichage.__pauc": search_query}
+                {"noms.nom": query},
+                {"prenoms.prenom": query},
+                {"affichage": query},
+                {"variantes_patronymiques.variante_patronymique": query}
             ]
         }
     }
 
     try:
-        # Execute the POST request  
         response = requests.post(url, headers=headers, json=payload)
-        
-        # Raise an exception for HTTP errors (e.g., 404, 500)
         response.raise_for_status()
-
-        # Parse the JSON response
-        json_data = response.json()
+        jsonData = response.json()
         
-        # Determine the number of results based on common response structures
-        result_count = len(json_data.get('data', [])) if 'data' in json_data else len(json_data)
-        
-        if result_count == 0:
-            print("No results found for this person.")
-        else:
-            print(f"Success, Found {result_count} result(s). JSON output:\n")
-            # Pretty-print the resulting JSON
-            print(json.dumps(json_data, indent=4, ensure_ascii=False))
+        if isinstance(jsonData, dict) and 'result' in jsonData and 'hits' in jsonData['result']:
+            return jsonData['result']['hits']
+        return []
+            
+    except requests.exceptions.RequestException:
+        return []
 
-    except requests.exceptions.RequestException as e:
-        print(f"Failed to reach the API: {e}")
-
-
-#Step 2
-
-#Verify that the first and lastname match
-def strictMatch(str1, str2):
-    if not str1 or not str2:
-        return False
-    return str1.strip().lower() == str2.strip().lower()
-
-
-def tokenMatch(str1, str2):
-    if not str1 or not str2:
-        return 0
-   
-    token1 = set(str1.lower().replace('-', ' ').split())
-    token2 = set(str2.lower().replace('-', ' ').split())
-
-    commonWords = token1 & token2
-
-    return len(commonWords)
-
-
-def extractYear(dateStr):
-    if not dateStr:
-        return None
-    #Search for 4 numbers following each other in a string
-    match = re.search(r'\d{4}', str(dateStr))
-    return int(match.group()) if match else None
-
-def matchYears(year1, year2, tolerance = 1):
-    y1 = extractYear(year1)
-    y2 = extractYear(year2)
-
-    if not y1 or not y2:
-        return False
-    #Verify difference between years within the accepted tolerance
-    return abs(y1 - y2) <= tolerance
-
-def levenshteinScore(str1, str2):
-    if not str1 or not str2:
-        return 0
-    #Return a score between 0 and 100 (where 100 means identical)
-    return fuzz.ratio(str1.lower(), str2.lower())
-
-
-
-
-# Main execution block
-if __name__ == "__main__":
-    input_last_name = input("Enter last name: ")
-    input_first_name = input("Enter first name (leave blank if unknown): ")
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-b", "--base", required=True)
+    parser.add_argument("-q", "--query", required=True)
+    # New Arguments
+    parser.add_argument("-mini", "--minimum", type=float, default=0.0, help="Minimum scoring threshold (e.g. 0.5)")
+    parser.add_argument("-dn", type=int, default=None, help="Target birth year")
+    parser.add_argument("-db", type=int, default=None, help="Target baptism year")
+    parser.add_argument("-dm", type=int, default=None, help="Target death year")
     
-    search_prosocour(input_last_name, input_first_name)
+    args = parser.parse_args()
+    dbChoice = args.base.lower()
+
+    if dbChoice not in dbRegistry:
+        print(json.dumps([]))
+        return
+        
+    rawResults = fetchProsocour(args.query, dbRegistry[dbChoice])
+    
+    if not rawResults:
+        print(json.dumps([]))
+        return
+
+    normalizedResults = []
+    for item in rawResults:
+        candidate = ProsocourData(item)
+        if candidate:
+            candidate['scoring'] = calculateScore(
+                targetQuery=args.query, 
+                candidateData=candidate, 
+                targetDn=args.dn, 
+                targetDb=args.db, 
+                targetDm=args.dm
+            )
+            
+            # Apply the minimum scoring filter
+            if candidate['scoring'] >= args.minimum:
+                normalizedResults.append(candidate)
+
+    sortedResults = sorted(normalizedResults, key=lambda x: x['scoring'], reverse=True)
+    
+    topResults = []
+    for item in sortedResults[:10]:
+        item.pop('fullName', None)
+        topResults.append(item)
+
+    print(json.dumps(topResults, indent=2, ensure_ascii=False))
+
+if __name__ == "__main__":
+    main()
