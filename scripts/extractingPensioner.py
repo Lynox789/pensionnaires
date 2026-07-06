@@ -4,9 +4,10 @@ import re
 import argparse
 from nltk.metrics import edit_distance
 
-dbRegistry = {
-    "prosocour": "https://www.prosocour.chateauversailles-recherche.fr/api/public/v2/personnes/search"
-}
+dbRegistry = {}
+
+#Tolerance for the dates
+TOLERANCE = 1
 
 def extractYear(dateStr):
     if not dateStr:
@@ -46,7 +47,7 @@ def checkCrossMatch(query, name, surname):
     
     return hasNameMatch and hasSurnameMatch
 
-def calculateScore(targetQuery, candidateData, targetDn=None, targetDb=None, targetDm=None):
+def calculateScore(targetQuery, candidateData, targetBy=None, targetBp=None, targetDy=None):
     candidateFullName = candidateData.get('fullName', '')
     candidateName = candidateData.get('name', '')
     candidateSurname = candidateData.get('surname', '')
@@ -66,132 +67,168 @@ def calculateScore(targetQuery, candidateData, targetDn=None, targetDb=None, tar
         score += 20.0
 
     # Date Evaluation (Dynamically increases max possible score if arguments are provided)
-    if targetDn is not None:
+    if targetBy is not None:
         maxScore += 20.0
-        candidateDn = candidateData.get('dn')
-        if candidateDn is not None:
-            diff = abs(targetDn - candidateDn)
+        candidateBy = candidateData.get('by')
+        if candidateBy is not None:
+            diff = abs(targetBy - candidateBy)
             if diff == 0: score += 20.0
-            elif diff <= 1: score += 10.0 # Tolerance of 1 year
+            elif diff <= TOLERANCE: score += 10.0 # Tolerance of 1 year
 
-    if targetDb is not None:
+    if targetBp is not None:
         maxScore += 10.0
-        candidateDb = candidateData.get('db')
-        if candidateDb is not None:
-            diff = abs(targetDb - candidateDb)
+        candidateBp = candidateData.get('bp')
+        if candidateBp is not None:
+            diff = abs(targetBp - candidateBp)
             if diff == 0: score += 10.0
-            elif diff <= 1: score += 5.0
+            elif diff <= TOLERANCE: score += 5.0
 
-    if targetDm is not None:
+    if targetDy is not None:
         maxScore += 20.0
-        candidateDm = candidateData.get('dm')
-        if candidateDm is not None:
-            diff = abs(targetDm - candidateDm)
+        candidateDy = candidateData.get('dy')
+        if candidateDy is not None:
+            diff = abs(targetDy - candidateDy)
             if diff == 0: score += 20.0
-            elif diff <= 1: score += 10.0
+            elif diff <= TOLERANCE: score += 10.0
 
     finalScore = score / maxScore
     return round(finalScore, 2)
 
-def safeExtractListValue(dataDict, listKey, itemKey):
+def ExtractListValue(dataDict, listKey, itemKey):
     lst = dataDict.get(listKey, [])
     if isinstance(lst, list) and len(lst) > 0 and isinstance(lst[0], dict):
         return lst[0].get(itemKey, '')
     return ''
 
-def safeExtractDate(dataDict, dateKey):
+def ExtractDate(dataDict, dateKey):
     val = dataDict.get(dateKey)
     if isinstance(val, dict):
         return extractYear(val.get('date') or val.get('annee'))
     return extractYear(val)
 
-def ProsocourData(item):
-    if not isinstance(item, dict):
-        return None
-
-    source = item.get('source', item)
+class DataSource:
+    """Base interface for all external database providers."""
+    def fetch(self, query):
+        raise NotImplementedError("Subclasses must implement fetch()")
     
-    surname = safeExtractListValue(source, 'noms', 'nom')
-    name = safeExtractListValue(source, 'prenoms', 'prenom')
-    fullName = source.get('affichage', f"{name} {surname}".strip())
-    
-    dn = safeExtractDate(source, 'naissance')
-    db = safeExtractDate(source, 'bapteme')
-    dm = safeExtractDate(source, 'mort')
-    title = safeExtractListValue(source, 'titres', 'titre')
-    personId = item.get('id', source.get('id', ''))
-    pictureUrl = source.get('portrait_url', None)
-    
-    return {
-        "base": "prosocour",
-        "scoring": 0.0,
-        "dn": dn,
-        "db": db,
-        "dm": dm,
-        "name": name,
-        "surname": surname,
-        "fullName": fullName,
-        "title": title,
-        "picture": pictureUrl,
-        "id": personId,
-        "url": f"https://www.prosocour.chateauversailles-recherche.fr/info_personne/{personId}" if personId else None
-    }
+    def formatReturn(self, item):
+        raise NotImplementedError("Subclasses must implement formatReturn()")
 
-def fetchProsocour(query, url):
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0",
-        "Accept": "application/json",
-        "Content-Type": "application/json",
-        "Origin": "https://www.prosocour.chateauversailles-recherche.fr",
-        "Referer": f"https://www.prosocour.chateauversailles-recherche.fr/search?s={query}"
-    }
 
-    payload = {
-        "size": 20, # Search 20 by 20
-        "sort": [
-            {"_score": {"order": "desc"}},
-            {"_id": "asc"}
-        ],
-        "where": {
-            "$or": [
-                {"noms.nom": query},
-                {"prenoms.prenom": query},
-                {"affichage": query},
-                {"variantes_patronymiques.variante_patronymique": query}
-            ]
+class Prosocour(DataSource):
+    def __init__(self):
+        self.url = "https://www.prosocour.chateauversailles-recherche.fr/api/public/v2/personnes/search"
+        self.headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+            "Accept": "application/json",
+            "Content-Type": "application/json"
         }
-    }
-
-    try:
-        response = requests.post(url, headers=headers, json=payload)
-        response.raise_for_status()
-        jsonData = response.json()
-        
-        if isinstance(jsonData, dict) and 'result' in jsonData and 'hits' in jsonData['result']:
-            return jsonData['result']['hits']
-        return []
+    
+    def fetch(self, query):
+        payload = {
+            "size": 20, # Search 20 by 20
+            "sort": [{"_score": {"order": "desc"}}, {"_id": "asc"}],
+            "where": {
+                "$or": [
+                    {"noms.nom": query},
+                    {"prenoms.prenom": query},
+                    {"affichage": query},
+                    {"variantes_patronymiques.variante_patronymique": query}
+                ]
+            }
+        }
+        try:
+            headers = self.headers.copy()
+            headers["Origin"] = "https://www.prosocour.chateauversailles-recherche.fr"
+            headers["Referer"] = f"https://www.prosocour.chateauversailles-recherche.fr/search?s={query}"
             
-    except requests.exceptions.RequestException:
-        return []
+            response = requests.post(self.url, headers=headers, json=payload)
+            response.raise_for_status()
+            jsonData = response.json()
+            
+            if isinstance(jsonData, dict) and 'result' in jsonData and 'hits' in jsonData['result']:
+                return jsonData['result']['hits']
+            return []
+        except requests.exceptions.RequestException:
+            return []
+    
+    def formatReturn(self, item):
+        if not isinstance(item, dict):
+            return None
+
+        source = item.get('source', item)
+        
+        surname = ExtractListValue(source, 'noms', 'nom')
+        name = ExtractListValue(source, 'prenoms', 'prenom')
+        fullName = source.get('affichage', f"{name} {surname}".strip())
+        
+        personId = item.get('id', source.get('id', ''))
+        
+        # Extraction et format of jobs
+        jobsList = []
+        denormCharges = source.get('denormalization', {}).get('charges') or []
+        rawCharges = source.get('charges') or []
+        
+        for i in range(min(len(denormCharges), len(rawCharges))):
+            jobName = denormCharges[i].get('charge', {}).get('nom', 'Inconnu')
+            
+            titularisation = rawCharges[i].get('titularisation') or {}
+            
+            dateEntreeDict = titularisation.get('date_entree') or {}
+            beginDate = dateEntreeDict.get('date', '?')
+            
+            dateOutputDict = titularisation.get('date_sortie') or {}
+            dateEnding = dateOutputDict.get('date', '?')
+            
+            jobsList.append(f"{jobName} : {beginDate}/{dateEnding}")
+
+        return {
+            "base": "prosocour",
+            "scoring": 0.0,
+            "by": ExtractDate(source, 'naissance'),
+            "bp": ExtractDate(source, 'bapteme'),
+            "dy": ExtractDate(source, 'mort'),
+            "name": name,
+            "surname": surname,
+            "fullName": fullName,
+            "title": ExtractListValue(source, 'titres', 'titre'),
+            "jobs": jobsList[::-1],
+            "picture": source.get('portrait_url', None),
+            "id": personId,
+            "url": f"https://www.prosocour.chateauversailles-recherche.fr/info_personne/{personId}" if personId else None
+        }
+
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("-b", "--base", required=True)
-    parser.add_argument("-q", "--query", required=True)
+    parser.add_argument("-q", "--query", required=False)
+    parser.add_argument("-n", "--name", required=False)
+    parser.add_argument("-s", "--surname", required=False)
+    
     # New Arguments
-    parser.add_argument("-mini", "--minimum", type=float, default=0.0, help="Minimum scoring threshold (e.g. 0.5)")
-    parser.add_argument("-dn", type=int, default=None, help="Target birth year")
-    parser.add_argument("-db", type=int, default=None, help="Target baptism year")
-    parser.add_argument("-dm", type=int, default=None, help="Target death year")
+    parser.add_argument("-mini", "--minimum", type=float, default=0.0, help="Choose minimum scoring (ex: 0.5)")
+    parser.add_argument("-by", type=int, default=None, help="Target birth year")
+    parser.add_argument("-bp", type=int, default=None, help="Target baptism year")
+    parser.add_argument("-dy", type=int, default=None, help="Target death year")
     
     args = parser.parse_args()
     dbChoice = args.base.lower()
 
-    if dbChoice not in dbRegistry:
+    if not args.query and not (args.name or args.surname):
+        print(json.dumps([{"error": "You must provide either a query (-q) or a name/surname (-n, -s)."}]))
+        return
+
+    searchQuery = args.query if args.query else f"{args.name or ''} {args.surname or ''}".strip()
+
+    dbClass = dbRegistry.get(dbChoice)
+    
+    if not dbClass:
         print(json.dumps([]))
         return
         
-    rawResults = fetchProsocour(args.query, dbRegistry[dbChoice])
+    provider = dbClass()
+    rawResults = provider.fetch(searchQuery)
     
     if not rawResults:
         print(json.dumps([]))
@@ -199,17 +236,16 @@ def main():
 
     normalizedResults = []
     for item in rawResults:
-        candidate = ProsocourData(item)
+        candidate = provider.formatReturn(item)
         if candidate:
             candidate['scoring'] = calculateScore(
-                targetQuery=args.query, 
+                targetQuery=searchQuery, 
                 candidateData=candidate, 
-                targetDn=args.dn, 
-                targetDb=args.db, 
-                targetDm=args.dm
+                targetBy=args.by, 
+                targetBp=args.bp, 
+                targetDy=args.dy
             )
             
-            # Apply the minimum scoring filter
             if candidate['scoring'] >= args.minimum:
                 normalizedResults.append(candidate)
 
@@ -223,4 +259,6 @@ def main():
     print(json.dumps(topResults, indent=2, ensure_ascii=False))
 
 if __name__ == "__main__":
+    dbRegistry["prosocour"] = Prosocour
+    dbRegistry["wikidata"] = None
     main()
