@@ -108,7 +108,7 @@ def ExtractDate(dataDict, dateKey):
 
 class DataSource:
     """Base interface for all external database providers."""
-    def fetch(self, query):
+    def fetch(self, query, name=None, surname=None):
         raise NotImplementedError("Subclasses must implement fetch()")
     
     def formatReturn(self, item):
@@ -124,11 +124,24 @@ class Prosocour(DataSource):
             "Content-Type": "application/json"
         }
     
-    def fetch(self, query):
+    def fetch(self, query, name=None, surname=None):
         payload = {
-            "size": 20, # Search 20 by 20
-            "sort": [{"_score": {"order": "desc"}}, {"_id": "asc"}],
-            "where": {
+            "size": 30, # Increased to ensure we fetch enough candidates
+            "sort": [{"_score": {"order": "desc"}}, {"_id": "asc"}]
+        }
+        
+        # Advanced Search Logic
+        if name or surname:
+            conditions = []
+            if surname:
+                conditions.append({"noms.nom": surname})
+            if name:
+                conditions.append({"prenoms.prenom": name})
+            
+            payload["where"] = {"$and": conditions}
+        else:
+            # Fallback to simple generic search if only -q is provided
+            payload["where"] = {
                 "$or": [
                     {"noms.nom": query},
                     {"prenoms.prenom": query},
@@ -136,11 +149,11 @@ class Prosocour(DataSource):
                     {"variantes_patronymiques.variante_patronymique": query}
                 ]
             }
-        }
+
         try:
             headers = self.headers.copy()
             headers["Origin"] = "https://www.prosocour.chateauversailles-recherche.fr"
-            headers["Referer"] = f"https://www.prosocour.chateauversailles-recherche.fr/search?s={query}"
+            headers["Referer"] = "https://www.prosocour.chateauversailles-recherche.fr/spersonne?show_advanced_search=advanced_search"
             
             response = requests.post(self.url, headers=headers, json=payload)
             response.raise_for_status()
@@ -194,6 +207,7 @@ class Prosocour(DataSource):
             "title": ExtractListValue(source, 'titres', 'titre'),
             "jobs": jobsList[::-1],
             "picture": source.get('portrait_url', None),
+            "comments": source.get('affichage', ''),
             "id": personId,
             "url": f"https://www.prosocour.chateauversailles-recherche.fr/info_personne/{personId}" if personId else None
         }
@@ -206,7 +220,6 @@ def main():
     parser.add_argument("-n", "--name", required=False)
     parser.add_argument("-s", "--surname", required=False)
     
-    # New Arguments
     parser.add_argument("-mini", "--minimum", type=float, default=0.0, help="Choose minimum scoring (ex: 0.5)")
     parser.add_argument("-by", type=int, default=None, help="Target birth year")
     parser.add_argument("-bp", type=int, default=None, help="Target baptism year")
@@ -228,7 +241,8 @@ def main():
         return
         
     provider = dbClass()
-    rawResults = provider.fetch(searchQuery)
+    # Pass down name and surname for the advanced search logic
+    rawResults = provider.fetch(query=searchQuery, name=args.name, surname=args.surname)
     
     if not rawResults:
         print(json.dumps([]))
