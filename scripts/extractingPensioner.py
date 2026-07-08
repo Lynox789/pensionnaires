@@ -126,7 +126,7 @@ class Prosocour(DataSource):
     
     def fetch(self, query, name=None, surname=None):
         payload = {
-            "size": 30, # Increased to ensure we fetch enough candidates
+            "size": 20,
             "sort": [{"_score": {"order": "desc"}}, {"_id": "asc"}]
         }
         
@@ -134,21 +134,43 @@ class Prosocour(DataSource):
         if name or surname:
             conditions = []
             if surname:
-                conditions.append({"noms.nom": surname})
+                conditions.append({
+                    "$or": [
+                        {"noms.nom.__pauc": surname},
+                        {"noms.nom": surname}
+                    ]
+                })
             if name:
-                conditions.append({"prenoms.prenom": name})
+                conditions.append({
+                    "$or": [
+                        {"prenoms.prenom.__pauc": name},
+                        {"prenoms.prenom": name}
+                    ]
+                })
             
-            payload["where"] = {"$and": conditions}
+            # Reproduction exacte de la structure attendue
+            payload["where"] = {"$and": [{"$and": conditions}]}
         else:
             # Fallback to simple generic search if only -q is provided
             payload["where"] = {
                 "$or": [
                     {"noms.nom": query},
+                    {"noms.nom.raw": query},
+                    {"noms.nom.__pauc": query},
                     {"prenoms.prenom": query},
+                    {"prenoms.prenom.raw": query},
+                    {"prenoms.prenom.__pauc": query},
+                    {"surnoms.surnom": query},
+                    {"surnoms.surnom.raw": query},  
+                    {"variantes_patronymiques.variante_patronymique": query},
+                    {"variantes_patronymiques.variante_patronymique.raw": query},
+                    {"variantes_patronymiques.variante_patronymique.__pauc": query},
                     {"affichage": query},
-                    {"variantes_patronymiques.variante_patronymique": query}
+                    {"affichage.raw": query},
+                    {"affichage.__pauc": query}
                 ]
             }
+            
 
         try:
             headers = self.headers.copy()
