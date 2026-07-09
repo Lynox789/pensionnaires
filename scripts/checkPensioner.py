@@ -1,9 +1,11 @@
 import psycopg2
 import time
 import sys
-import json
+import re
 from extractingPensioner import Prosocour
 from config import DB_CONFIG
+
+TIME_BETWEEN_EACH_CALL = 0.5
 
 def cleanText(text):
     """Cleans specific prefixes and suffixes from a given text."""
@@ -26,6 +28,24 @@ def cleanText(text):
             break
 
     return text.strip()
+
+def extractBirthYearFromHit(hit):
+    """Extracts the 4-digit birth year from the specific JSON path in Prosocour's response."""
+    try:
+        source = hit.get("source", {})
+        naissance = source.get("naissance", {})
+        dateInfo = naissance.get("date", {})
+        dateStr = dateInfo.get("date", "")
+        
+        if dateStr:
+            # search for 4 number followinf each other
+            match = re.search(r'\d{4}', str(dateStr))
+            if match:
+                return int(match.group())
+    except (AttributeError, TypeError):
+        pass
+    
+    return None
 
 def fetchPensioner():
     """Retrieve 20 pensioners for each class from 1 to 7, including birth year."""
@@ -62,6 +82,55 @@ def fetchPensioner():
         print(f"Database connection error: {e}")
         sys.exit(1)
 
+def evaluatePermutations(provider, name, surname, acceptableYears):
+    """
+    Splits composed names and executes an advanced search for every possible combination.
+    Returns the total matches found, the number of permutations attempted, and the highest score.
+    """
+    nameParts = [part for part in re.split(r'[-\s]', name) if part]
+    surnameParts = [part for part in re.split(r'[-\s]', surname) if part]
+    
+    # Abort if no first name exists or if neither name nor surname is composed
+    if not name or (len(nameParts) <= 1 and len(surnameParts) <= 1):
+        return 0, 0, 0.0 # return of permFound, permNb, permScore
+        
+    permNb = 0
+    permFound = 0
+    permScore = 0.0
+    
+    for n in nameParts:
+        for s in surnameParts:
+            permNb += 1
+            time.sleep(TIME_BETWEEN_EACH_CALL)
+            
+            # Use strictly advanced search for permutations
+            results = provider.fetch(query=None, name=n, surname=s)
+            matchCount = len(results)
+            
+            if matchCount > 0:
+                permFound += matchCount
+                yearMatched = False
+                
+                # Verify birth year tolerance
+                if acceptableYears:
+                    for hit in results:
+                        hitYear = extractBirthYearFromHit(hit)
+                        if hitYear in acceptableYears:
+                            permScore = max(permScore, 0.15)
+                            yearMatched = True
+                            break
+                            
+                # Base permutation score if year is missing or does not match
+                if not yearMatched:
+                    permScore = max(permScore, 0.05)
+    
+    # The final permutation score decreases in inverse proportion to the number of permutations attempted.
+    # Formula: Final Score = Base Score / Total Permutations
+    if permNb > 0:
+        permScore = permScore / permNb
+
+    return permFound, permNb, permScore
+
 def main():
     # Init of Prosocour provider
     providerProsocour = Prosocour()
@@ -79,15 +148,15 @@ def main():
         iteration += 1
         
         # Advanced Search
-        time.sleep(1)
+        time.sleep(TIME_BETWEEN_EACH_CALL)
         resultsAdv = providerProsocour.fetch(query=None, name=p['name'], surname=p['surname'])
-        matchAdv = len(resultsAdv) #count how many results we have
+        matchAdv = len(resultsAdv)
         
         # Simple Search
-        time.sleep(1)
+        time.sleep(TIME_BETWEEN_EACH_CALL)
         querySimple = f"{p['name']} {p['surname']}".strip()
         resultsSim = providerProsocour.fetch(query=querySimple)
-        matchSim = len(resultsSim) #count how many results we have
+        matchSim = len(resultsSim)
         
         if matchAdv > 0 or matchSim > 0:
             foundCount += 1
@@ -100,6 +169,10 @@ def main():
         # 0.5 : Multiple advanced matches, no birth year confirmation.
         # 0.3 : Simple match only, no birth year confirmation.
         # 0.0 : No matches found.
+
+        #Permutation (for each case found)
+        # 0.15: Permutation advanced match confirmed by birth year.
+        # 0.05: Permutation advanced match, no birth year confirmation.
         
         score = 0.0
         dbYear = p['birth_year']
@@ -108,22 +181,21 @@ def main():
         if dbYear is not None:
             try:
                 baseYear = int(dbYear)
-                # Define tolerance: [year-1, year, year+1]
-                acceptableYears = [str(baseYear - 1), str(baseYear), str(baseYear + 1)]
+                acceptableYears = [baseYear - 1, baseYear, baseYear + 1]
                 
-                # Check if ANY of the acceptable years exist in the JSON data of the advanced hits
+                # Check advanced hits by extracting the exact year from the JSON path
                 for hit in resultsAdv:
-                    hitJson = json.dumps(hit)
-                    if any(y in hitJson for y in acceptableYears):
+                    hitYear = extractBirthYearFromHit(hit)
+                    if hitYear in acceptableYears:
                         score = 1.0 if matchAdv == 1 else 0.8
                         yearMatched = True
                         break 
                         
-                # If not found in advanced, check in the simple hits
+                # Check simple hits by extracting the exact year from the JSON path
                 if not yearMatched:
                     for hit in resultsSim:
-                        hitJson = json.dumps(hit)
-                        if any(y in hitJson for y in acceptableYears):
+                        hitYear = extractBirthYearFromHit(hit)
+                        if hitYear in acceptableYears:
                             score = 0.6
                             yearMatched = True
                             break
@@ -138,6 +210,16 @@ def main():
                 score = 0.5 
             elif matchSim > 0:
                 score = 0.3 
+        
+        # Execute permutations only if primary search yields a score of 0.0
+        if score == 0.0:
+            permFound, permNb, permScore = evaluatePermutations(providerProsocour, p['name'], p['surname'], acceptableYears)
+            
+            if permNb > 0:
+                if permFound > 0:
+                    foundCount += 1
+                print(f"{iteration} : {p['class']} : {p['name']} {p['surname']} : permFound={permFound} permNb={permNb} : sco={permScore}")
+                continue # Skip the standard print format below
 
         # Final Output Formatting
         print(f"{iteration} : {p['class']} : {p['name']} {p['surname']} : adv={matchAdv} sim={matchSim} : sco={score}")
