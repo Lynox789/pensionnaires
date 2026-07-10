@@ -50,15 +50,15 @@ def extractBirthYearFromHit(hit):
 def fetchPensioner():
     """Retrieve 20 pensioners for each class from 1 to 7, including birth year."""
     query = """
-    SELECT id, class, last_name, first_name, birth_year
+    SELECT id, class, last_name, first_name, birth_year, uid
     FROM (
         SELECT id, class, COALESCE(last_name, '') AS last_name, COALESCE(first_name, '') AS first_name,
-               birth_year,
+               birth_year, uid,
                ROW_NUMBER() OVER (PARTITION BY class ORDER BY id) as rn
         FROM pensionnaires
         WHERE class BETWEEN 1 AND 7
     ) sub
-    WHERE rn <= 20
+    WHERE rn <= 1
     ORDER BY class, id;
     """
     try:
@@ -73,7 +73,8 @@ def fetchPensioner():
                 "surname": cleanText(row[2]),
                 "name": cleanText(row[3]),
                 "class": row[1],
-                "birth_year": row[4] 
+                "birth_year": row[4],
+                "uid": row[5]
             })
         cursor.close()
         conn.close()
@@ -92,12 +93,13 @@ def evaluatePermutations(provider, name, surname, acceptableYears):
     
     # Abort if no first name exists or if neither name nor surname is composed
     if not name or (len(nameParts) <= 1 and len(surnameParts) <= 1):
-        return 0, 0, 0.0 # return of permFound, permNb, permScore
+        return 0, 0, 0.0, [] # return of permFound, permNb, permScore
         
     permNb = 0
     permFound = 0
     permScore = 0.0
-    
+    collectedHits = [] # Array to accumulate all valid JSON hits found during permutations
+
     for n in nameParts:
         for s in surnameParts:
             permNb += 1
@@ -109,6 +111,7 @@ def evaluatePermutations(provider, name, surname, acceptableYears):
             
             if matchCount > 0:
                 permFound += matchCount
+                collectedHits.extend(results) # Store successful permutation hits for database insertion
                 yearMatched = False
                 
                 # Verify birth year tolerance
@@ -129,7 +132,58 @@ def evaluatePermutations(provider, name, surname, acceptableYears):
     if permNb > 0:
         permScore = permScore / permNb
 
-    return permFound, permNb, permScore
+    return permFound, permNb, permScore, collectedHits
+
+
+def saveHitsToDatabase(uid, hits, score):
+    """Inserts Prosocour hits and their associated authority links into the opendata table."""
+    # Prevent inserting empty results or completely unmatched records
+    if not hits or score == 0.0:
+        return
+        
+    try:
+        conn = psycopg2.connect(**DB_CONFIG)
+        cursor = conn.cursor()
+        
+        for hit in hits:
+            prosocourId = hit.get('id') or hit.get('source', {}).get('_id')
+            if not prosocourId: 
+                continue
+                
+            prosocourUrl = f"https://www.prosocour.chateauversailles-recherche.fr/info_personne/{prosocourId}"
+            
+            # Insert main Prosocour record. Ignores if already exists.
+            cursor.execute("""
+                INSERT INTO opendata (pensionnaire_uid, base, external_uid, url, score)
+                VALUES (%s, %s, %s, %s, %s)
+                ON CONFLICT (pensionnaire_uid, base, external_uid) DO NOTHING
+            """, (uid, 'prosocour', prosocourId, prosocourUrl, score))
+            
+            # Insert linked authority records
+            source = hit.get('source', {})
+            liensAutorite = source.get('liens_autorite', [])
+            
+            for lien in liensAutorite:
+                baseName = lien.get('titre', 'unknown').lower()
+                linkUrl = lien.get('url', '')
+                if not baseName or not linkUrl:
+                    continue
+                
+                # Extract the trailing identifier from the authority URL
+                extUid = linkUrl.strip('/').split('/')[-1]
+                
+                # Insert the authority link, referencing the Prosocour ID as its parent for cascading updates
+                cursor.execute("""
+                    INSERT INTO opendata (pensionnaire_uid, base, external_uid, url, score, parent_external_uid)
+                    VALUES (%s, %s, %s, %s, %s, %s)
+                    ON CONFLICT (pensionnaire_uid, base, external_uid) DO NOTHING
+                """, (uid, baseName, extUid, linkUrl, score, prosocourId))
+                
+        conn.commit()
+        cursor.close()
+        conn.close()
+    except Exception as e:
+        print(f"Database insertion error: {e}")
 
 def main():
     # Init of Prosocour provider
@@ -138,6 +192,9 @@ def main():
     print("Retrieving pensioners from database...")
     pensionnaires = fetchPensioner()
     totalCount = len(pensionnaires)
+
+    # Initialize dictionary to track processing volume and success rate per class
+    classStats = {i: {'total': 0, 'found': 0} for i in range(1, 8)}
     
     print(f"Processing {totalCount} records...\n")
     
@@ -146,6 +203,8 @@ def main():
     
     for p in pensionnaires:
         iteration += 1
+        pClass = p['class']
+        classStats[pClass]['total'] += 1    
         
         # Advanced Search
         time.sleep(TIME_BETWEEN_EACH_CALL)
@@ -177,7 +236,7 @@ def main():
         score = 0.0
         dbYear = p['birth_year']
         yearMatched = False
-        
+        acceptableYears = []
         if dbYear is not None:
             try:
                 baseYear = int(dbYear)
@@ -213,23 +272,42 @@ def main():
         
         # Execute permutations only if primary search yields a score of 0.0
         if score == 0.0:
-            permFound, permNb, permScore = evaluatePermutations(providerProsocour, p['name'], p['surname'], acceptableYears)
+            permFound, permNb, permScore, permHits = evaluatePermutations(providerProsocour, p['name'], p['surname'], acceptableYears)
             
             if permNb > 0:
                 if permFound > 0:
                     foundCount += 1
-                print(f"{iteration} : {p['class']} : {p['name']} {p['surname']} : permFound={permFound} permNb={permNb} : sco={permScore}")
+                    classStats[pClass]['found'] += 1
+                    saveHitsToDatabase(p['uid'], permHits, permScore)
+
+                print(f"{iteration} : {pClass} : {p['name']} {p['surname']} : permFound={permFound} permNb={permNb} : sco={permScore}")
                 continue # Skip the standard print format below
 
+        if score > 0.0:
+            foundCount += 1
+            classStats[pClass]['found'] += 1
+            allPrimaryHits = resultsAdv + resultsSim
+            saveHitsToDatabase(p['uid'], allPrimaryHits, score)
+
         # Final Output Formatting
-        print(f"{iteration} : {p['class']} : {p['name']} {p['surname']} : adv={matchAdv} sim={matchSim} : sco={score}")
+        print(f"{iteration} : {pClass} : {p['name']} {p['surname']} : adv={matchAdv} sim={matchSim} : sco={score}")
 
     # Final summary
-    successRate = (foundCount / totalCount) * 100 if totalCount > 0 else 0
-    print("\nProcess finished")
+
+    print("\n" + "="*40)
+    print("Final summary and statistics\n")
     print(f"Total processed: {totalCount}")
-    print(f"Pensioners with at least one record: {foundCount}")
-    print(f"Success rate: {successRate:.2f}%")
+    
+    successRate = (foundCount / totalCount) * 100 if totalCount > 0 else 0
+    print(f"Overall Success rate: {successRate:.2f}%\n")
+    
+    # Iterate through classes to output isolated success rates
+    for c in range(1, 8):
+        cTotal = classStats[c]['total']
+        cFound = classStats[c]['found']
+        cRate = (cFound / cTotal) * 100 if cTotal > 0 else 0
+        if cTotal > 0:
+            print(f"Class {c}: {cRate:.2f}% success ({cFound}/{cTotal} found)")
 
 if __name__ == "__main__":
     main()
