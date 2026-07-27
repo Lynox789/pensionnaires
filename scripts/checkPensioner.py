@@ -6,6 +6,7 @@ from extractingPensioner import Prosocour
 from config import DB_CONFIG
 
 TIME_BETWEEN_EACH_CALL = 0.5
+MAX_AUTHORITY_LINKS_PER_PERMUTATION = 10
 
 def cleanText(text):
     """Cleans specific prefixes and suffixes from a given text."""
@@ -135,7 +136,7 @@ def evaluatePermutations(provider, name, surname, acceptableYears):
     return permFound, permNb, permScore, collectedHits
 
 
-def saveHitsToDatabase(uid, hits, score):
+def saveHitsToDatabase(uid, hits, score, maxAuthorityLinks=None):
     """Inserts Prosocour hits and their associated authority links into the opendata table."""
     # Prevent inserting empty results or completely unmatched records
     if not hits or score == 0.0:
@@ -144,6 +145,8 @@ def saveHitsToDatabase(uid, hits, score):
     try:
         conn = psycopg2.connect(**DB_CONFIG)
         cursor = conn.cursor()
+
+        insertedAuthoritiesCount = 0
         
         for hit in hits:
             prosocourId = hit.get('id') or hit.get('source', {}).get('_id')
@@ -158,7 +161,11 @@ def saveHitsToDatabase(uid, hits, score):
                 VALUES (%s, %s, %s, %s, %s)
                 ON CONFLICT (pensionnaire_uid, base, external_uid) DO NOTHING
             """, (uid, 'prosocour', prosocourId, prosocourUrl, score))
-            
+
+            # Skip authority links processing if the threshold is already reached for this batch
+            if maxAuthorityLinks is not None and insertedAuthoritiesCount >= maxAuthorityLinks:
+                continue
+
             # Insert linked authority records
             source = hit.get('source', {})
             liensAutorite = source.get('liens_autorite', [])
@@ -178,7 +185,13 @@ def saveHitsToDatabase(uid, hits, score):
                     VALUES (%s, %s, %s, %s, %s, %s)
                     ON CONFLICT (pensionnaire_uid, base, external_uid) DO NOTHING
                 """, (uid, baseName, extUid, linkUrl, score, prosocourId))
-                
+
+                insertedAuthoritiesCount += 1
+            
+                # Halt authority link insertion immediately if the threshold is reached
+                if maxAuthorityLinks is not None and insertedAuthoritiesCount >= maxAuthorityLinks:
+                    break
+            
         conn.commit()
         cursor.close()
         conn.close()
@@ -278,7 +291,7 @@ def main():
                 if permFound > 0:
                     foundCount += 1
                     classStats[pClass]['found'] += 1
-                    saveHitsToDatabase(p['uid'], permHits, permScore)
+                    saveHitsToDatabase(p['uid'], permHits, permScore, maxAuthorityLinks=MAX_AUTHORITY_LINKS_PER_PERMUTATION)
 
                 print(f"{iteration} : {pClass} : {p['name']} {p['surname']} : permFound={permFound} permNb={permNb} : sco={permScore}")
                 continue # Skip the standard print format below
