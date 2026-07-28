@@ -7,6 +7,7 @@ from config import DB_CONFIG
 
 TIME_BETWEEN_EACH_CALL = 0.5
 MAX_AUTHORITY_LINKS_PER_PERMUTATION = 10
+MAX_PERMUTATIONS_PER_PENSIONER = 8
 
 def cleanText(text):
     """Cleans specific prefixes and suffixes from a given text."""
@@ -59,7 +60,7 @@ def fetchPensioner():
         FROM pensionnaires
         WHERE class BETWEEN 1 AND 7
     ) sub
-    WHERE rn <= 1
+    WHERE rn <= 3
     ORDER BY class, id;
     """
     try:
@@ -103,6 +104,9 @@ def evaluatePermutations(provider, name, surname, acceptableYears):
 
     for n in nameParts:
         for s in surnameParts:
+            if permNb >= MAX_PERMUTATIONS_PER_PENSIONER:
+                break
+
             permNb += 1
             time.sleep(TIME_BETWEEN_EACH_CALL)
             
@@ -120,18 +124,16 @@ def evaluatePermutations(provider, name, surname, acceptableYears):
                     for hit in results:
                         hitYear = extractBirthYearFromHit(hit)
                         if hitYear in acceptableYears:
-                            permScore = max(permScore, 0.15)
+                            permScore = max(permScore, 0.25)
                             yearMatched = True
                             break
                             
                 # Base permutation score if year is missing or does not match
                 if not yearMatched:
-                    permScore = max(permScore, 0.05)
+                    permScore = max(permScore, 0.10)
     
-    # The final permutation score decreases in inverse proportion to the number of permutations attempted.
-    # Formula: Final Score = Base Score / Total Permutations
-    if permNb > 0:
-        permScore = permScore / permNb
+        if permNb >= MAX_PERMUTATIONS_PER_PENSIONER:
+            break
 
     return permFound, permNb, permScore, collectedHits
 
@@ -206,10 +208,19 @@ def main():
     pensionnaires = fetchPensioner()
     totalCount = len(pensionnaires)
 
-    # Initialize dictionary to track processing volume and success rate per class
-    classStats = {i: {'total': 0, 'found': 0} for i in range(1, 8)}
+    # Initialize dictionary to track processing volume and score distribution per class
+    classStats = {i: {'total': 0, 'found': 0, 'perfect': 0, 'good': 0, 'other': 0} for i in range(1, 8)}
+
+    #Variable for percentage of pensioners found
+    countPerfect = 0
+    countGood = 0
+    countOther = 0
     
     print(f"Processing {totalCount} records...\n")
+    print("[Iteration] : [Class] : [First Name] [Last Name] : [Search details] : sco=[Final score]")
+    print("  -> Details (Standard search)     : adv=[Nb advanced results] sim=[Nb simple results]")
+    print("  -> Details (Permutation search)  : permFound=[Nb results] permNb=[Nb attempted queries]")
+    print()
     
     iteration = 0
     foundCount = 0
@@ -230,9 +241,6 @@ def main():
         resultsSim = providerProsocour.fetch(query=querySimple)
         matchSim = len(resultsSim)
         
-        if matchAdv > 0 or matchSim > 0:
-            foundCount += 1
-
         # Scoring System:
         # 1.0 : Single advanced match confirmed by birth year (+/- 1 year).
         # 0.8 : Multiple advanced matches, but one is confirmed by birth year.
@@ -243,8 +251,8 @@ def main():
         # 0.0 : No matches found.
 
         #Permutation (for each case found)
-        # 0.15: Permutation advanced match confirmed by birth year.
-        # 0.05: Permutation advanced match, no birth year confirmation.
+        # 0.25: Permutation advanced match confirmed by birth year.
+        # 0.10: Permutation advanced match, no birth year confirmation.
         
         score = 0.0
         dbYear = p['birth_year']
@@ -293,6 +301,17 @@ def main():
                     classStats[pClass]['found'] += 1
                     saveHitsToDatabase(p['uid'], permHits, permScore, maxAuthorityLinks=MAX_AUTHORITY_LINKS_PER_PERMUTATION)
 
+                    # Track global and class-specific score distribution for permutations
+                    if permScore == 1.0:
+                        countPerfect += 1
+                        classStats[pClass]['perfect'] += 1
+                    elif permScore >= 0.5:
+                        countGood += 1
+                        classStats[pClass]['good'] += 1
+                    elif permScore > 0.0:
+                        countOther += 1
+                        classStats[pClass]['other'] += 1
+
                 print(f"{iteration} : {pClass} : {p['name']} {p['surname']} : permFound={permFound} permNb={permNb} : sco={permScore}")
                 continue # Skip the standard print format below
 
@@ -302,25 +321,57 @@ def main():
             allPrimaryHits = resultsAdv + resultsSim
             saveHitsToDatabase(p['uid'], allPrimaryHits, score)
 
+            # Track global and class-specific score distribution for primary searches
+            if score == 1.0:
+                countPerfect += 1
+                classStats[pClass]['perfect'] += 1
+            elif score >= 0.5:
+                countGood += 1
+                classStats[pClass]['good'] += 1
+            elif score > 0.0:
+                countOther += 1
+                classStats[pClass]['other'] += 1
+
         # Final Output Formatting
         print(f"{iteration} : {pClass} : {p['name']} {p['surname']} : adv={matchAdv} sim={matchSim} : sco={score}")
 
-    # Final summary
+   # Final summary
 
     print("\n" + "="*40)
     print("Final summary and statistics\n")
     print(f"Total processed: {totalCount}")
     
-    successRate = (foundCount / totalCount) * 100 if totalCount > 0 else 0
-    print(f"Overall Success rate: {successRate:.2f}%\n")
+    countNotFound = totalCount - foundCount
+
+    if totalCount > 0:
+        successRate = (foundCount / totalCount) * 100
+        perfectRate = (countPerfect / totalCount) * 100
+        goodRate = (countGood / totalCount) * 100
+        otherRate = (countOther / totalCount) * 100
+        notFoundRate = (countNotFound / totalCount) * 100
+    else:
+        successRate = perfectRate = goodRate = otherRate = notFoundRate = 0.0
+
+    print(f"Overall Success rate: {successRate:.2f}% ({foundCount} records found)")
+    print(f"  - Perfect matches (score 1.0): {perfectRate:.2f}% ({countPerfect})")
+    print(f"  - Good matches (score 0.5 to <1.0): {goodRate:.2f}% ({countGood})")
+    print(f"  - Other matches (score < 0.5): {otherRate:.2f}% ({countOther})")
+    print(f"  - Not found (score 0.0): {notFoundRate:.2f}% ({countNotFound})\n")
     
-    # Iterate through classes to output isolated success rates
+    # Iterate through classes to output isolated success rates and score distributions
     for c in range(1, 8):
         cTotal = classStats[c]['total']
         cFound = classStats[c]['found']
-        cRate = (cFound / cTotal) * 100 if cTotal > 0 else 0
+        
         if cTotal > 0:
+            cRate = (cFound / cTotal) * 100
+            cPerfect = classStats[c]['perfect']
+            cGood = classStats[c]['good']
+            cOther = classStats[c]['other']
+            cNotFound = cTotal - cFound
+            
             print(f"Class {c}: {cRate:.2f}% success ({cFound}/{cTotal} found)")
+            print(f"  - Perfect: {cPerfect} | Good: {cGood} | Other: {cOther} | Not Found: {cNotFound}")
 
 if __name__ == "__main__":
     main()
