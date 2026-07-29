@@ -9,12 +9,22 @@ TIME_BETWEEN_EACH_CALL = 0.5
 MAX_AUTHORITY_LINKS_PER_PERMUTATION = 10
 MAX_PERMUTATIONS_PER_PENSIONER = 8
 
+#Variable to clean first and lastname
+WORDS_TO_ERASE = {"de", "du", "des", "la", "le", "les", "l", "d"}
+TITLES_PATTERN = re.compile(
+    r'\b(baronne|baron|comte|comtesse|cte|princesse|prince|dlle|demoiselle|dame|anonyme|filleul|veuve|duc|duchesse|marquis|marquise)\b', 
+    re.IGNORECASE
+)
+
 def cleanText(text):
     """Cleans specific prefixes and suffixes from a given text."""
     if not text:
         return ""
     
     text = text.strip()
+    
+    # Remove titles and descriptions using regex
+    text = TITLES_PATTERN.sub('', text).strip()
     
     prefixesToRemove = ["fr. ", "fr.", "de ", "d' ", "d'"]
     suffixesToRemove = [" de", " d'"]
@@ -60,7 +70,7 @@ def fetchPensioner():
         FROM pensionnaires
         WHERE class BETWEEN 1 AND 7
     ) sub
-    WHERE rn <= 3
+    WHERE rn <= 1
     ORDER BY class, id;
     """
     try:
@@ -87,23 +97,31 @@ def fetchPensioner():
 
 def evaluatePermutations(provider, name, surname, acceptableYears):
     """
-    Splits composed names and executes an advanced search for every possible combination.
-    Returns the total matches found, the number of permutations attempted, and the highest score.
+    Splits composed names, filters stop words, and executes an advanced search for combinations.
+    Handles cases where the first name is missing by cross-referencing all available name parts.
     """
-    nameParts = [part for part in re.split(r'[-\s]', name) if part]
-    surnameParts = [part for part in re.split(r'[-\s]', surname) if part]
+    # Split and filter out noise words like
+    nameParts = [part for part in re.split(r'[-\s]', name) if part and part.lower() not in WORDS_TO_ERASE]
+    surnameParts = [part for part in re.split(r'[-\s]', surname) if part and part.lower() not in WORDS_TO_ERASE]
     
-    # Abort if no first name exists or if neither name nor surname is composed
-    if not name or (len(nameParts) <= 1 and len(surnameParts) <= 1):
-        return 0, 0, 0.0, [] # return of permFound, permNb, permScore
+    # Merge into a single pool to handle cases where the first name is missing or swapped
+    allParts = nameParts + surnameParts
+    
+    # Abort if we don't have at least two meaningful words to permute
+    if len(allParts) < 2:
+        return 0, 0, 0.0, []
         
     permNb = 0
     permFound = 0
     permScore = 0.0
-    collectedHits = [] # Array to accumulate all valid JSON hits found during permutations
+    collectedHits = []
 
-    for n in nameParts:
-        for s in surnameParts:
+    # Try every valid word combination
+    for i, n in enumerate(allParts):
+        for j, s in enumerate(allParts):
+            if i == j: # Prevent searching the exact same word against itself
+                continue
+                
             if permNb >= MAX_PERMUTATIONS_PER_PENSIONER:
                 break
 
@@ -116,7 +134,7 @@ def evaluatePermutations(provider, name, surname, acceptableYears):
             
             if matchCount > 0:
                 permFound += matchCount
-                collectedHits.extend(results) # Store successful permutation hits for database insertion
+                collectedHits.extend(results)
                 yearMatched = False
                 
                 # Verify birth year tolerance
@@ -136,7 +154,6 @@ def evaluatePermutations(provider, name, surname, acceptableYears):
             break
 
     return permFound, permNb, permScore, collectedHits
-
 
 def saveHitsToDatabase(uid, hits, score, maxAuthorityLinks=None):
     """Inserts Prosocour hits and their associated authority links into the opendata table."""
