@@ -5,7 +5,7 @@ import re
 from extractingPensioner import Prosocour
 from config import DB_CONFIG
 
-TIME_BETWEEN_EACH_CALL = 0.5
+TIME_BETWEEN_EACH_CALL = 0.4
 MAX_AUTHORITY_LINKS_PER_PERMUTATION = 10
 MAX_PERMUTATIONS_PER_PENSIONER = 8
 
