@@ -12,7 +12,7 @@ MAX_PERMUTATIONS_PER_PENSIONER = 8
 #Variable to clean first and lastname
 WORDS_TO_ERASE = {"de", "du", "des", "la", "le", "les", "l", "d"}
 TITLES_PATTERN = re.compile(
-    r'\b(baronne|baron|comte|comtesse|cte|princesse|prince|dlle|demoiselle|dame|anonyme|filleul|veuve|duc|duchesse|marquis|marquise)\b', 
+    r'\b(baronne|baron|comte|comtesse|cte|princesse|prince|dlle|demoiselle|dame|anonyme|filleul|veuve|duc|duchesse|marquis|marquise|maréchal|maréchale|chevalier|abbé)\b', 
     re.IGNORECASE
 )
 
@@ -26,18 +26,22 @@ def cleanText(text):
     # Remove titles and descriptions using regex
     text = TITLES_PATTERN.sub('', text).strip()
     
-    prefixesToRemove = ["fr. ", "fr.", "de ", "d' ", "d'"]
+    prefixesToRemove = ["fr. ", "fr.", "de ", "d' ", "d'", "le ", "la ", "l' ", "l'"]
     suffixesToRemove = [" de", " d'"]
     
-    for prefix in prefixesToRemove:
-        if text.lower().startswith(prefix):
-            text = text[len(prefix):]
-            break 
-            
-    for suffix in suffixesToRemove:
-        if text.lower().endswith(suffix):
-            text = text[:-len(suffix)]
-            break
+    changed = True
+    #use while loop in case of multiple prefix or suffix ex : "de la"
+    while changed:
+        changed = False
+        for prefix in prefixesToRemove:
+            if text.lower().startswith(prefix):
+                text = text[len(prefix):].strip()
+                changed = True
+                
+        for suffix in suffixesToRemove:
+            if text.lower().endswith(suffix):
+                text = text[:-len(suffix)].strip()
+                changed = True
 
     return text.strip()
 
@@ -59,10 +63,11 @@ def extractBirthYearFromHit(hit):
     
     return None
 
+
 def fetchPensioner():
     """Retrieve 20 pensioners for each class from 1 to 7, including birth year."""
     query = """
-    SELECT id, class, last_name, first_name, birth_year, uid
+        SELECT id, class, last_name, first_name, birth_year, uid
     FROM (
         SELECT id, class, COALESCE(last_name, '') AS last_name, COALESCE(first_name, '') AS first_name,
                birth_year, uid,
