@@ -7,43 +7,60 @@ from config import DB_CONFIG
 
 TIME_BETWEEN_EACH_CALL = 0.4
 MAX_AUTHORITY_LINKS_PER_PERMUTATION = 10
-MAX_PERMUTATIONS_PER_PENSIONER = 8
+MAX_PERMUTATIONS_PER_PENSIONER = 12
 
 #Variable to clean first and lastname
 WORDS_TO_ERASE = {"de", "du", "des", "la", "le", "les", "l", "d"}
 TITLES_PATTERN = re.compile(
-    r'\b(baronne|baron|comte|comtesse|cte|princesse|prince|dlle|demoiselle|dame|anonyme|filleul|veuve|duc|duchesse|marquis|marquise|maréchal|maréchale|chevalier|abbé)\b', 
+    r'\b(baronne|baron|comte|comtesse|cte|princesse|prince|dlle|demoiselle|dame|anonyme|filleul|veuve|duc|duchesse|marquis|marquise|maréchal|maréchale|chevalier|abbé|vicomte|vicomtesse|cardinal|évêque|eveque|archevêque|archeveque|prélat|prelat|monseigneur|madame|mademoiselle)\b', 
     re.IGNORECASE
 )
 
-def cleanText(text):
-    """Cleans specific prefixes and suffixes from a given text."""
-    if not text:
+def isolatePrimaryFirstName(first_name):
+    """Isolates the first word if first name has more than 3 words."""
+    words = first_name.split()
+    if len(words) > 3:
+        return words[0]
+    return first_name
+
+def cleanLastName(last_name):
+    """Removes titles from last name but keeps particles."""
+    if not last_name:
         return ""
     
-    text = text.strip()
+    last_name = last_name.strip()
+    last_name = TITLES_PATTERN.sub('', last_name).strip()
     
-    # Remove titles and descriptions using regex
-    text = TITLES_PATTERN.sub('', text).strip()
+    # Clean extra spaces left by title removal
+    return re.sub(r'\s+', ' ', last_name).strip()
+
+def cleanFirstName(first_name):
+    """Cleans titles, prefixes, suffixes, and isolates primary name."""
+    if not first_name:
+        return ""
+    
+    first_name = first_name.strip()
+    first_name = TITLES_PATTERN.sub('', first_name).strip()
     
     prefixesToRemove = ["fr. ", "fr.", "de ", "d' ", "d'", "le ", "la ", "l' ", "l'"]
     suffixesToRemove = [" de", " d'"]
     
     changed = True
-    #use while loop in case of multiple prefix or suffix ex : "de la"
     while changed:
         changed = False
         for prefix in prefixesToRemove:
-            if text.lower().startswith(prefix):
-                text = text[len(prefix):].strip()
+            if first_name.lower().startswith(prefix):
+                first_name = first_name[len(prefix):].strip()
                 changed = True
                 
         for suffix in suffixesToRemove:
-            if text.lower().endswith(suffix):
-                text = text[:-len(suffix)].strip()
+            if first_name.lower().endswith(suffix):
+                first_name = first_name[:-len(suffix)].strip()
                 changed = True
 
-    return text.strip()
+    first_name = isolatePrimaryFirstName(first_name)
+    
+    return first_name.strip()
 
 def extractBirthYearFromHit(hit):
     """Extracts the 4-digit birth year from the specific JSON path in Prosocour's response."""
@@ -87,8 +104,8 @@ def fetchPensioner():
         pensionnaires = []
         for row in rows:
             pensionnaires.append({
-                "surname": cleanText(row[2]),
-                "name": cleanText(row[3]),
+                "surname": cleanLastName(row[2]),
+                "name": cleanFirstName(row[3]),
                 "class": row[1],
                 "birth_year": row[4],
                 "uid": row[5]
