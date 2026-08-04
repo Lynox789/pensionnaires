@@ -282,8 +282,8 @@ def main():
         
         # Scoring System:
         # 1.0 : Single advanced match confirmed by birth year (+/- 1 year).
+        # 0.9 : Single advanced match, but birth year is missing or doesn't match.
         # 0.8 : Multiple advanced matches, but one is confirmed by birth year.
-        # 0.7 : Single advanced match, but birth year is missing or doesn't match.
         # 0.6 : Simple match confirmed by birth year.
         # 0.5 : Multiple advanced matches, no birth year confirmation.
         # 0.3 : Simple match only, no birth year confirmation.
@@ -324,7 +324,7 @@ def main():
         # Apply fallback scores if the birth year was not matched or missing
         if not yearMatched:
             if matchAdv == 1:
-                score = 0.7 
+                score = 0.9
             elif matchAdv > 1:
                 score = 0.5 
             elif matchSim > 0:
