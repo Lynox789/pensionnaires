@@ -1,11 +1,13 @@
 import psycopg2
 import time
+import datetime
 import sys
 import re
+import concurrent.futures
 from extractingPensioner import Prosocour
 from config import DB_CONFIG
 
-TIME_BETWEEN_EACH_CALL = 0.4
+TIME_BETWEEN_EACH_CALL = 0.2
 MAX_AUTHORITY_LINKS_PER_PERMUTATION = 10
 MAX_PERMUTATIONS_PER_PENSIONER = 12
 
@@ -15,6 +17,19 @@ TITLES_PATTERN = re.compile(
     r'\b(baronne|baron|comte|comtesse|cte|princesse|prince|dlle|demoiselle|dame|anonyme|filleul|veuve|duc|duchesse|marquis|marquise|maréchal|maréchale|chevalier|abbé|vicomte|vicomtesse|cardinal|évêque|eveque|archevêque|archeveque|prélat|prelat|monseigneur|madame|mademoiselle)\b', 
     re.IGNORECASE
 )
+
+#regex for extracting prefix and suffix
+#prefix : "fr. ", "fr.", "de ", "d' ", "d'", "le ", "la ", "l' ", "l'"
+#suffix : " de", " d'"
+PREFIXES_PATTERN = re.compile(r'^(?:fr\.\s*|de\s+|d\'\s*|le\s+|la\s+|l\'\s*)+', re.IGNORECASE)
+SUFFIXES_PATTERN = re.compile(r'(?:\s+de|\s+d\')+$', re.IGNORECASE)
+
+#regex for extracting year
+YEAR_PATTERN = re.compile(r'\d{4}')
+SPLIT_PATTERN = re.compile(r'[-\s]+')
+
+NUMBER_OF_PENSIONERS_PER_CYCLE = 7
+
 
 def isolatePrimaryFirstName(first_name):
     """Isolates the first word if first name has more than 3 words."""
@@ -35,51 +50,32 @@ def cleanLastName(last_name):
     return re.sub(r'\s+', ' ', last_name).strip()
 
 def cleanFirstName(first_name):
-    """Cleans titles, prefixes, suffixes, and isolates primary name."""
+    """Cleans titles, prefixes, suffixes, and isolates primary name using pre-compiled regex."""
     if not first_name:
         return ""
     
-    first_name = first_name.strip()
     first_name = TITLES_PATTERN.sub('', first_name).strip()
+    first_name = PREFIXES_PATTERN.sub('', first_name)
+    first_name = SUFFIXES_PATTERN.sub('', first_name)
     
-    prefixesToRemove = ["fr. ", "fr.", "de ", "d' ", "d'", "le ", "la ", "l' ", "l'"]
-    suffixesToRemove = [" de", " d'"]
-    
-    changed = True
-    while changed:
-        changed = False
-        for prefix in prefixesToRemove:
-            if first_name.lower().startswith(prefix):
-                first_name = first_name[len(prefix):].strip()
-                changed = True
-                
-        for suffix in suffixesToRemove:
-            if first_name.lower().endswith(suffix):
-                first_name = first_name[:-len(suffix)].strip()
-                changed = True
-
     first_name = isolatePrimaryFirstName(first_name)
-    
     return first_name.strip()
 
 def extractBirthYearFromHit(hit):
     """Extracts the 4-digit birth year from the specific JSON path in Prosocour's response."""
     try:
-        source = hit.get("source", {})
-        naissance = source.get("naissance", {})
-        dateInfo = naissance.get("date", {})
-        dateStr = dateInfo.get("date", "")
+        # Extracting the date from the return JSON file from Prosocour
+        dateStr = hit.get("source", {}).get("naissance", {}).get("date", {}).get("date", "")
         
         if dateStr:
-            # search for 4 number followinf each other
-            match = re.search(r'\d{4}', str(dateStr))
+            #use of the regex pattern to extract the year
+            match = YEAR_PATTERN.search(str(dateStr))
             if match:
                 return int(match.group())
     except (AttributeError, TypeError):
         pass
     
     return None
-
 
 def fetchPensioner():
     """Retrieve 20 pensioners for each class from 1 to 7, including birth year."""
@@ -92,7 +88,7 @@ def fetchPensioner():
         FROM pensionnaires
         WHERE class BETWEEN 1 AND 7
     ) sub
-    WHERE rn <= 1
+    WHERE rn <= 10
     ORDER BY class, id;
     """
     try:
@@ -123,8 +119,8 @@ def evaluatePermutations(provider, name, surname, acceptableYears):
     Handles cases where the first name is missing by cross-referencing all available name parts.
     """
     # Split and filter out noise words like
-    nameParts = [part for part in re.split(r'[-\s]', name) if part and part.lower() not in WORDS_TO_ERASE]
-    surnameParts = [part for part in re.split(r'[-\s]', surname) if part and part.lower() not in WORDS_TO_ERASE]
+    nameParts = [part for part in SPLIT_PATTERN.split(name) if part and part.lower() not in WORDS_TO_ERASE]
+    surnameParts = [part for part in SPLIT_PATTERN.split(surname) if part and part.lower() not in WORDS_TO_ERASE]
     
     # Merge into a single pool to handle cases where the first name is missing or swapped
     allParts = nameParts + surnameParts
@@ -239,23 +235,95 @@ def saveHitsToDatabase(uid, hits, score, maxAuthorityLinks=None):
     except Exception as e:
         print(f"Database insertion error: {e}")
 
+
+def formatTime(seconds):
+    # Format seconds into HH:MM:SS
+    return str(datetime.timedelta(seconds=int(seconds)))
+
+
+def processPensionerWorker(p):
+    """Worker function mapped to each thread to execute the API calls safely."""
+    # Create an independent provider instance per thread
+    provider = Prosocour()
+    
+    time.sleep(TIME_BETWEEN_EACH_CALL)
+    resultsAdv = provider.fetch(query=None, name=p['name'], surname=p['surname'])
+    matchAdv = len(resultsAdv)
+    
+    time.sleep(TIME_BETWEEN_EACH_CALL)
+    querySimple = f"{p['name']} {p['surname']}".strip()
+    resultsSim = provider.fetch(query=querySimple)
+    matchSim = len(resultsSim)
+    
+    score = 0.0
+    dbYear = p['birth_year']
+    yearMatched = False
+    acceptableYears = []
+    
+    if dbYear is not None:
+        try:
+            baseYear = int(dbYear)
+            acceptableYears = [baseYear - 1, baseYear, baseYear + 1]
+            
+            for hit in resultsAdv:
+                hitYear = extractBirthYearFromHit(hit)
+                if hitYear in acceptableYears:
+                    score = 1.0 if matchAdv == 1 else 0.8
+                    yearMatched = True
+                    break 
+                    
+            if not yearMatched:
+                for hit in resultsSim:
+                    hitYear = extractBirthYearFromHit(hit)
+                    if hitYear in acceptableYears:
+                        score = 0.6
+                        yearMatched = True
+                        break
+        except ValueError:
+            pass 
+            
+    if not yearMatched:
+        if matchAdv == 1:
+            score = 0.9
+        elif matchAdv > 1:
+            score = 0.5 
+        elif matchSim > 0:
+            score = 0.3 
+
+    permFound, permNb, permScore, permHits = 0, 0, 0.0, []
+    if score == 0.0:
+        permFound, permNb, permScore, permHits = evaluatePermutations(provider, p['name'], p['surname'], acceptableYears)
+
+    # Return a compiled result package to the main thread
+    return {
+        'p': p,
+        'matchAdv': matchAdv,
+        'matchSim': matchSim,
+        'score': score,
+        'permFound': permFound,
+        'permNb': permNb,
+        'permScore': permScore,
+        'permHits': permHits,
+        'allPrimaryHits': resultsAdv + resultsSim if score > 0.0 else []
+    }
+
 def main():
-    # Init of Prosocour provider
-    providerProsocour = Prosocour()
+    scriptStartTime = time.time()
     
     print("Retrieving pensioners from database...")
     pensionnaires = fetchPensioner()
     totalCount = len(pensionnaires)
 
-    # Initialize dictionary to track processing volume and score distribution per class
     classStats = {i: {'total': 0, 'found': 0, 'perfect': 0, 'good': 0, 'other': 0} for i in range(1, 8)}
 
-    #Variable for percentage of pensioners found
     countPerfect = 0
     countGood = 0
     countOther = 0
-    
-    print(f"Processing {totalCount} records...\n")
+
+    # Slice the pensioner list into cycles
+    cycles = [pensionnaires[i:i + NUMBER_OF_PENSIONERS_PER_CYCLE] for i in range(0, totalCount, NUMBER_OF_PENSIONERS_PER_CYCLE)]
+        
+    print(f"Processing {totalCount} records (Multithreading Pensioners per cycle : {NUMBER_OF_PENSIONERS_PER_CYCLE})\n")
     print("[Iteration] : [Class] : [First Name] [Last Name] : [Search details] : sco=[Final score]")
     print("  -> Details (Standard search)     : adv=[Nb advanced results] sim=[Nb simple results]")
     print("  -> Details (Permutation search)  : permFound=[Nb results] permNb=[Nb attempted queries]")
@@ -263,122 +331,82 @@ def main():
     
     iteration = 0
     foundCount = 0
-    
-    for p in pensionnaires:
-        iteration += 1
-        pClass = p['class']
-        classStats[pClass]['total'] += 1    
-        
-        # Advanced Search
-        time.sleep(TIME_BETWEEN_EACH_CALL)
-        resultsAdv = providerProsocour.fetch(query=None, name=p['name'], surname=p['surname'])
-        matchAdv = len(resultsAdv)
-        
-        # Simple Search
-        time.sleep(TIME_BETWEEN_EACH_CALL)
-        querySimple = f"{p['name']} {p['surname']}".strip()
-        resultsSim = providerProsocour.fetch(query=querySimple)
-        matchSim = len(resultsSim)
-        
-        # Scoring System:
-        # 1.0 : Single advanced match confirmed by birth year (+/- 1 year).
-        # 0.9 : Single advanced match, but birth year is missing or doesn't match.
-        # 0.8 : Multiple advanced matches, but one is confirmed by birth year.
-        # 0.6 : Simple match confirmed by birth year.
-        # 0.5 : Multiple advanced matches, no birth year confirmation.
-        # 0.3 : Simple match only, no birth year confirmation.
-        # 0.0 : No matches found.
+    consoleWidth = 100
 
-        #Permutation (for each case found)
-        # 0.25: Permutation advanced match confirmed by birth year.
-        # 0.10: Permutation advanced match, no birth year confirmation.
-        
-        score = 0.0
-        dbYear = p['birth_year']
-        yearMatched = False
-        acceptableYears = []
-        if dbYear is not None:
-            try:
-                baseYear = int(dbYear)
-                acceptableYears = [baseYear - 1, baseYear, baseYear + 1]
-                
-                # Check advanced hits by extracting the exact year from the JSON path
-                for hit in resultsAdv:
-                    hitYear = extractBirthYearFromHit(hit)
-                    if hitYear in acceptableYears:
-                        score = 1.0 if matchAdv == 1 else 0.8
-                        yearMatched = True
-                        break 
-                        
-                # Check simple hits by extracting the exact year from the JSON path
-                if not yearMatched:
-                    for hit in resultsSim:
-                        hitYear = extractBirthYearFromHit(hit)
-                        if hitYear in acceptableYears:
-                            score = 0.6
-                            yearMatched = True
-                            break
-            except ValueError:
-                pass 
-                
-        # Apply fallback scores if the birth year was not matched or missing
-        if not yearMatched:
-            if matchAdv == 1:
-                score = 0.9
-            elif matchAdv > 1:
-                score = 0.5 
-            elif matchSim > 0:
-                score = 0.3 
-        
-        # Execute permutations only if primary search yields a score of 0.0
-        if score == 0.0:
-            permFound, permNb, permScore, permHits = evaluatePermutations(providerProsocour, p['name'], p['surname'], acceptableYears)
+    # Use ThreadPoolExecutor for concurrency
+    with concurrent.futures.ThreadPoolExecutor(max_workers=NUMBER_OF_PENSIONERS_PER_CYCLE) as executor:
+        for cycle in cycles:
+            # Map evaluates the cycle in parallel and waits for all of them to finish
+            results = list(executor.map(processPensionerWorker, cycle))
             
-            if permNb > 0:
-                if permFound > 0:
+            # Process the results sequentially to preserve order and DB integrity
+            for res in results:
+                iteration += 1
+                p = res['p']
+                pClass = p['class']
+                classStats[pClass]['total'] += 1    
+                
+                score = res['score']
+                permScore = res['permScore']
+                
+                if score == 0.0:
+                    if res['permNb'] > 0 and res['permFound'] > 0:
+                        foundCount += 1
+                        classStats[pClass]['found'] += 1
+                        saveHitsToDatabase(p['uid'], res['permHits'], permScore, maxAuthorityLinks=MAX_AUTHORITY_LINKS_PER_PERMUTATION)
+
+                        if permScore == 1.0:
+                            countPerfect += 1
+                            classStats[pClass]['perfect'] += 1
+                        elif permScore >= 0.5:
+                            countGood += 1
+                            classStats[pClass]['good'] += 1
+                        elif permScore > 0.0:
+                            countOther += 1
+                            classStats[pClass]['other'] += 1
+
+                    elapsedSoFar = time.time() - scriptStartTime
+                    avgTimePerIter = elapsedSoFar / iteration
+                    etaSeconds = avgTimePerIter * (totalCount - iteration)
+                    etaStr = formatTime(etaSeconds)
+
+                    outputStr = f"{iteration} : {pClass} : {p['name']} {p['surname']} : permFound={res['permFound']} permNb={res['permNb']} : sco={permScore}"
+                    spacesNeeded = max(1, consoleWidth - len(outputStr) - len(f" | ETA: {etaStr}"))
+                    print(f"{outputStr}{' ' * spacesNeeded}| ETA: {etaStr}")
+                    
+                else:
                     foundCount += 1
                     classStats[pClass]['found'] += 1
-                    saveHitsToDatabase(p['uid'], permHits, permScore, maxAuthorityLinks=MAX_AUTHORITY_LINKS_PER_PERMUTATION)
+                    saveHitsToDatabase(p['uid'], res['allPrimaryHits'], score)
 
-                    # Track global and class-specific score distribution for permutations
-                    if permScore == 1.0:
+                    if score == 1.0:
                         countPerfect += 1
                         classStats[pClass]['perfect'] += 1
-                    elif permScore >= 0.5:
+                    elif score >= 0.5:
                         countGood += 1
                         classStats[pClass]['good'] += 1
-                    elif permScore > 0.0:
+                    elif score > 0.0:
                         countOther += 1
                         classStats[pClass]['other'] += 1
 
-                print(f"{iteration} : {pClass} : {p['name']} {p['surname']} : permFound={permFound} permNb={permNb} : sco={permScore}")
-                continue # Skip the standard print format below
+                    elapsedSoFar = time.time() - scriptStartTime
+                    avgTimePerIter = elapsedSoFar / iteration
+                    etaSeconds = avgTimePerIter * (totalCount - iteration)
+                    etaStr = formatTime(etaSeconds)
 
-        if score > 0.0:
-            foundCount += 1
-            classStats[pClass]['found'] += 1
-            allPrimaryHits = resultsAdv + resultsSim
-            saveHitsToDatabase(p['uid'], allPrimaryHits, score)
+                    outputStr = f"{iteration} : {pClass} : {p['name']} {p['surname']} : adv={res['matchAdv']} sim={res['matchSim']} : sco={score}"
+                    spacesNeeded = max(1, consoleWidth - len(outputStr) - len(f" | ETA: {etaStr}"))
+                    print(f"{outputStr}{' ' * spacesNeeded}| ETA: {etaStr}")
 
-            # Track global and class-specific score distribution for primary searches
-            if score == 1.0:
-                countPerfect += 1
-                classStats[pClass]['perfect'] += 1
-            elif score >= 0.5:
-                countGood += 1
-                classStats[pClass]['good'] += 1
-            elif score > 0.0:
-                countOther += 1
-                classStats[pClass]['other'] += 1
-
-        # Final Output Formatting
-        print(f"{iteration} : {pClass} : {p['name']} {p['surname']} : adv={matchAdv} sim={matchSim} : sco={score}")
-
-   # Final summary
+    # Final summary
+    totalTimeSeconds = time.time() - scriptStartTime
+    avgTimePerCase = totalTimeSeconds / totalCount if totalCount > 0 else 0
 
     print("\n" + "="*40)
     print("Final summary and statistics\n")
     print(f"Total processed: {totalCount}")
+    print(f"Total time elapsed: {formatTime(totalTimeSeconds)}")
+    print(f"Average time per case: {avgTimePerCase:.2f} seconds\n")
     
     countNotFound = totalCount - foundCount
 
@@ -397,7 +425,6 @@ def main():
     print(f"  - Other matches (score < 0.5): {otherRate:.2f}% ({countOther})")
     print(f"  - Not found (score 0.0): {notFoundRate:.2f}% ({countNotFound})\n")
     
-    # Iterate through classes to output isolated success rates and score distributions
     for c in range(1, 8):
         cTotal = classStats[c]['total']
         cFound = classStats[c]['found']
