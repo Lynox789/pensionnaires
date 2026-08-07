@@ -7,7 +7,7 @@ import concurrent.futures
 from extractingPensioner import Prosocour
 from config import DB_CONFIG
 
-TIME_BETWEEN_EACH_CALL = 0.2
+TIME_BETWEEN_EACH_CALL = 0.1
 MAX_AUTHORITY_LINKS_PER_PERMUTATION = 10
 MAX_PERMUTATIONS_PER_PENSIONER = 12
 
@@ -28,7 +28,7 @@ SUFFIXES_PATTERN = re.compile(r'(?:\s+de|\s+d\')+$', re.IGNORECASE)
 YEAR_PATTERN = re.compile(r'\d{4}')
 SPLIT_PATTERN = re.compile(r'[-\s]+')
 
-NUMBER_OF_PENSIONERS_PER_CYCLE = 7
+NUMBER_OF_PENSIONERS_PER_CYCLE = 20
 
 
 def isolatePrimaryFirstName(first_name):
