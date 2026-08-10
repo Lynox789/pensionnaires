@@ -10,6 +10,7 @@ from config import DB_CONFIG
 TIME_BETWEEN_EACH_CALL = 0.1
 MAX_AUTHORITY_LINKS_PER_PERMUTATION = 10
 MAX_PERMUTATIONS_PER_PENSIONER = 12
+NUMBER_OF_CLASS = 8
 
 #Variable to clean first and lastname
 WORDS_TO_ERASE = {"de", "du", "des", "la", "le", "les", "l", "d"}
@@ -79,16 +80,16 @@ def extractBirthYearFromHit(hit):
 
 def fetchPensioner():
     """Retrieve 20 pensioners for each class from 1 to 7, including birth year."""
-    query = """
-        SELECT id, class, last_name, first_name, birth_year, uid
-    FROM (
-        SELECT id, class, COALESCE(last_name, '') AS last_name, COALESCE(first_name, '') AS first_name,
-               birth_year, uid,
-               ROW_NUMBER() OVER (PARTITION BY class ORDER BY id) as rn
-        FROM pensionnaires
-        WHERE class BETWEEN 1 AND 7
-    ) sub
-    WHERE rn <= 10
+    query = f"""
+            SELECT 
+        id, 
+        class, 
+        COALESCE(last_name, '') AS last_name, 
+        COALESCE(first_name, '') AS first_name, 
+        birth_year, 
+        uid
+    FROM pensionnaires
+    WHERE class BETWEEN 1 AND {NUMBER_OF_CLASS}
     ORDER BY class, id;
     """
     try:
@@ -314,7 +315,7 @@ def main():
     pensionnaires = fetchPensioner()
     totalCount = len(pensionnaires)
 
-    classStats = {i: {'total': 0, 'found': 0, 'perfect': 0, 'good': 0, 'other': 0} for i in range(1, 8)}
+    classStats = {i: {'total': 0, 'found': 0, 'perfect': 0, 'good': 0, 'other': 0} for i in range(1, NUMBER_OF_CLASS + 1)}
 
     countPerfect = 0
     countGood = 0
@@ -425,7 +426,7 @@ def main():
     print(f"  - Other matches (score < 0.5): {otherRate:.2f}% ({countOther})")
     print(f"  - Not found (score 0.0): {notFoundRate:.2f}% ({countNotFound})\n")
     
-    for c in range(1, 8):
+    for c in range(1, NUMBER_OF_CLASS + 1):
         cTotal = classStats[c]['total']
         cFound = classStats[c]['found']
         
@@ -438,6 +439,40 @@ def main():
             
             print(f"Class {c}: {cRate:.2f}% success ({cFound}/{cTotal} found)")
             print(f"  - Perfect: {cPerfect} | Good: {cGood} | Other: {cOther} | Not Found: {cNotFound}")
+
+    #save in file summary the results
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    filename = f"summary_stats_{timestamp}.txt"
+    try:
+        with open(filename, "w", encoding="utf-8") as f:
+            f.write("\n" + "="*40 + "\n")
+            f.write("Final summary and statistics\n\n")
+            f.write(f"Total processed: {totalCount}\n")
+            f.write(f"Total time elapsed: {formatTime(totalTimeSeconds)}\n")
+            f.write(f"Average time per case: {avgTimePerCase:.2f} seconds\n\n")
+            f.write(f"Overall Success rate: {successRate:.2f}% ({foundCount} records found)\n")
+            f.write(f"  - Perfect matches (score 1.0): {perfectRate:.2f}% ({countPerfect})\n")
+            f.write(f"  - Good matches (score 0.5 to <1.0): {goodRate:.2f}% ({countGood})\n")
+            f.write(f"  - Other matches (score < 0.5): {otherRate:.2f}% ({countOther})\n")
+            f.write(f"  - Not found (score 0.0): {notFoundRate:.2f}% ({countNotFound})\n\n")
+            
+            for c in range(1, NUMBER_OF_CLASS + 1):
+                cTotal = classStats[c]['total']
+                cFound = classStats[c]['found']
+                
+                if cTotal > 0:
+                    cRate = (cFound / cTotal) * 100
+                    cPerfect = classStats[c]['perfect']
+                    cGood = classStats[c]['good']
+                    cOther = classStats[c]['other']
+                    cNotFound = cTotal - cFound
+                    
+                    f.write(f"Class {c}: {cRate:.2f}% success ({cFound}/{cTotal} found)\n")
+                    f.write(f"  - Perfect: {cPerfect} | Good: {cGood} | Other: {cOther} | Not Found: {cNotFound}\n")
+                    
+        print(f"\n Stats save in {filename}")
+    except Exception as e:
+        print(f"\nError : {e}")
 
 if __name__ == "__main__":
     main()
