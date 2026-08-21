@@ -1,0 +1,35 @@
+.error-container {
+    max-width: 600px;
+    margin: 4rem auto;
+    text-align: center;
+    background: white;
+    padding: 3rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+.error-container h1 {
+    color: var(--bg-dark);
+    font-family: var(--font-serif);
+    margin-bottom: 1rem;
+}
+
+.error-container p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.btn-back {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--bg-dark);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.btn-back:hover {
+    background-color: #3b4256;
+    color: white;
+}

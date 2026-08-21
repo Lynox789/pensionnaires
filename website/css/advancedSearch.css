@@ -1,0 +1,102 @@
+.adv-search-hero {
+    background-color: var(--bg-dark);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.adv-search-hero h1 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.adv-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.adv-instructions {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.adv-row {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.adv-select {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: #f9f9f9;
+}
+
+.adv-input {
+    flex: 2;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.adv-btn {
+    padding: 0.8rem 1rem;
+    background: #3c82ce;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.adv-btn:hover {
+    background: #2f6cb0;
+}
+
+.adv-btn-remove {
+    background: #e0e0e0;
+    color: #333;
+}
+
+.adv-btn-remove:hover {
+    background: #ccc;
+}
+
+.adv-submit-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+}
+
+.adv-submit-btn {
+    padding: 0.8rem 2rem;
+    background: var(--bg-dark);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.adv-submit-btn:hover {
+    background: #3b4256;
+}
+
+.simple-search-link {
+    color: var(--bg-dark);
+    text-decoration: underline;
+    font-size: 0.9rem;
+}

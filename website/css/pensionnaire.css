@@ -1,0 +1,161 @@
+.details-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    flex-grow: 1;
+}
+
+.back-link {
+    display: inline-block;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: var(--text-main);
+}
+
+.details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+
+.details-title h1 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.details-title h1 strong {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.meta-tags {
+    display: flex;
+    gap: 1rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.details-amount {
+    text-align: right;
+}
+
+.details-amount span {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 0.2rem;
+}
+
+.details-amount strong {
+    font-family: var(--font-sans);
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--bg-dark);
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+}
+
+.detail-section h2 {
+    font-size: 1.1rem;
+    color: var(--bg-dark);
+    margin-bottom: 1.5rem;
+    font-family: var(--font-serif);
+}
+
+.pension-box {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.pension-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.pension-type {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--bg-dark);
+}
+
+.pension-amount {
+    font-weight: bold;
+    font-family: monospace;
+    color: var(--text-muted);
+}
+
+.pension-dept {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pension-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    font-style: italic;
+    color: var(--text-main);
+}
+
+.opendata-list {
+    list-style: none;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+}
+
+.opendata-list li {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.opendata-list li:last-child {
+    border-bottom: none;
+}
+
+.base-name {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: var(--text-muted);
+}
+
+.base-link {
+    font-family: monospace;
+    color: var(--bg-dark);
+    text-decoration: none;
+    font-size: 0.9rem;
+    word-break: break-all;
+}
+
+.base-link:hover {
+    text-decoration: underline;
+}
+
+.text-muted {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
